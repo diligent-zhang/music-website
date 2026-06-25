@@ -45,7 +45,7 @@
 | AI | LangChain4j + DeepSeek API + BGE-small-zh 嵌入模型 |
 | 部署 | Docker Compose |
 
-> 详细架构说明见 [ARCHITECTURE.md](music-website-master/ARCHITECTURE.md)
+> 详细架构说明见 [ARCHITECTURE.md](ARCHITECTURE.md)
 
 ---
 
