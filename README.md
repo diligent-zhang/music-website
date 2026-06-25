@@ -7,6 +7,9 @@
 ## 项目介绍
 
 一个功能完整的在线音乐平台，支持音乐播放、用户登录注册、歌单管理、评论收藏、演唱会购票、AI 音乐助手等功能。包含用户前台和管理后台两个前端，前后端分离架构。
+该项目借鉴于https://github.com/Yin-Hongwei/music-website；
+我对该项目进行了一些功能的添加，包括排行榜、演唱会购票、支付功能、ai音乐小助手等功能。其中ai助手能够识别用户要播放歌曲的要求并做出自动播放音乐的功能。
+项目演示地址：
 
 ### 功能清单
 
@@ -271,3 +274,7 @@ docker compose up --build
 本项目基于 [CC BY-NC 4.0](music-website-master/LICENSE) 协议开源，仅供学习交流使用，**禁止商业用途**。
 
 Copyright (c) 2018-2025 Yin-Hongwei
+
+该项目借鉴于开源项目:https://github.com/Yin-Hongwei/music-website；
+
+由于本人技术并不是很强，当前项目不够完善，存在一些问题，希望未来能够有充足的能力去完善该项目。
