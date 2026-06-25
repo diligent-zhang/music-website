@@ -1,0 +1,111 @@
+2026-02-08 01:00:53 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-02-08 01:00:53 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 25 ms
+2026-02-08 01:00:53 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-02-08 01:00:53 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-02-08 01:00:53 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-02-08 01:00:53 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-02-08 01:47:28 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 140560 (C:\学习\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\学习\简历项目\music-website-master 音乐)
+2026-02-08 01:47:28 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-02-08 01:47:28 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-08 01:47:28 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-08 01:47:29 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-02-08 01:47:29 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-08 01:47:29 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2026-02-08 01:47:31 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-02-08 01:47:31 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2837 ms
+2026-02-08 01:47:32 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-02-08 01:47:32 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-02-08 01:47:32 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 3.854 seconds (JVM running for 4.967)
+2026-02-08 01:47:37 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-02-08 01:47:37 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 2 ms
+2026-02-08 01:47:37 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-02-08 01:47:37 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-02-08 01:47:37 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-02-08 01:47:37 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-02-08 02:09:06 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /favicon.ico
+2026-02-08 02:11:57 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /
+2026-02-08 02:33:11 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-02-08 02:33:11 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-02-08 02:33:19 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-02-08 02:33:19 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-02-08 02:36:44 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-02-08 02:36:44 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-02-08 02:37:47 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-02-08 02:37:47 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-02-08 02:38:59 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 134664 (C:\学习\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\学习\简历项目\music-website-master 音乐)
+2026-02-08 02:38:59 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-02-08 02:38:59 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-08 02:38:59 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-08 02:39:00 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-02-08 02:39:00 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-08 02:39:00 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2026-02-08 02:39:02 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-02-08 02:39:02 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2769 ms
+2026-02-08 02:39:02 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-02-08 02:39:02 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-02-08 02:39:02 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 3.774 seconds (JVM running for 4.791)
+2026-02-08 02:39:29 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-02-08 02:39:29 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
+2026-02-08 02:39:29 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-02-08 02:39:29 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-02-08 02:46:31 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-02-08 02:46:38 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-02-08 02:47:57 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-02-08 22:51:56 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 180728 (C:\学习\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\学习\简历项目\music-website-master 音乐)
+2026-02-08 22:51:56 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-02-08 22:51:56 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-08 22:51:56 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-08 22:51:57 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-02-08 22:51:57 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-08 22:51:57 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2026-02-08 22:51:59 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-02-08 22:51:59 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2721 ms
+2026-02-08 22:51:59 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-02-08 22:51:59 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-02-08 22:51:59 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 3.681 seconds (JVM running for 4.7)
+2026-02-08 22:52:25 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-02-08 22:52:25 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 2 ms
+2026-02-08 22:52:25 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-02-08 22:52:25 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-02-08 22:52:25 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-02-08 22:52:25 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-02-08 22:53:02 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-02-08 22:53:02 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-02-08 22:53:04 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-02-08 22:53:04 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-02-08 23:03:39 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 174664 (C:\学习\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\学习\简历项目\music-website-master 音乐)
+2026-02-08 23:03:39 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-02-08 23:03:39 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-08 23:03:39 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-08 23:03:39 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-02-08 23:03:39 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-08 23:03:39 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2026-02-08 23:03:42 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-02-08 23:03:42 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2844 ms
+2026-02-08 23:03:42 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-02-08 23:03:42 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-02-08 23:03:42 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 3.822 seconds (JVM running for 4.769)
+2026-02-08 23:04:09 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-02-08 23:04:09 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
+2026-02-08 23:04:09 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-02-08 23:04:09 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-02-08 23:43:23 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 183780 (C:\学习\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\学习\简历项目\music-website-master 音乐)
+2026-02-08 23:43:23 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-02-08 23:43:23 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-02-08 23:43:23 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-02-08 23:43:24 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-02-08 23:43:24 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-08 23:43:24 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2026-02-08 23:43:26 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-02-08 23:43:26 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2830 ms
+2026-02-08 23:43:27 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-02-08 23:43:27 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-02-08 23:43:27 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 3.791 seconds (JVM running for 4.909)
+2026-02-08 23:43:31 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-02-08 23:43:31 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
+2026-02-08 23:43:31 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-02-08 23:43:31 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-02-08 23:43:31 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-02-08 23:43:31 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-02-08 23:44:23 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-02-08 23:44:23 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg

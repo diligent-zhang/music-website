@@ -1,0 +1,199 @@
+ 2.2 ConcertServiceImpl — 逐方法拆解
+
+  listConcerts — 分页查询
+
+  LambdaQueryWrapper<Concert> wrapper = new LambdaQueryWrapper<>();
+  if (status != null) {
+      wrapper.eq(Concert::getStatus, status);
+  }
+  wrapper.orderByDesc(Concert::getSaleStartTime);
+
+  为什么用 LambdaQueryWrapper 而不是手写 SQL？ 因为 Concert::getStatus
+  是编译期检查的，字段改名会直接编译报错，不会像手写 "status" 字符串那样悄悄炸在运行时。
+
+  排序逻辑：按开售时间倒序 — 即将开售的排最前面，这符合用户浏览习惯。
+
+  getDetail — 详情 + 实时库存
+
+  // 从 Redis 读取剩余库存
+  String stockKey = TicketRedisKey.stockKey(tier.getId());
+  Object stock = redisTemplate.opsForValue().get(stockKey);
+  int remaining = stock != null ? Integer.parseInt(stock.toString()) : tier.getTotalStock();
+
+  为什么要从 Redis 读而不是直接查 total_stock - COUNT(order)？ 这是高并发抢票场景的核心设计。库存扣减发生在 Redis（Lua
+  原子操作，单线程天然无锁），MySQL 里的订单是异步写入的。如果详情页去查 MySQL，抢票高峰期 DB 压力大且数据有延迟。Redis
+  的值才是"此刻还剩多少张"的唯一真相来源。
+
+  初始值的兜底：如果 Redis 里还没有这个 key（比如刚启动还没预热），就回退取 totalStock 作为初始值。
+
+  addConcert — 发布演唱会
+
+  baseMapper.insert(concert);
+  Integer concertId = concert.getId();  // MyBatis-Plus 自动回填自增 ID
+
+  插入演唱会记录后，MyBatis-Plus 会自动把数据库生成的自增 ID 回填到 concert.id 字段，所以下一行就能拿到 concertId。
+
+  然后遍历票档列表：
+  ticketTierMapper.insert(tier);
+  // 立即同步到 Redis
+  redisTemplate.opsForValue()
+      .setIfAbsent(stockKey, String.valueOf(tr.getTotalStock()));
+
+  用 setIfAbsent（对应 Redis 的 SETNX 命令）而不是 set，目的是防止覆盖运行中的库存数据。如果 Redis 里已经有这个
+  key（比如之前发布过又删除重建），不会把正在售卖中的库存清零。
+
+  updateStatus — 状态变更 + Redis 同步
+
+  if (status == 2) {
+      redisTemplate.opsForValue()
+              .set(TicketRedisKey.onSaleKey(concertId), "1");
+  } else {
+      redisTemplate.delete(TicketRedisKey.onSaleKey(concertId));
+  }
+
+  状态 2 = "售票中"。写入 ticket:on_sale:{concertId} → "1"
+  作为标记，前端可以用来快速判断某演唱会是否开售，而不需要每次都查 DB。其他状态（下架/结束）直接删掉这个 Redis key。
+
+  ---
+  2.3 TicketService 接口
+
+  3 个方法对应 3 个用户端 API：
+
+  - buy — 整个购票功能的核心，处理高并发抢票
+  - getOrder — 订单详情，优先读 Redis 缓存
+  - getMyOrders — 我的订单列表
+
+  ---
+  2.4 TicketServiceImpl — 购票引擎，逐段解释
+
+  整体流程（对应设计文档的 7 步）
+
+  用户请求 → ①参数校验 → ②SETNX去重 → ③Lua扣库存 → ④生成订单号 → ⑤Redis缓存 → ⑥异步写MySQL → ⑦返回
+
+  步骤 1：参数校验
+
+  if (concert.getStatus() != 2) {
+      return R.error("当前不可购票");
+  }
+
+  状态 2 才允许购买。其他状态（预告/售罄/结束/下架）直接拒绝。
+
+  if (tier == null || !tier.getConcertId().equals(request.getConcertId())) {
+      return R.error("票档不存在");
+  }
+
+  第二个条件 !tier.getConcertId().equals(request.getConcertId()) 防止请求篡改 — 比如传了一个 A 演唱会的 concertId
+  但带了一个 B 演唱会的 tierId。
+
+  步骤 2：SETNX 用户去重
+
+  Boolean isFirst = redisTemplate.opsForValue()
+          .setIfAbsent(purchasedKey, "1");
+  if (Boolean.FALSE.equals(isFirst)) {
+      return R.error("您已购买过该票档");
+  }
+
+  setIfAbsent = Redis 的 SETNX。这个操作的关键特性是原子性 — 如果 key 已存在，Redis 保证返回 false
+  且不覆盖。这就天然实现了一个"每用户每票档只能买一次"的分布式锁，不需要 synchronized。
+
+  key 的格式：ticket:purchased:{userId}:{tierId}，比如 ticket:purchased:1001:5。
+
+  步骤 3：Lua 脚本原子扣库存
+
+  DefaultRedisScript<Long> script = new DefaultRedisScript<>();
+  script.setScriptText(TicketRedisKey.LUA_DECR_STOCK);
+  script.setResultType(Long.class);
+  Long result = redisTemplate.execute(script, Collections.singletonList(stockKey));
+
+  Lua 脚本的内容（来自 TicketRedisKey.LUA_DECR_STOCK）：
+  local stock = redis.call('GET', KEYS[1])
+  if not stock or tonumber(stock) <= 0 then
+      return 0
+  end
+  redis.call('DECR', KEYS[1])
+  return 1
+
+  为什么必须用 Lua 脚本而不是 Java 代码先 GET 再 DECR？
+
+  假设不用 Lua，Java 代码写：
+  int stock = redisTemplate.opsForValue().get(key);
+  if (stock > 0) {
+      redisTemplate.opsForValue().decrement(key);
+  }
+
+  这里有竞态条件：两个请求同时 GET 到 stock=1，都判断 >0，都执行 DECR，库存就变成 -1 了（超卖）。
+
+  Redis 执行 Lua 脚本时会把整个脚本当作一个原子命令执行，中间不会插入其他命令。所以 GET + 判断 + DECR
+  是不可分割的，这就是"无锁并发"的核心机制。
+
+  扣减失败时的回滚：
+  if (result == null || result == 0) {
+      redisTemplate.delete(purchasedKey);  // 释放 SETNX 标记
+      return R.error("已售罄");
+  }
+
+  这里必须释放 purchasedKey，否则用户被标记为"已购买"但实际上没买到，后续重试也买不了。
+
+  步骤 5：Redis 缓存订单
+
+  String json = objectMapper.writeValueAsString(orderCache);
+  redisTemplate.opsForValue().set(
+      TicketRedisKey.orderKey(orderNo), json);
+
+  购票成功后把订单信息序列化为 JSON 存 Redis。后续查订单时优先读这个缓存（内存级速度），不命中再查 DB。注意这里没设
+  TTL，实际应该参考设计文档设 7 天过期。
+
+  步骤 6：异步写 MySQL
+
+  @Async
+  public void asyncInsertOrder(...) {
+
+  @Async 让这个方法在独立线程池中执行，不阻塞用户的购票响应。用户收到"购票成功"不需要等 MySQL 写入完成，~5ms
+  就能拿到响应。
+
+  回滚逻辑：
+  catch (Exception e) {
+      // MySQL 写入失败 → 归还库存
+      redisTemplate.opsForValue().increment(stockKey);
+      // 释放用户已购标记
+      redisTemplate.delete(purchasedKey);
+  }
+
+  MySQL 写入失败是小概率事件，但必须处理。否则会出现 Redis 库存扣了但 DB 里没有订单的"丢票"情况。
+
+  getOrder — 缓存优先的查询模式
+
+  Object cached = redisTemplate.opsForValue().get(cacheKey);
+  if (cached != null) {
+      return R.success("成功", orderInfo);  // 命中缓存，直接返回
+  }
+  // 未命中 → 查 DB
+  QueryWrapper<TicketOrder> wrapper = new QueryWrapper<>();
+  wrapper.eq("order_no", orderNo);
+
+  这是标准的 Cache-Aside 模式。注意 DB 查到后没有回写缓存，因为新创建的订单在步骤 5 已经写了缓存，这里的 DB
+  查询只处理缓存过期后的情况。
+
+  ---
+  关键设计决策总结
+  这是标准的 Cache-Aside 模式。注意 DB 查到后没有回写缓存，因为新创建的订单在步骤 5 已经写了缓存，这里的 DB
+  查询只处理缓存过期后的情况。
+
+  ---
+  关键设计决策总结
+
+  ┌────────────┬────────────────────────┬──────────────────────────────────────────┐
+  │    问题    │          方案          │                  为什么                  │
+  ├────────────┼────────────────────────┼──────────────────────────────────────────┤
+  │ 防超卖     │ Redis Lua 原子扣减     │ Redis 单线程执行 Lua，GET+DECR 不可分割  │
+  ├────────────┼────────────────────────┼──────────────────────────────────────────┤
+  │ 防重复下单 │ SETNX 用户已购标记     │ 原子操作，天然分布式唯一                 │
+  ├────────────┼────────────────────────┼──────────────────────────────────────────┤
+  │ 不阻塞响应 │ @Async 异步写 MySQL    │ 用户不用等 DB IO                         │
+  ├────────────┼────────────────────────┼──────────────────────────────────────────┤
+  │ 缓存一致性 │ Redis 先写，MySQL 后写 │ 抢票场景允许短暂不一致，定时任务对账修复 │
+  ├────────────┼────────────────────────┼──────────────────────────────────────────┤
+  │ 失败回滚   │ catch 中 INCR 归还库存 │ 避免库存"凭空消失"                       │
+  └────────────┴────────────────────────┴──────────────────────────────────────────┘
+
+  这 4 个文件就是整个购票功能的后端核心。有什么不清楚的地方可以继续问。

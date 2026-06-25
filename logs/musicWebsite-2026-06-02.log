@@ -1,0 +1,263 @@
+2026-06-02 17:44:37 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 51804 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-02 17:44:37 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-02 17:44:37 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-02 17:44:37 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-02 17:44:38 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-02 17:44:38 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-02 17:44:38 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2026-06-02 17:44:40 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-02 17:44:40 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 3351 ms
+2026-06-02 17:44:41 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-02 17:44:41 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-02 17:44:41 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 4.49 seconds (JVM running for 5.781)
+2026-06-02 17:44:44 INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener]: 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-06-02 17:44:44 ERROR [org.springframework.boot.SpringApplication]: Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:770)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:751)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.example.yin.YinMusicApplication.main(YinMusicApplication.java:14)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1689)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1597)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1383)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1366)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1093)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:421)
+	at org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:193)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:210)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:190)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:97)
+	at org.springframework.data.redis.core.DefaultZSetOperations.zCard(DefaultZSetOperations.java:617)
+	at org.springframework.data.redis.core.DefaultZSetOperations.size(DefaultZSetOperations.java:606)
+	at com.example.yin.config.RankDataInitializer.run(RankDataInitializer.java:30)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:767)
+	... 10 more
+Caused by: org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:109)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1595)
+	... 24 more
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:330)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:216)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.lambda$null$0(LettucePoolingConnectionProvider.java:97)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:211)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:201)
+	at org.apache.commons.pool2.BasePooledObjectFactory.makeObject(BasePooledObjectFactory.java:70)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:571)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:298)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:223)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:122)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:117)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:103)
+	... 25 more
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:750)
+2026-06-02 17:46:04 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 46260 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-02 17:46:04 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-02 17:46:04 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-02 17:46:04 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-02 17:46:05 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-02 17:46:05 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-02 17:46:05 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+2026-06-02 17:46:07 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-02 17:46:07 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 3188 ms
+2026-06-02 17:46:08 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-02 17:46:08 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-02 17:46:08 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 4.236 seconds (JVM running for 5.368)
+2026-06-02 17:46:09 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-06-02 17:46:09 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-06-02 17:46:10 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 7 个票档, 新初始化 0 个 key
+2026-06-02 17:47:31 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-06-02 17:47:31 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
+2026-06-02 17:47:31 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 17:47:45 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 17:47:50 INFO [org.springframework.scheduling.annotation.AnnotationAsyncExecutionInterceptor]: More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [rankPlayExecutor, taskScheduler]
+2026-06-02 17:47:56 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 17:48:02 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 17:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 17:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 17:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 17:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 18:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 18:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 18:00:00 INFO [com.example.yin.task.RankScheduledTask]: 开始同步播放量到数据库...
+2026-06-02 18:00:00 INFO [com.example.yin.task.RankScheduledTask]: 播放量同步完成，共更新 0 首歌曲
+2026-06-02 18:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 18:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 18:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 18:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 18:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 18:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 18:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 18:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 18:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 18:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 18:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 18:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 18:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 18:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 18:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 18:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 18:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 18:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 18:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 18:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 18:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 18:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 19:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 19:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 19:00:00 INFO [com.example.yin.task.RankScheduledTask]: 开始同步播放量到数据库...
+2026-06-02 19:00:00 INFO [com.example.yin.task.RankScheduledTask]: 播放量同步完成，共更新 0 首歌曲
+2026-06-02 19:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 19:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 19:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 19:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 19:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 19:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 19:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 19:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 19:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 19:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 19:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 19:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 19:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 19:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 19:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 19:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 19:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 19:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 19:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 19:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 19:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 19:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 20:00:00 INFO [com.example.yin.task.RankScheduledTask]: 开始同步播放量到数据库...
+2026-06-02 20:00:00 INFO [com.example.yin.task.RankScheduledTask]: 播放量同步完成，共更新 0 首歌曲
+2026-06-02 20:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 20:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 20:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 20:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 20:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 20:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 20:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 20:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 20:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 20:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 20:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 20:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 20:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 20:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 20:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 20:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 20:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 20:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 20:40:49 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 20:41:02 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 20:41:25 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 20:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 20:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 20:45:42 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 20:45:45 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 20:45:47 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 20:45:54 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 20:46:22 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票开始: userId=65, concertId=1, tierId=2 =====
+2026-06-02 20:46:22 INFO [com.example.yin.service.impl.TicketServiceImpl]: 步骤①通过: concert=薛之谦演唱会, status=2
+2026-06-02 20:46:22 INFO [com.example.yin.service.impl.TicketServiceImpl]: 步骤①通过: tierName=第一档, price=300.00, totalStock=1000
+2026-06-02 20:46:22 INFO [com.example.yin.service.impl.TicketServiceImpl]: 步骤②通过: SETNX 成功, key=ticket:purchased:65:2
+2026-06-02 20:46:22 INFO [com.example.yin.service.impl.TicketServiceImpl]: 步骤③: 库存 key=ticket:stock:2
+2026-06-02 20:46:22 INFO [com.example.yin.service.impl.TicketServiceImpl]: 步骤③: Redis 当前库存原始值 = 1000
+2026-06-02 20:46:22 INFO [com.example.yin.service.impl.TicketServiceImpl]: 步骤③: Lua 脚本执行结果 result=1 (0=库存不足, 1=扣减成功, null=异常)
+2026-06-02 20:46:22 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17804043822505811, userId=65, tierId=2, price=300.00 =====
+2026-06-02 20:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 20:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 20:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 20:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 20:55:16 WARN [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver]: Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'userId' for method parameter type Integer is not present]
+2026-06-02 20:55:18 WARN [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver]: Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'userId' for method parameter type Integer is not present]
+2026-06-02 20:58:56 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 20:59:19 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 20:59:20 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 21:00:00 INFO [com.example.yin.task.RankScheduledTask]: 开始同步播放量到数据库...
+2026-06-02 21:00:00 INFO [com.example.yin.task.RankScheduledTask]: 播放量同步完成，共更新 0 首歌曲
+2026-06-02 21:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 21:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 21:03:45 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 21:03:51 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 21:03:53 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 21:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 21:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 21:07:56 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 47472 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-02 21:07:56 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-02 21:07:56 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-02 21:07:56 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-02 21:07:57 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-02 21:07:57 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-02 21:07:57 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2026-06-02 21:07:59 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-02 21:07:59 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 3175 ms
+2026-06-02 21:08:00 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-02 21:08:00 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-02 21:08:00 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 4.135 seconds (JVM running for 5.1)
+2026-06-02 21:08:01 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-06-02 21:08:01 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-06-02 21:08:01 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 7 个票档, 新初始化 0 个 key
+2026-06-02 21:08:07 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-06-02 21:08:07 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
+2026-06-02 21:08:16 INFO [org.springframework.scheduling.annotation.AnnotationAsyncExecutionInterceptor]: More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [rankPlayExecutor, taskScheduler]
+2026-06-02 21:08:23 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 21:08:40 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 21:09:18 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 21:09:19 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 21:09:23 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET /user01/img/singerPic/liangyaoxie.jpg
+2026-06-02 21:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 21:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 21:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 21:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 21:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 21:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 21:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 21:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 21:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 21:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 21:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 21:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 21:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 21:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 21:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 21:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 21:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 21:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 21:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 21:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 22:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-02 22:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-02 22:00:00 INFO [com.example.yin.task.RankScheduledTask]: 开始同步播放量到数据库...
+2026-06-02 22:00:00 INFO [com.example.yin.task.RankScheduledTask]: 播放量同步完成，共更新 0 首歌曲

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.yin.mapper.PlayLogMapper">
+
+  <select id="selectRankByTimeRange" resultType="java.util.HashMap">
+    SELECT
+      song_id   AS songId,
+      COUNT(*)  AS playCount
+    FROM play_log
+    WHERE play_time >= #{startTime}
+      AND play_time &lt;= #{endTime}
+    GROUP BY song_id
+    ORDER BY playCount DESC
+    LIMIT #{limit}
+  </select>
+
+  <select id="selectPlayLogs" resultType="java.util.HashMap">
+    SELECT
+      pl.id,
+      pl.song_id     AS songId,
+      pl.user_id     AS userId,
+      pl.play_time   AS playTime,
+      s.name         AS songName,
+      s.pic          AS songPic
+    FROM play_log pl
+    LEFT JOIN song s ON pl.song_id = s.id
+    WHERE 1=1
+    <if test="songName != null and songName != ''">
+      AND s.name LIKE CONCAT('%', #{songName}, '%')
+    </if>
+    <if test="userId != null">
+      AND pl.user_id = #{userId}
+    </if>
+    ORDER BY pl.play_time DESC
+    LIMIT #{offset}, #{size}
+  </select>
+
+  <select id="countPlayLogs" resultType="long">
+    SELECT COUNT(*)
+    FROM play_log pl
+    LEFT JOIN song s ON pl.song_id = s.id
+    WHERE 1=1
+    <if test="songName != null and songName != ''">
+      AND s.name LIKE CONCAT('%', #{songName}, '%')
+    </if>
+    <if test="userId != null">
+      AND pl.user_id = #{userId}
+    </if>
+  </select>
+
+  <delete id="deleteById">
+    DELETE FROM play_log WHERE id = #{id}
+  </delete>
+
+</mapper>

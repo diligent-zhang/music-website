@@ -1,0 +1,361 @@
+2026-05-24 13:02:10 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 63956 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-05-24 13:02:10 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-05-24 13:02:10 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-24 13:02:10 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-24 13:02:10 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-05-24 13:02:10 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-05-24 13:02:10 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2026-05-24 13:02:13 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-05-24 13:02:13 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 3273 ms
+2026-05-24 13:02:14 WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext]: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'concertController' method 
+com.example.yin.controller.ConcertController#list(Integer, Integer, Integer)
+to {GET [/concert/list]}: There is already 'adminController' bean method
+com.example.yin.controller.AdminController#adminConcertList(Integer, Integer) mapped.
+2026-05-24 13:02:14 INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener]: 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-05-24 13:02:14 ERROR [org.springframework.boot.SpringApplication]: Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'concertController' method 
+com.example.yin.controller.ConcertController#list(Integer, Integer, Integer)
+to {GET [/concert/list]}: There is already 'adminController' bean method
+com.example.yin.controller.AdminController#adminConcertList(Integer, Integer) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.example.yin.YinMusicApplication.main(YinMusicApplication.java:14)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'concertController' method 
+com.example.yin.controller.ConcertController#list(Integer, Integer, Integer)
+to {GET [/concert/list]}: There is already 'adminController' bean method
+com.example.yin.controller.AdminController#adminConcertList(Integer, Integer) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 21 more
+2026-05-24 13:05:58 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 66368 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-05-24 13:05:58 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-05-24 13:05:58 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-24 13:05:58 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-24 13:05:59 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-05-24 13:05:59 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-05-24 13:05:59 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2026-05-24 13:06:01 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-05-24 13:06:01 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 3073 ms
+2026-05-24 13:06:02 WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext]: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'concertController' method 
+com.example.yin.controller.ConcertController#list(Integer, Integer, Integer)
+to {GET [/concert/list]}: There is already 'adminController' bean method
+com.example.yin.controller.AdminController#adminConcertList(Integer, Integer) mapped.
+2026-05-24 13:06:02 INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener]: 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-05-24 13:06:02 ERROR [org.springframework.boot.SpringApplication]: Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'concertController' method 
+com.example.yin.controller.ConcertController#list(Integer, Integer, Integer)
+to {GET [/concert/list]}: There is already 'adminController' bean method
+com.example.yin.controller.AdminController#adminConcertList(Integer, Integer) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.example.yin.YinMusicApplication.main(YinMusicApplication.java:14)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'concertController' method 
+com.example.yin.controller.ConcertController#list(Integer, Integer, Integer)
+to {GET [/concert/list]}: There is already 'adminController' bean method
+com.example.yin.controller.AdminController#adminConcertList(Integer, Integer) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 21 more
+2026-05-24 13:08:16 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 64412 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-05-24 13:08:16 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-05-24 13:08:16 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-24 13:08:16 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-24 13:08:16 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-05-24 13:08:16 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-05-24 13:08:16 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2026-05-24 13:08:19 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-05-24 13:08:19 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2918 ms
+2026-05-24 13:08:19 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-05-24 13:08:19 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-05-24 13:08:19 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 3.991 seconds (JVM running for 4.965)
+2026-05-24 13:08:20 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-05-24 13:08:20 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-05-24 13:08:21 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 0 个票档, 新初始化 0 个 key
+2026-05-24 13:08:39 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-05-24 13:08:39 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
+2026-05-24 13:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 13:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 13:14:24 WARN [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver]: Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "2026-06-15 00:00:00": not a valid representation (error: Failed to parse Date value '2026-06-15 00:00:00': Cannot parse date "2026-06-15 00:00:00": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null)); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "2026-06-15 00:00:00": not a valid representation (error: Failed to parse Date value '2026-06-15 00:00:00': Cannot parse date "2026-06-15 00:00:00": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null))<EOL> at [Source: (PushbackInputStream); line: 1, column: 440] (through reference chain: com.example.yin.model.request.ConcertRequest["showTime"])]
+2026-05-24 13:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 13:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 13:19:11 WARN [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver]: Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "2026-06-15 00:00:00": not a valid representation (error: Failed to parse Date value '2026-06-15 00:00:00': Cannot parse date "2026-06-15 00:00:00": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null)); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "2026-06-15 00:00:00": not a valid representation (error: Failed to parse Date value '2026-06-15 00:00:00': Cannot parse date "2026-06-15 00:00:00": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null))<EOL> at [Source: (PushbackInputStream); line: 1, column: 440] (through reference chain: com.example.yin.model.request.ConcertRequest["showTime"])]
+2026-05-24 13:19:42 WARN [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver]: Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:19:32": not a valid representation (error: Failed to parse Date value '2026-05-24 13:19:32': Cannot parse date "2026-05-24 13:19:32": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null)); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:19:32": not a valid representation (error: Failed to parse Date value '2026-05-24 13:19:32': Cannot parse date "2026-05-24 13:19:32": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null))<EOL> at [Source: (PushbackInputStream); line: 1, column: 124] (through reference chain: com.example.yin.model.request.ConcertRequest["showTime"])]
+2026-05-24 13:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 13:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 13:21:42 WARN [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver]: Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:21:31": not a valid representation (error: Failed to parse Date value '2026-05-24 13:21:31': Cannot parse date "2026-05-24 13:21:31": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null)); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:21:31": not a valid representation (error: Failed to parse Date value '2026-05-24 13:21:31': Cannot parse date "2026-05-24 13:21:31": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null))<EOL> at [Source: (PushbackInputStream); line: 1, column: 125] (through reference chain: com.example.yin.model.request.ConcertRequest["showTime"])]
+2026-05-24 13:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 13:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 13:26:18 WARN [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver]: Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:26:05": not a valid representation (error: Failed to parse Date value '2026-05-24 13:26:05': Cannot parse date "2026-05-24 13:26:05": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null)); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:26:05": not a valid representation (error: Failed to parse Date value '2026-05-24 13:26:05': Cannot parse date "2026-05-24 13:26:05": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null))<EOL> at [Source: (PushbackInputStream); line: 1, column: 124] (through reference chain: com.example.yin.model.request.ConcertRequest["showTime"])]
+2026-05-24 13:28:31 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 65976 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-05-24 13:28:31 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-05-24 13:28:31 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-24 13:28:31 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-24 13:28:32 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-05-24 13:28:32 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-05-24 13:28:32 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2026-05-24 13:28:34 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-05-24 13:28:34 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2608 ms
+2026-05-24 13:28:35 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-05-24 13:28:35 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-05-24 13:28:35 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 3.601 seconds (JVM running for 4.509)
+2026-05-24 13:28:36 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-05-24 13:28:36 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-05-24 13:28:36 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 0 个票档, 新初始化 0 个 key
+2026-05-24 13:28:41 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-05-24 13:28:41 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
+2026-05-24 13:29:27 WARN [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver]: Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:28:51": not a valid representation (error: Failed to parse Date value '2026-05-24 13:28:51': Cannot parse date "2026-05-24 13:28:51": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null)); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:28:51": not a valid representation (error: Failed to parse Date value '2026-05-24 13:28:51': Cannot parse date "2026-05-24 13:28:51": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null))<EOL> at [Source: (PushbackInputStream); line: 1, column: 126] (through reference chain: com.example.yin.model.request.ConcertRequest["showTime"])]
+2026-05-24 13:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 13:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 13:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 13:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 13:37:53 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 42912 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-05-24 13:37:53 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-05-24 13:37:53 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-24 13:37:53 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-24 13:37:53 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-05-24 13:37:53 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-05-24 13:37:53 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2026-05-24 13:37:55 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-05-24 13:37:56 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2560 ms
+2026-05-24 13:37:56 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-05-24 13:37:56 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-05-24 13:37:56 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 3.531 seconds (JVM running for 4.444)
+2026-05-24 13:37:57 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-05-24 13:37:57 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-05-24 13:37:57 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 0 个票档, 新初始化 0 个 key
+2026-05-24 13:38:02 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-05-24 13:38:02 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
+2026-05-24 13:38:20 ERROR [com.example.yin.config.GlobalExceptionHandler]: 请求体解析失败: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:38:11": not a valid representation (error: Failed to parse Date value '2026-05-24 13:38:11': Cannot parse date "2026-05-24 13:38:11": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null)); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:38:11": not a valid representation (error: Failed to parse Date value '2026-05-24 13:38:11': Cannot parse date "2026-05-24 13:38:11": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null))
+ at [Source: (PushbackInputStream); line: 1, column: 125] (through reference chain: com.example.yin.model.request.ConcertRequest["showTime"])
+2026-05-24 13:38:20 ERROR [com.example.yin.config.GlobalExceptionHandler]: 根因: com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:38:11": not a valid representation (error: Failed to parse Date value '2026-05-24 13:38:11': Cannot parse date "2026-05-24 13:38:11": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null))
+ at [Source: (PushbackInputStream); line: 1, column: 125] (through reference chain: com.example.yin.model.request.ConcertRequest["showTime"])
+2026-05-24 13:38:44 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-05-24 13:38:44 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-05-24 13:38:47 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-05-24 13:38:47 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-05-24 13:38:54 INFO [org.springframework.scheduling.annotation.AnnotationAsyncExecutionInterceptor]: More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [rankPlayExecutor, taskScheduler]
+2026-05-24 13:38:57 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-05-24 13:38:57 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-05-24 13:39:35 ERROR [com.example.yin.config.GlobalExceptionHandler]: 请求体解析失败: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:39:28": not a valid representation (error: Failed to parse Date value '2026-05-24 13:39:28': Cannot parse date "2026-05-24 13:39:28": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null)); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:39:28": not a valid representation (error: Failed to parse Date value '2026-05-24 13:39:28': Cannot parse date "2026-05-24 13:39:28": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null))
+ at [Source: (PushbackInputStream); line: 1, column: 129] (through reference chain: com.example.yin.model.request.ConcertRequest["showTime"])
+2026-05-24 13:39:35 ERROR [com.example.yin.config.GlobalExceptionHandler]: 根因: com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:39:28": not a valid representation (error: Failed to parse Date value '2026-05-24 13:39:28': Cannot parse date "2026-05-24 13:39:28": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null))
+ at [Source: (PushbackInputStream); line: 1, column: 129] (through reference chain: com.example.yin.model.request.ConcertRequest["showTime"])
+2026-05-24 13:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 13:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 13:41:17 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 67304 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-05-24 13:41:17 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-05-24 13:41:17 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-24 13:41:17 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-24 13:41:17 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-05-24 13:41:17 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-05-24 13:41:17 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2026-05-24 13:41:19 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-05-24 13:41:19 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2653 ms
+2026-05-24 13:41:20 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-05-24 13:41:20 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-05-24 13:41:20 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 3.649 seconds (JVM running for 4.565)
+2026-05-24 13:41:21 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-05-24 13:41:21 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-05-24 13:41:21 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 0 个票档, 新初始化 0 个 key
+2026-05-24 13:41:25 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-05-24 13:41:25 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
+2026-05-24 13:41:41 ERROR [com.example.yin.config.GlobalExceptionHandler]: 请求体解析失败: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:41:33": not a valid representation (error: Failed to parse Date value '2026-05-24 13:41:33': Cannot parse date "2026-05-24 13:41:33": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null)); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:41:33": not a valid representation (error: Failed to parse Date value '2026-05-24 13:41:33': Cannot parse date "2026-05-24 13:41:33": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null))
+ at [Source: (PushbackInputStream); line: 1, column: 125] (through reference chain: com.example.yin.model.request.ConcertRequest["showTime"])
+2026-05-24 13:41:41 ERROR [com.example.yin.config.GlobalExceptionHandler]: 根因: com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:41:33": not a valid representation (error: Failed to parse Date value '2026-05-24 13:41:33': Cannot parse date "2026-05-24 13:41:33": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null))
+ at [Source: (PushbackInputStream); line: 1, column: 125] (through reference chain: com.example.yin.model.request.ConcertRequest["showTime"])
+2026-05-24 13:42:36 INFO [org.springframework.scheduling.annotation.AnnotationAsyncExecutionInterceptor]: More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [rankPlayExecutor, taskScheduler]
+2026-05-24 13:43:17 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 64728 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-05-24 13:43:17 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-05-24 13:43:17 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-24 13:43:17 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-24 13:43:17 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-05-24 13:43:17 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-05-24 13:43:17 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2026-05-24 13:43:19 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-05-24 13:43:19 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2692 ms
+2026-05-24 13:43:20 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-05-24 13:43:20 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-05-24 13:43:20 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 3.729 seconds (JVM running for 4.65)
+2026-05-24 13:43:21 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-05-24 13:43:21 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-05-24 13:43:21 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 0 个票档, 新初始化 0 个 key
+2026-05-24 13:43:26 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-05-24 13:43:26 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
+2026-05-24 13:43:44 ERROR [com.example.yin.config.GlobalExceptionHandler]: 请求体解析失败: JSON parse error: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:43:33": not a valid representation (error: Failed to parse Date value '2026-05-24 13:43:33': Cannot parse date "2026-05-24 13:43:33": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null)); nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:43:33": not a valid representation (error: Failed to parse Date value '2026-05-24 13:43:33': Cannot parse date "2026-05-24 13:43:33": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null))
+ at [Source: (PushbackInputStream); line: 1, column: 124] (through reference chain: com.example.yin.model.request.ConcertRequest["showTime"])
+2026-05-24 13:43:44 ERROR [com.example.yin.config.GlobalExceptionHandler]: 根因: com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `java.util.Date` from String "2026-05-24 13:43:33": not a valid representation (error: Failed to parse Date value '2026-05-24 13:43:33': Cannot parse date "2026-05-24 13:43:33": while it seems to fit format 'yyyy-MM-dd'T'HH:mm:ss.SSSX', parsing fails (leniency? null))
+ at [Source: (PushbackInputStream); line: 1, column: 124] (through reference chain: com.example.yin.model.request.ConcertRequest["showTime"])
+2026-05-24 13:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 13:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 13:45:07 INFO [org.springframework.scheduling.annotation.AnnotationAsyncExecutionInterceptor]: More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [rankPlayExecutor, taskScheduler]
+2026-05-24 13:45:14 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-05-24 13:45:14 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-05-24 13:47:08 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 57744 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-05-24 13:47:08 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-05-24 13:47:08 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-24 13:47:08 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-24 13:47:09 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-05-24 13:47:09 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-05-24 13:47:09 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2026-05-24 13:47:11 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-05-24 13:47:11 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2539 ms
+2026-05-24 13:47:11 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-05-24 13:47:11 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-05-24 13:47:11 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 3.493 seconds (JVM running for 4.381)
+2026-05-24 13:47:12 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-05-24 13:47:12 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-05-24 13:47:12 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 0 个票档, 新初始化 0 个 key
+2026-05-24 13:47:21 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-05-24 13:47:21 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 0 ms
+2026-05-24 13:47:35 INFO [com.example.yin.controller.AdminController]: 收到演唱会发布请求: title=1, tiers=[ConcertRequest.TierRequest(tierName=1, price=1110, totalStock=2)]
+2026-05-24 13:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 13:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 13:52:40 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 58072 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-05-24 13:52:40 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-05-24 13:52:40 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-24 13:52:40 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-24 13:52:41 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-05-24 13:52:41 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-05-24 13:52:41 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2026-05-24 13:52:43 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-05-24 13:52:43 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 3076 ms
+2026-05-24 13:52:44 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-05-24 13:52:44 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-05-24 13:52:44 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 4.312 seconds (JVM running for 5.282)
+2026-05-24 13:52:45 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-05-24 13:52:45 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-05-24 13:52:45 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 1 个票档, 新初始化 0 个 key
+2026-05-24 13:53:14 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-05-24 13:53:14 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
+2026-05-24 13:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 13:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 13:55:06 INFO [com.example.yin.controller.AdminController]: 收到演唱会发布请求: title=薛之谦演唱会, tiers=[ConcertRequest.TierRequest(tierName=第一档, price=300, totalStock=1000), ConcertRequest.TierRequest(tierName=第二档, price=500, totalStock=5), ConcertRequest.TierRequest(tierName=第三档, price=800, totalStock=5), ConcertRequest.TierRequest(tierName=至尊档, price=1888, totalStock=2)]
+2026-05-24 13:56:41 INFO [com.example.yin.controller.AdminController]: 收到演唱会发布请求: title=薛之谦演唱会, tiers=[ConcertRequest.TierRequest(tierName=第一档, price=300, totalStock=1000), ConcertRequest.TierRequest(tierName=第二档, price=500, totalStock=5), ConcertRequest.TierRequest(tierName=第三档, price=800, totalStock=5), ConcertRequest.TierRequest(tierName=至尊档, price=1888, totalStock=2)]
+2026-05-24 14:00:00 INFO [com.example.yin.task.RankScheduledTask]: 开始同步播放量到数据库...
+2026-05-24 14:00:00 INFO [com.example.yin.task.RankScheduledTask]: 播放量同步完成，共更新 0 首歌曲
+2026-05-24 14:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 14:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 14:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 14:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 14:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 14:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 14:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 14:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 14:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 14:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 14:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 14:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 14:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 14:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 14:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 14:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 14:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 14:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 14:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 14:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 14:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 14:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 14:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 14:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 15:00:00 INFO [com.example.yin.task.RankScheduledTask]: 开始同步播放量到数据库...
+2026-05-24 15:00:00 INFO [com.example.yin.task.RankScheduledTask]: 播放量同步完成，共更新 0 首歌曲
+2026-05-24 15:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 15:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 15:00:25 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-05-24 15:00:25 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-05-24 15:00:27 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-05-24 15:00:27 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-05-24 15:00:28 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-05-24 15:00:28 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-05-24 15:00:35 INFO [org.springframework.scheduling.annotation.AnnotationAsyncExecutionInterceptor]: More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [rankPlayExecutor, taskScheduler]
+2026-05-24 15:01:35 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-05-24 15:01:35 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-05-24 15:01:39 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-05-24 15:01:39 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-05-24 15:01:57 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-05-24 15:01:57 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-05-24 15:03:09 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/liangyaoxie.jpg
+2026-05-24 15:03:09 WARN [org.springframework.web.servlet.PageNotFound]: No mapping for GET //user01/img/singerPic/dengziqi.jpg
+2026-05-24 15:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-05-24 15:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-05-24 15:19:11 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 1.8.0_451 on LAPTOP-0E25MM1F with PID 65324 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-05-24 15:19:11 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-05-24 15:19:11 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-24 15:19:11 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-24 15:19:11 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-05-24 15:19:11 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-05-24 15:19:11 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2026-05-24 15:19:13 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-05-24 15:19:13 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2676 ms
+2026-05-24 15:19:14 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-05-24 15:19:14 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-05-24 15:19:14 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 3.682 seconds (JVM running for 4.64)
+2026-05-24 15:19:15 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-05-24 15:19:15 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-05-24 15:19:15 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 5 个票档, 新初始化 0 个 key

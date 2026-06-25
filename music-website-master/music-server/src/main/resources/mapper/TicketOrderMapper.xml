@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.yin.mapper.TicketOrderMapper">
+
+    <select id="selectOrdersByConcert" resultType="java.util.HashMap">
+        SELECT
+            o.id, o.order_no AS orderNo, o.user_id AS userId,
+            o.tier_name AS tierName, o.id_card AS idCard, o.phone,
+            o.price, o.pay_status AS payStatus,
+            o.verify_status AS verifyStatus, o.create_time AS createTime,
+            c.username
+        FROM ticket_order o
+                 LEFT JOIN consumer c ON o.user_id = c.id
+        WHERE o.concert_id = #{concertId}
+        ORDER BY o.create_time DESC
+            LIMIT #{offset}, #{size}
+    </select>
+
+    <select id="countOrdersByConcert" resultType="long">
+        SELECT COUNT(*) FROM ticket_order WHERE concert_id = #{concertId}
+    </select>
+
+    <select id="selectOrdersByUser" resultType="java.util.HashMap">
+        SELECT
+            o.id, o.order_no AS orderNo, o.concert_id AS concertId,
+            o.tier_name AS tierName, o.price, o.pay_status AS payStatus,
+            o.verify_status AS verifyStatus, o.qr_code_token AS qrCodeToken,
+            o.create_time AS createTime,
+            ct.title AS concertTitle, ct.show_time AS showTime, ct.venue
+        FROM ticket_order o
+                 LEFT JOIN concert ct ON o.concert_id = ct.id
+        WHERE o.user_id = #{userId}
+        ORDER BY o.create_time DESC
+    </select>
+
+</mapper>

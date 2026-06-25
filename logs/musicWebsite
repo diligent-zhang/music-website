@@ -1,0 +1,1656 @@
+2026-06-22 20:04:38 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 35056 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-22 20:04:38 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-22 20:04:38 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2026-06-22 20:04:38 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-22 20:04:38 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-22 20:04:40 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-22 20:04:40 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-22 20:04:40 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2026-06-22 20:04:42 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-22 20:04:42 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 4171 ms
+2026-06-22 20:04:44 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
+2026-06-22 20:04:44 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
+2026-06-22 20:04:45 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-22 20:04:45 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-22 20:04:45 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 7.003 seconds (JVM running for 7.95)
+2026-06-22 20:04:45 WARN [com.example.yin.service.rag.DocumentIngestionService]: RAG 文档目录不存在: C:\Study\简历项目\music-website-master 音乐\rag-docs，跳过知识库构建
+2026-06-22 20:04:45 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-06-22 20:04:46 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-06-22 20:04:46 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 7 个票档, 新初始化 0 个 key
+2026-06-22 20:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-22 20:05:00 WARN [com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta]: Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @58a9760d
+2026-06-22 20:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-22 20:06:26 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-06-22 20:06:26 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
+2026-06-22 20:07:42 INFO [org.springframework.scheduling.annotation.AnnotationAsyncExecutionInterceptor]: More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [rankPlayExecutor, taskScheduler]
+2026-06-22 20:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-22 20:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-22 20:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-22 20:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-22 20:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-22 20:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-22 20:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-22 20:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-22 20:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-22 20:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-22 20:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-22 20:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-22 20:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-22 20:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-22 20:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-22 20:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-22 20:48:09 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 14460 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-22 20:48:09 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-22 20:48:09 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2026-06-22 20:48:09 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-22 20:48:09 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-22 20:48:11 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-22 20:48:11 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-22 20:48:11 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2026-06-22 20:48:12 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-22 20:48:12 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 3681 ms
+2026-06-22 20:48:14 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
+2026-06-22 20:48:14 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
+2026-06-22 20:48:14 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-22 20:48:14 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-22 20:48:14 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 6.178 seconds (JVM running for 7.151)
+2026-06-22 20:48:14 WARN [com.example.yin.service.rag.DocumentIngestionService]: RAG 文档目录不存在: C:\Study\简历项目\music-website-master 音乐\rag-docs，跳过知识库构建
+2026-06-22 20:48:15 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-06-22 20:48:15 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-06-22 20:48:15 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 7 个票档, 新初始化 0 个 key
+2026-06-22 20:48:43 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-06-22 20:48:43 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
+2026-06-22 20:48:45 INFO [org.springframework.scheduling.annotation.AnnotationAsyncExecutionInterceptor]: More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [rankPlayExecutor, taskScheduler]
+2026-06-22 20:49:00 WARN [com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta]: Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @58a9760d
+2026-06-22 20:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-22 20:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-22 20:52:26 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Shutdown initiated...
+2026-06-22 20:52:26 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Shutdown completed.
+2026-06-22 20:52:28 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 35540 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-22 20:52:28 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-22 20:52:28 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2026-06-22 20:52:28 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-22 20:52:28 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-22 20:52:29 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-22 20:52:29 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-22 20:52:29 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2026-06-22 20:52:30 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-22 20:52:30 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 1969 ms
+2026-06-22 20:52:31 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
+2026-06-22 20:52:31 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
+2026-06-22 20:52:32 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-22 20:52:32 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-22 20:52:32 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 4.282 seconds (JVM running for 5.02)
+2026-06-22 20:52:32 WARN [com.example.yin.service.rag.DocumentIngestionService]: RAG 文档目录不存在: C:\Study\简历项目\music-website-master 音乐\rag-docs，跳过知识库构建
+2026-06-22 20:52:32 INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener]: 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-06-22 20:52:32 ERROR [org.springframework.boot.SpringApplication]: Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:770)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:751)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.example.yin.YinMusicApplication.main(YinMusicApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.apache.ibatis.builder.IncompleteElementException: Could not find a parent resultmap with id 'com.example.yin.mapper.SongMapper.ResultMapWithBLOBs'
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addResultMap(MapperBuilderAssistant.java:188)
+	at org.apache.ibatis.builder.ResultMapResolver.resolve(ResultMapResolver.java:47)
+	at org.apache.ibatis.session.Configuration.parsePendingResultMaps(Configuration.java:909)
+	at org.apache.ibatis.session.Configuration.buildAllStatements(Configuration.java:873)
+	at com.baomidou.mybatisplus.core.MybatisConfiguration.hasStatement(MybatisConfiguration.java:350)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:853)
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.resolveMappedStatement(MapperMethod.java:257)
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:227)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy3/jdk.proxy3.$Proxy94.selectList(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy3/jdk.proxy3.$Proxy95.selectList(Unknown Source)
+	at com.example.yin.config.TicketDataInitializer.run(TicketDataInitializer.java:23)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:767)
+	... 10 more
+2026-06-22 20:56:00 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 16556 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-22 20:56:00 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-22 20:56:00 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2026-06-22 20:56:00 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-22 20:56:00 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-22 20:56:00 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-22 20:56:00 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-22 20:56:00 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2026-06-22 20:56:02 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-22 20:56:02 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 1891 ms
+2026-06-22 20:56:03 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
+2026-06-22 20:56:03 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
+2026-06-22 20:56:04 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-22 20:56:04 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-22 20:56:04 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 4.071 seconds (JVM running for 4.761)
+2026-06-22 20:56:04 INFO [com.example.yin.service.rag.DocumentIngestionService]: 加载 117 个文档，开始切割...
+2026-06-22 20:56:04 INFO [com.example.yin.service.rag.DocumentIngestionService]: 切割完成，共 144 个文本片段，开始向量化...
+2026-06-22 20:56:05 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 50/144
+2026-06-22 20:56:05 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 100/144
+2026-06-22 20:56:06 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 144/144
+2026-06-22 20:56:06 INFO [com.example.yin.service.rag.DocumentIngestionService]: RAG 知识库构建完成！共 117 个文档 → 144 个向量片段
+2026-06-22 20:56:06 INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener]: 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-06-22 20:56:06 ERROR [org.springframework.boot.SpringApplication]: Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:770)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:751)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.example.yin.YinMusicApplication.main(YinMusicApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.apache.ibatis.builder.IncompleteElementException: Could not find a parent resultmap with id 'com.example.yin.mapper.SongMapper.ResultMap'
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addResultMap(MapperBuilderAssistant.java:188)
+	at org.apache.ibatis.builder.ResultMapResolver.resolve(ResultMapResolver.java:47)
+	at org.apache.ibatis.session.Configuration.parsePendingResultMaps(Configuration.java:909)
+	at org.apache.ibatis.session.Configuration.buildAllStatements(Configuration.java:873)
+	at com.baomidou.mybatisplus.core.MybatisConfiguration.hasStatement(MybatisConfiguration.java:350)
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:853)
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.resolveMappedStatement(MapperMethod.java:257)
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:227)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at jdk.proxy3/jdk.proxy3.$Proxy94.selectList(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy3/jdk.proxy3.$Proxy95.selectList(Unknown Source)
+	at com.example.yin.config.TicketDataInitializer.run(TicketDataInitializer.java:23)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:767)
+	... 10 more
+2026-06-22 20:57:19 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 35848 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-22 20:57:19 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-22 20:57:19 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2026-06-22 20:57:19 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-22 20:57:19 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-22 20:57:20 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-22 20:57:20 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-22 20:57:20 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2026-06-22 20:57:21 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-22 20:57:21 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 1862 ms
+2026-06-22 20:57:22 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
+2026-06-22 20:57:22 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
+2026-06-22 20:57:23 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-22 20:57:23 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-22 20:57:23 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 4.091 seconds (JVM running for 4.734)
+2026-06-22 20:57:23 INFO [com.example.yin.service.rag.DocumentIngestionService]: 加载 117 个文档，开始切割...
+2026-06-22 20:57:23 INFO [com.example.yin.service.rag.DocumentIngestionService]: 切割完成，共 144 个文本片段，开始向量化...
+2026-06-22 20:57:24 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 50/144
+2026-06-22 20:57:25 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 100/144
+2026-06-22 20:57:25 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 144/144
+2026-06-22 20:57:25 INFO [com.example.yin.service.rag.DocumentIngestionService]: RAG 知识库构建完成！共 117 个文档 → 144 个向量片段
+2026-06-22 20:57:26 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-06-22 20:57:26 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-06-22 20:57:26 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 7 个票档, 新初始化 0 个 key
+2026-06-22 20:57:36 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-06-22 20:57:36 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
+2026-06-22 20:57:45 INFO [org.springframework.scheduling.annotation.AnnotationAsyncExecutionInterceptor]: More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [rankPlayExecutor, taskScheduler]
+2026-06-22 20:58:00 WARN [com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta]: Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @58a9760d
+2026-06-22 20:58:46 INFO [com.example.yin.service.impl.AiServiceImpl]: 用户 [u-64b21eaf-9859-433f-8d4e-c246925e6ac1] 消息: 张杰的何必在一起怎么样
+2026-06-22 20:58:46 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP request:
+- method: POST
+- url: https://api.deepseek.com/chat/completions
+- headers: [Authorization: Beare...5f], [User-Agent: langchain4j-openai], [Content-Type: application/json]
+- body: {
+  "model" : "deepseek-chat",
+  "messages" : [ {
+    "role" : "system",
+    "content" : "你是音乐助手\"小音\"，拥有音乐知识库，可回答创作背景、歌词含义等。\n\n工具：\n- searchSongs / searchSongsBySinger：搜索歌曲/歌手\n- getRankList：排行榜\n- getSongLists / searchSongListByStyle：浏览歌单\n- searchSingers：搜索歌手信息\n- recommendSongs：推荐歌曲\n- playSong(songName)：播放歌曲（用户说\"播放XX\"时直接调用）\n- pausePlayback / resumePlayback / nextSong / setVolume：播放控制\n\n规则：\n- 用户说\"播放XX\"，直接调用 playSong，调用后告知用户即可。\n- 推荐歌曲列3-5首并简介，等用户选择后再播放。\n- 只回答音乐相关问题，中文，语气温暖。\n"
+  }, {
+    "role" : "user",
+    "content" : "张杰的何必在一起怎么样\n\nAnswer using the following information:\n张杰-何必在一起|张杰\r\n这首歌由梁晓雪作曲、李焯雄填词，收录于张杰2009年发行的专辑《穿越三部曲》中。创作背景源于对爱情中“强求”与“放手”的思考，歌词直接而痛彻地探讨了当感情已无法挽回时，勉强在一起只会让彼此更受伤的现实。主题核心在于“既然爱已不在，不如潇洒放手”，那句“何必在一起，其实我们都没有错”道出了许多人在感情尽头的心声。音乐风格上，歌曲采用流行摇滚的编曲，以电吉他的失真音色和有力的鼓点营造出强烈的情绪张力，张杰的演唱从低吟到高亢，极具爆发力。整首歌表达的情感是复杂而决绝的，既有对过往的无奈与痛楚，也有一种“长痛不如短痛”的清醒与释然，激励听者在面对破碎感情时学会勇敢告别。\n\n张杰|\r\n歌手: 张杰\n\n张杰是中国内地著名男歌手，1982年12月20日出生于中国四川成都。华语歌坛新生代领军人物，偶像与实力兼具的超人气天王。\n\n【出道经历】2004年参加东方卫视《我型我秀》获得全国总冠军而正式出道。2007年参加湖南卫视《快乐男声》获得全国第四名，人气急剧上升。\n\n【音乐成就】至今已发行10余张高品质唱片，唱片销量称冠内地群雄。2008年以来举办过多场爆满的个人演唱会。在各大权威音乐奖项中先后获得多次\"最受欢迎男歌手\"称号，2012年度中国TOP排行榜内地最佳男歌手。2010年在韩国M-net亚洲音乐大赏(MAMA)上获得\"亚洲之星\"(Best Asian Artist)大奖，影响力触及海外。\n\n【代表作品】《仰望星空》《他不懂》《天下》《逆战》《剑心》《我们都一样》《这就是爱》《勿忘心安》等。\n\n【音乐风格】以抒情流行为主，嗓音高亢清澈、极具穿透力，擅长通过高音和转音表达强烈情感。歌曲主题多为励志、爱情、梦想，是中国\"正能量\"音乐的代表人物之一。\n\n【粉丝文化】张杰的粉丝名为\"星星\"，他多次在音乐创作中融入与粉丝的情感，如《仰望星空》由粉丝参与副歌和声录制。他的演唱会以\"星星\"荧光海闻名。\n\n【音乐风格】抒情流行，旋律温暖真挚而不高亢激昂。张杰的嗓音深情婉转、高亢清澈，歌迷的和声质朴真诚，副歌部分的合唱起到画龙点睛的作用。这首歌后来成为很多学校的班歌，在各类励志场合广为播放。\n\n张杰-天下|张杰\r\n《天下》是张杰2008年发行的专辑《明天过后》中的歌曲，由周毅作词，刘吉宁作曲，周火和刘吉宁编曲。获2008年度MusicRadio中国TOP排行榜年度金曲奖。\n\n【创作背景】2007年张杰与好友刘吉宁成功合作《最美的太阳》后，2008年筹备专辑时继续与刘吉宁合作。张杰希望尝试不同风格的歌曲，特别想唱一首既有柔情又带有\"袖手天下\"古代帝王霸气的歌曲，希望传递\"每个人经过打拼都能拥有属于自己一片天地\"的自信。2008年7月26日张杰在杭州个人演唱会上首次演唱该曲。\n\n【主题含义】歌曲讲述了一个\"不爱江山爱美人\"的侠骨柔情故事：一代君王邂逅心爱女子，因身份所限无法相守，宁愿\"抛去江山如画，换她笑面如花\"、\"只为她，袖手天下\"。从壮志凌云到儿女情长，完整展现了为爱放弃权势的决绝与深情，同时隐含\"自信拼搏、闯出自己天地\"的励志寓意。"
+  } ],
+  "stream" : false,
+  "tools" : [ {
+    "type" : "function",
+    "function" : {
+      "name" : "nextSong",
+      "description" : "下一首",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getRankList",
+      "description" : "获取排行榜：type 可选 day(日榜)、week(周榜)、month(月榜)，默认 day",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "type" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "pausePlayback",
+      "description" : "暂停播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "resumePlayback",
+      "description" : "继续播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongListByStyle",
+      "description" : "搜索歌单（仅搜索歌单列表，不播放歌曲）：根据风格关键词搜索歌单，如'伤感'、'摇滚'、'古风'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "style" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "style" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongsBySinger",
+      "description" : "根据歌手名搜索：搜索指定歌手的所有歌曲。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "setVolume",
+      "description" : "设置音量：volume 取值范围 0-100",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "volume" : {
+            "type" : "integer"
+          }
+        },
+        "required" : [ "volume" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getSongLists",
+      "description" : "获取所有歌单列表，返回歌单名称、风格和ID",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSingers",
+      "description" : "搜索歌手信息：根据歌手名搜索，返回歌手基本信息",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "playSong",
+      "description" : "播放歌曲：用户说'播放XX'时调用此工具。自动搜索并播放，无需先调用搜索工具。songName 为必填的歌名。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "songName" : {
+            "type" : "string"
+          },
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "songName", "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongs",
+      "description" : "搜索歌曲（仅搜索，不播放）：根据歌名关键词在数据库中搜索匹配的歌曲。用户想搜索/查找歌曲时用，想播放时用 playSong。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "recommendSongs",
+      "description" : "推荐歌曲：根据用户的心情或场景推荐热门歌曲，mood 如'开心'、'伤感'、'放松'、'励志'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "mood" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "mood" ]
+      }
+    }
+  } ]
+}
+
+2026-06-22 20:58:49 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP response:
+- status code: 200
+- headers: [:status: 200], [access-control-allow-credentials: true], [age: 0], [content-type: application/json], [date: Mon, 22 Jun 2026 12:58:46 GMT], [eo-cache-status: MISS], [eo-log-uuid: 7033164152609328079], [server: openresty], [strict-transport-security: max-age=31536000; includeSubDomains; preload], [vary: origin, access-control-request-method, access-control-request-headers], [x-content-type-options: nosniff], [x-ds-trace-id: cc86b404c71baf60921fbb4874dd5f8b]
+- body: {"id":"927dc504-261c-4814-be01-bba3e87c6c55","object":"chat.completion","created":1782133126,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"小音来啦！🎵 关于张杰的《何必在一起》，这可是一首非常有故事感的作品哦～\n\n这首歌收录在张杰2009年的专辑《穿越三部曲》中，由梁晓雪作曲、李焯雄填词。它的创作背景源于对爱情中“强求”与“放手”的思考，歌词直击人心，探讨的是当感情已无法挽回时，勉强在一起只会让彼此更受伤的现实。\n\n**核心主题**就是那句经典歌词——**“何必在一起，其实我们都没有错”**。它道出了许多人在感情尽头的心声：既然爱已不在，不如潇洒放手。整首歌的情绪是复杂而决绝的，既有对过往的无奈与痛楚，也有一种“长痛不如短痛”的清醒与释然。\n\n从音乐风格上来说，这首歌采用了**流行摇滚**的编曲，电吉他的失真音色和有力的鼓点营造出强烈的情绪张力。张杰的演唱从**低吟浅唱到高亢爆发**，极具感染力，把那种不舍又必须放手的矛盾情感表达得淋漓尽致！\n\n**总之呢**，这是一首很适合在夜深人静时听的\"治愈系伤感歌\"，能让人在歌声中找到释然的勇气。🎧\n\n要不要我现在就放给你听？😊"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1923,"completion_tokens":272,"total_tokens":2195,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":1923},"system_fingerprint":"fp_8b330d02d0_prod0820_fp8_kvcache_20260402"}
+
+2026-06-22 20:58:49 INFO [com.example.yin.service.impl.AiServiceImpl]: Agent 回复: 小音来啦！🎵 关于张杰的《何必在一起》，这可是一首非常有故事感的作品哦～
+
+这首歌收录在张杰2009年的专辑《穿越三部曲》中，由梁晓雪作曲、李焯雄填词。它的创作背景源于对爱情中“强求”与“放手”的思考，歌词直击人心，探讨的是当感情已无法挽回时，勉强在一起只会让彼此更受伤的现实。
+
+**核心主题**就是那句经典歌词——**“何必在一起，其实我们都没有错”**。它道出了许多人在感情尽头的心声：既然爱已不在，不如潇洒放手。整首歌的情绪是复杂而决绝的，既有对过往的无奈与痛楚，也有一种“长痛不如短痛”的清醒与释然。
+
+从音乐风格上来说，这首歌采用了**流行摇滚**的编曲，电吉他的失真音色和有力的鼓点营造出强烈的情绪张力。张杰的演唱从**低吟浅唱到高亢爆发**，极具感染力，把那种不舍又必须放手的矛盾情感表达得淋漓尽致！
+
+**总之呢**，这是一首很适合在夜深人静时听的"治愈系伤感歌"，能让人在歌声中找到释然的勇气。🎧
+
+要不要我现在就放给你听？😊
+2026-06-22 20:59:08 INFO [com.example.yin.service.impl.AiServiceImpl]: 用户 [u-64b21eaf-9859-433f-8d4e-c246925e6ac1] 消息: 放
+2026-06-22 20:59:08 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP request:
+- method: POST
+- url: https://api.deepseek.com/chat/completions
+- headers: [Authorization: Beare...5f], [User-Agent: langchain4j-openai], [Content-Type: application/json]
+- body: {
+  "model" : "deepseek-chat",
+  "messages" : [ {
+    "role" : "system",
+    "content" : "你是音乐助手\"小音\"，拥有音乐知识库，可回答创作背景、歌词含义等。\n\n工具：\n- searchSongs / searchSongsBySinger：搜索歌曲/歌手\n- getRankList：排行榜\n- getSongLists / searchSongListByStyle：浏览歌单\n- searchSingers：搜索歌手信息\n- recommendSongs：推荐歌曲\n- playSong(songName)：播放歌曲（用户说\"播放XX\"时直接调用）\n- pausePlayback / resumePlayback / nextSong / setVolume：播放控制\n\n规则：\n- 用户说\"播放XX\"，直接调用 playSong，调用后告知用户即可。\n- 推荐歌曲列3-5首并简介，等用户选择后再播放。\n- 只回答音乐相关问题，中文，语气温暖。\n"
+  }, {
+    "role" : "user",
+    "content" : "放\n\nAnswer using the following information:\n【音乐风格】周杰伦自评\"这首歌曲让创作回到根本，用最简单的音乐与歌词来表达励志之意\"。被形容为\"周式疗伤嘻哈民谣风\"——融合民谣吉他与嘻哈饶舌，前奏蟋蟀声营造夏日稻田的沉浸感，编曲清新质朴，是周杰伦2000年代末期最具人文情怀的歌曲之一。\n\n【个人特质】以幽默风趣著称，舞台上充满活力，被誉为\"行走的CD\"——意指现场演唱水准与录音室无异。\n\n张杰-何必在一起|张杰\r\n这首歌由梁晓雪作曲、李焯雄填词，收录于张杰2009年发行的专辑《穿越三部曲》中。创作背景源于对爱情中“强求”与“放手”的思考，歌词直接而痛彻地探讨了当感情已无法挽回时，勉强在一起只会让彼此更受伤的现实。主题核心在于“既然爱已不在，不如潇洒放手”，那句“何必在一起，其实我们都没有错”道出了许多人在感情尽头的心声。音乐风格上，歌曲采用流行摇滚的编曲，以电吉他的失真音色和有力的鼓点营造出强烈的情绪张力，张杰的演唱从低吟到高亢，极具爆发力。整首歌表达的情感是复杂而决绝的，既有对过往的无奈与痛楚，也有一种“长痛不如短痛”的清醒与释然，激励听者在面对破碎感情时学会勇敢告别。\n\n杨宗纬-多余|杨宗纬\r\n《多余》是台湾歌手杨宗纬演唱的一首抒情歌曲，收录于他2011年发行的专辑《原色》中，由李宗盛作词、周国仪作曲。歌曲创作背景源于对情感关系中“错位感”的探讨——当一段感情走到尽头，曾经的付出与回忆反而成为累赘，显得“多余”。歌词以直白而克制的笔触，描绘了分手后一方试图挽留、另一方却决意离开的无奈场景，如“我是你生命中的多余，还是你遗忘的风景”等句，深刻揭示了爱而不得的苦涩。风格上，这是一首典型的“杨式情歌”，以钢琴和弦乐铺陈出深沉而哀婉的基调，杨宗纬独特的沙哑嗓音在低音区充满叙事感，高音区则爆发力十足，将压抑的痛楚层层推进。歌曲表达的情感复杂而真实：既有对逝去爱情的眷恋，也有对自身处境的清醒认知，最终在“多余”的自嘲中，透露出一种隐忍的释怀。\n\n【社会影响】作为90后华语女歌手的领军人物，她在社交媒体拥有数千万粉丝，是年轻一代的音乐偶像和榜样。"
+  } ],
+  "stream" : false,
+  "tools" : [ {
+    "type" : "function",
+    "function" : {
+      "name" : "nextSong",
+      "description" : "下一首",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getRankList",
+      "description" : "获取排行榜：type 可选 day(日榜)、week(周榜)、month(月榜)，默认 day",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "type" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "pausePlayback",
+      "description" : "暂停播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "resumePlayback",
+      "description" : "继续播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongListByStyle",
+      "description" : "搜索歌单（仅搜索歌单列表，不播放歌曲）：根据风格关键词搜索歌单，如'伤感'、'摇滚'、'古风'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "style" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "style" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongsBySinger",
+      "description" : "根据歌手名搜索：搜索指定歌手的所有歌曲。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "setVolume",
+      "description" : "设置音量：volume 取值范围 0-100",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "volume" : {
+            "type" : "integer"
+          }
+        },
+        "required" : [ "volume" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getSongLists",
+      "description" : "获取所有歌单列表，返回歌单名称、风格和ID",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSingers",
+      "description" : "搜索歌手信息：根据歌手名搜索，返回歌手基本信息",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "playSong",
+      "description" : "播放歌曲：用户说'播放XX'时调用此工具。自动搜索并播放，无需先调用搜索工具。songName 为必填的歌名。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "songName" : {
+            "type" : "string"
+          },
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "songName", "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongs",
+      "description" : "搜索歌曲（仅搜索，不播放）：根据歌名关键词在数据库中搜索匹配的歌曲。用户想搜索/查找歌曲时用，想播放时用 playSong。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "recommendSongs",
+      "description" : "推荐歌曲：根据用户的心情或场景推荐热门歌曲，mood 如'开心'、'伤感'、'放松'、'励志'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "mood" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "mood" ]
+      }
+    }
+  } ]
+}
+
+2026-06-22 20:59:10 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP response:
+- status code: 200
+- headers: [:status: 200], [access-control-allow-credentials: true], [age: 0], [content-type: application/json], [date: Mon, 22 Jun 2026 12:59:08 GMT], [eo-cache-status: MISS], [eo-log-uuid: 17841960689900194495], [server: openresty], [strict-transport-security: max-age=31536000; includeSubDomains; preload], [vary: origin, access-control-request-method, access-control-request-headers], [x-content-type-options: nosniff], [x-ds-trace-id: 552a5cac0d26d2b0bdbabb4e63126775]
+- body: {"id":"c3e9b0b4-af05-46a1-9c39-8253ed36bca8","object":"chat.completion","created":1782133148,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"好的，你想让我播放哪一首歌呢？我这里有：\n\n1. **张杰 - 《何必在一起》** 🎵 一首探讨感情放手与释然的流行摇滚，情绪张力十足！\n2. **杨宗纬 - 《多余》** 🎵 深沉的抒情情歌，唱出爱而不得的苦涩与释怀。\n\n你想听哪一首？或者你有其他想听的歌，直接告诉我“播放XXX”就行哦~ 😊"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1683,"completion_tokens":97,"total_tokens":1780,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":1683},"system_fingerprint":"fp_8b330d02d0_prod0820_fp8_kvcache_20260402"}
+
+2026-06-22 20:59:10 INFO [com.example.yin.service.impl.AiServiceImpl]: Agent 回复: 好的，你想让我播放哪一首歌呢？我这里有：
+
+1. **张杰 - 《何必在一起》** 🎵 一首探讨感情放手与释然的流行摇滚，情绪张力十足！
+2. **杨宗纬 - 《多余》** 🎵 深沉的抒情情歌，唱出爱而不得的苦涩与释怀。
+
+你想听哪一首？或者你有其他想听的歌，直接告诉我“播放XXX”就行哦~ 😊
+2026-06-22 20:59:20 INFO [com.example.yin.service.impl.AiServiceImpl]: 用户 [u-64b21eaf-9859-433f-8d4e-c246925e6ac1] 消息: 何必在一起
+2026-06-22 20:59:20 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP request:
+- method: POST
+- url: https://api.deepseek.com/chat/completions
+- headers: [Authorization: Beare...5f], [User-Agent: langchain4j-openai], [Content-Type: application/json]
+- body: {
+  "model" : "deepseek-chat",
+  "messages" : [ {
+    "role" : "system",
+    "content" : "你是音乐助手\"小音\"，拥有音乐知识库，可回答创作背景、歌词含义等。\n\n工具：\n- searchSongs / searchSongsBySinger：搜索歌曲/歌手\n- getRankList：排行榜\n- getSongLists / searchSongListByStyle：浏览歌单\n- searchSingers：搜索歌手信息\n- recommendSongs：推荐歌曲\n- playSong(songName)：播放歌曲（用户说\"播放XX\"时直接调用）\n- pausePlayback / resumePlayback / nextSong / setVolume：播放控制\n\n规则：\n- 用户说\"播放XX\"，直接调用 playSong，调用后告知用户即可。\n- 推荐歌曲列3-5首并简介，等用户选择后再播放。\n- 只回答音乐相关问题，中文，语气温暖。\n"
+  }, {
+    "role" : "user",
+    "content" : "何必在一起\n\nAnswer using the following information:\n张杰-何必在一起|张杰\r\n这首歌由梁晓雪作曲、李焯雄填词，收录于张杰2009年发行的专辑《穿越三部曲》中。创作背景源于对爱情中“强求”与“放手”的思考，歌词直接而痛彻地探讨了当感情已无法挽回时，勉强在一起只会让彼此更受伤的现实。主题核心在于“既然爱已不在，不如潇洒放手”，那句“何必在一起，其实我们都没有错”道出了许多人在感情尽头的心声。音乐风格上，歌曲采用流行摇滚的编曲，以电吉他的失真音色和有力的鼓点营造出强烈的情绪张力，张杰的演唱从低吟到高亢，极具爆发力。整首歌表达的情感是复杂而决绝的，既有对过往的无奈与痛楚，也有一种“长痛不如短痛”的清醒与释然，激励听者在面对破碎感情时学会勇敢告别。\n\n林俊杰-关键词|林俊杰\r\n《关键词》是林俊杰2015年专辑《和自己对话》中的歌曲，由林俊杰作曲，林怡凤作词。\n\n【创作背景】这首歌的创作灵感来源于林俊杰对\"爱\"这一抽象概念的具象化思考。他试图用音乐捕捉那些能瞬间唤起情感共鸣的\"关键词\"——如\"眼泪\"、\"拥抱\"、\"永远\"等。这首歌也是林俊杰\"人头录音\"实验专辑《和自己对话》中的重要作品，该专辑首创华语流行音乐使用假人头麦克风录音，让听众获得如同置身现场的3D听觉体验。\n\n【主题含义】歌词以\"你是我的关键词\"为核心意象，将恋人比作生命中不可或缺的密码。\"你在我心里留下了一首歌\"等诗意表达，诠释了爱情如何成为理解自我与世界的钥匙。在不同的关系阶段，\"关键词\"可能是初恋时的心跳声、热恋时的\"我爱你\"，或分手后的\"谢谢你\"。\n\n【音乐风格】流行与R&B融合，轻快的电子合成器音色和律动感十足的鼓点打底，副歌部分旋律上扬且朗朗上口。林俊杰温暖声线和标志性转音技巧充分展现，整首歌情感明亮而坚定——在纷繁复杂的世界里，爱就是那个能解锁一切美好的\"关键词\"。\n\n陈奕迅-不要说话|陈奕迅\r\n这首歌曲由小柯作词作曲，收录于陈奕迅2008年发行的专辑《不想放手》中。创作背景源于对现代人情感表达困境的观察——人们往往在深爱时反而沉默，用行动而非言语传递心意。歌词以“爱一个人是不是应该有默契”开篇，探讨了“沉默之爱”的主题：真正的爱无需多言，一个眼神、一个动作便能心意相通，但沉默也可能成为误解的源头。歌曲风格以钢琴为主导的抒情慢板，陈奕迅标志性的低沉嗓音缓缓铺陈，副歌部分旋律层层递进，营造出克制而深情的氛围。整首歌表达的情感复杂而细腻，既有暗恋者不敢言说的忐忑，也有对纯粹情感的向往，最终落点在“愿意用一支黑色的铅笔，画一出沉默舞台剧”的温柔守护上，令人动容。\n\n陈奕迅 + 王菲-因为爱情|陈奕迅\r\n这首歌由小柯作词作曲，是2011年电影《将爱情进行到底》的主题曲。创作背景与电影剧情紧密相连——影片讲述了大学恋人多年后的重逢与选择，歌曲正是对“爱情能否经得起时间考验”这一命题的回应。歌词以“因为爱情，不会轻易悲伤”开篇，用平实的语言描绘了爱情在岁月中的沉淀与变化，既有对青春回忆的温暖，也有对现实无奈的感慨。风格上，歌曲采用舒缓的流行抒情编曲，以钢琴和吉他为主，营造出简约而深情的氛围。陈奕迅低沉磁性的嗓音与王菲空灵清澈的声线交织，形成了极具层次感的情感对话。整首歌表达的情感是复杂而真挚的，它既是对纯真爱情的怀念与致敬，也承认了爱情随时间流逝可能产生的疏离与遗憾，但最终落点在“依然随时可以为你疯狂”的执着上，令人听后既感动又唏嘘。\n\n【社会影响】作为90后华语女歌手的领军人物，她在社交媒体拥有数千万粉丝，是年轻一代的音乐偶像和榜样。"
+  } ],
+  "stream" : false,
+  "tools" : [ {
+    "type" : "function",
+    "function" : {
+      "name" : "nextSong",
+      "description" : "下一首",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getRankList",
+      "description" : "获取排行榜：type 可选 day(日榜)、week(周榜)、month(月榜)，默认 day",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "type" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "pausePlayback",
+      "description" : "暂停播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "resumePlayback",
+      "description" : "继续播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongListByStyle",
+      "description" : "搜索歌单（仅搜索歌单列表，不播放歌曲）：根据风格关键词搜索歌单，如'伤感'、'摇滚'、'古风'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "style" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "style" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongsBySinger",
+      "description" : "根据歌手名搜索：搜索指定歌手的所有歌曲。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "setVolume",
+      "description" : "设置音量：volume 取值范围 0-100",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "volume" : {
+            "type" : "integer"
+          }
+        },
+        "required" : [ "volume" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getSongLists",
+      "description" : "获取所有歌单列表，返回歌单名称、风格和ID",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSingers",
+      "description" : "搜索歌手信息：根据歌手名搜索，返回歌手基本信息",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "playSong",
+      "description" : "播放歌曲：用户说'播放XX'时调用此工具。自动搜索并播放，无需先调用搜索工具。songName 为必填的歌名。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "songName" : {
+            "type" : "string"
+          },
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "songName", "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongs",
+      "description" : "搜索歌曲（仅搜索，不播放）：根据歌名关键词在数据库中搜索匹配的歌曲。用户想搜索/查找歌曲时用，想播放时用 playSong。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "recommendSongs",
+      "description" : "推荐歌曲：根据用户的心情或场景推荐热门歌曲，mood 如'开心'、'伤感'、'放松'、'励志'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "mood" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "mood" ]
+      }
+    }
+  } ]
+}
+
+2026-06-22 20:59:23 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP response:
+- status code: 200
+- headers: [:status: 200], [access-control-allow-credentials: true], [age: 0], [content-type: application/json], [date: Mon, 22 Jun 2026 12:59:20 GMT], [eo-cache-status: MISS], [eo-log-uuid: 9602126187639937100], [server: openresty], [strict-transport-security: max-age=31536000; includeSubDomains; preload], [vary: origin, access-control-request-method, access-control-request-headers], [x-content-type-options: nosniff], [x-ds-trace-id: 4bfee1a341ca15bbebae1d8548553835]
+- body: {"id":"96b1b6dd-8def-4d0b-a969-0df3b42d91d6","object":"chat.completion","created":1782133160,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"我看到你在搜索\"何必在一起\"，这首歌是**张杰**的经典作品，我来为你详细介绍一下～🎵\n\n---\n\n## 🎤 歌曲信息\n\n**歌名：** 《何必在一起》\n**歌手：** 张杰\n**收录专辑：** 《穿越三部曲》（2009年发行）\n\n---\n\n## 📝 创作背景与歌词含义\n\n这首歌由**梁晓雪作曲、李焯雄填词**，创作灵感源于对爱情中\"强求\"与\"放手\"的深刻思考。\n\n**主题核心：** 当感情已经无法挽回时，勉强在一起只会让彼此更受伤。正如那句直击人心的歌词——**\"何必在一起，其实我们都没有错\"**，道出了许多人在感情尽头的心声。\n\n✨ **歌曲想传达的是：** 既然爱已不在，不如潇洒放手。这是一种\"长痛不如短痛\"的清醒与释然，激励听者在面对破碎感情时学会勇敢告别。\n\n## 🎶 音乐风格\n\n采用**流行摇滚**编曲，电吉他的失真音色搭配有力的鼓点，营造出强烈的情绪张力。张杰的演唱从低吟到高亢，极具爆发力，将那种复杂而决绝的情感展现得淋漓尽致。\n\n---\n\n要不要我帮你**播放这首歌**？或者你还想了解张杰的其他歌曲吗？😊"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":2030,"completion_tokens":282,"total_tokens":2312,"prompt_tokens_details":{"cached_tokens":1024},"prompt_cache_hit_tokens":1024,"prompt_cache_miss_tokens":1006},"system_fingerprint":"fp_8b330d02d0_prod0820_fp8_kvcache_20260402"}
+
+2026-06-22 20:59:23 INFO [com.example.yin.service.impl.AiServiceImpl]: Agent 回复: 我看到你在搜索"何必在一起"，这首歌是**张杰**的经典作品，我来为你详细介绍一下～🎵
+
+---
+
+## 🎤 歌曲信息
+
+**歌名：** 《何必在一起》
+**歌手：** 张杰
+**收录专辑：** 《穿越三部曲》（2009年发行）
+
+---
+
+## 📝 创作背景与歌词含义
+
+这首歌由**梁晓雪作曲、李焯雄填词**，创作灵感源于对爱情中"强求"与"放手"的深刻思考。
+
+**主题核心：** 当感情已经无法挽回时，勉强在一起只会让彼此更受伤。正如那句直击人心的歌词——**"何必在一起，其实我们都没有错"**，道出了许多人在感情尽头的心声。
+
+✨ **歌曲想传达的是：** 既然爱已不在，不如潇洒放手。这是一种"长痛不如短痛"的清醒与释然，激励听者在面对破碎感情时学会勇敢告别。
+
+## 🎶 音乐风格
+
+采用**流行摇滚**编曲，电吉他的失真音色搭配有力的鼓点，营造出强烈的情绪张力。张杰的演唱从低吟到高亢，极具爆发力，将那种复杂而决绝的情感展现得淋漓尽致。
+
+---
+
+要不要我帮你**播放这首歌**？或者你还想了解张杰的其他歌曲吗？😊
+2026-06-22 20:59:35 INFO [com.example.yin.service.impl.AiServiceImpl]: 用户 [u-64b21eaf-9859-433f-8d4e-c246925e6ac1] 消息: 播放何必在一起
+2026-06-22 20:59:35 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP request:
+- method: POST
+- url: https://api.deepseek.com/chat/completions
+- headers: [Authorization: Beare...5f], [User-Agent: langchain4j-openai], [Content-Type: application/json]
+- body: {
+  "model" : "deepseek-chat",
+  "messages" : [ {
+    "role" : "system",
+    "content" : "你是音乐助手\"小音\"，拥有音乐知识库，可回答创作背景、歌词含义等。\n\n工具：\n- searchSongs / searchSongsBySinger：搜索歌曲/歌手\n- getRankList：排行榜\n- getSongLists / searchSongListByStyle：浏览歌单\n- searchSingers：搜索歌手信息\n- recommendSongs：推荐歌曲\n- playSong(songName)：播放歌曲（用户说\"播放XX\"时直接调用）\n- pausePlayback / resumePlayback / nextSong / setVolume：播放控制\n\n规则：\n- 用户说\"播放XX\"，直接调用 playSong，调用后告知用户即可。\n- 推荐歌曲列3-5首并简介，等用户选择后再播放。\n- 只回答音乐相关问题，中文，语气温暖。\n"
+  }, {
+    "role" : "user",
+    "content" : "播放何必在一起\n\nAnswer using the following information:\n张杰-何必在一起|张杰\r\n这首歌由梁晓雪作曲、李焯雄填词，收录于张杰2009年发行的专辑《穿越三部曲》中。创作背景源于对爱情中“强求”与“放手”的思考，歌词直接而痛彻地探讨了当感情已无法挽回时，勉强在一起只会让彼此更受伤的现实。主题核心在于“既然爱已不在，不如潇洒放手”，那句“何必在一起，其实我们都没有错”道出了许多人在感情尽头的心声。音乐风格上，歌曲采用流行摇滚的编曲，以电吉他的失真音色和有力的鼓点营造出强烈的情绪张力，张杰的演唱从低吟到高亢，极具爆发力。整首歌表达的情感是复杂而决绝的，既有对过往的无奈与痛楚，也有一种“长痛不如短痛”的清醒与释然，激励听者在面对破碎感情时学会勇敢告别。\n\n【个人特质】以幽默风趣著称，舞台上充满活力，被誉为\"行走的CD\"——意指现场演唱水准与录音室无异。\n\n【社会影响】作为90后华语女歌手的领军人物，她在社交媒体拥有数千万粉丝，是年轻一代的音乐偶像和榜样。\n\n【粉丝文化】张杰的粉丝名为\"星星\"，他多次在音乐创作中融入与粉丝的情感，如《仰望星空》由粉丝参与副歌和声录制。他的演唱会以\"星星\"荧光海闻名。\n\n陈奕迅-不要说话|陈奕迅\r\n这首歌曲由小柯作词作曲，收录于陈奕迅2008年发行的专辑《不想放手》中。创作背景源于对现代人情感表达困境的观察——人们往往在深爱时反而沉默，用行动而非言语传递心意。歌词以“爱一个人是不是应该有默契”开篇，探讨了“沉默之爱”的主题：真正的爱无需多言，一个眼神、一个动作便能心意相通，但沉默也可能成为误解的源头。歌曲风格以钢琴为主导的抒情慢板，陈奕迅标志性的低沉嗓音缓缓铺陈，副歌部分旋律层层递进，营造出克制而深情的氛围。整首歌表达的情感复杂而细腻，既有暗恋者不敢言说的忐忑，也有对纯粹情感的向往，最终落点在“愿意用一支黑色的铅笔，画一出沉默舞台剧”的温柔守护上，令人动容。"
+  } ],
+  "stream" : false,
+  "tools" : [ {
+    "type" : "function",
+    "function" : {
+      "name" : "nextSong",
+      "description" : "下一首",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getRankList",
+      "description" : "获取排行榜：type 可选 day(日榜)、week(周榜)、month(月榜)，默认 day",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "type" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "pausePlayback",
+      "description" : "暂停播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "resumePlayback",
+      "description" : "继续播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongListByStyle",
+      "description" : "搜索歌单（仅搜索歌单列表，不播放歌曲）：根据风格关键词搜索歌单，如'伤感'、'摇滚'、'古风'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "style" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "style" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongsBySinger",
+      "description" : "根据歌手名搜索：搜索指定歌手的所有歌曲。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "setVolume",
+      "description" : "设置音量：volume 取值范围 0-100",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "volume" : {
+            "type" : "integer"
+          }
+        },
+        "required" : [ "volume" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getSongLists",
+      "description" : "获取所有歌单列表，返回歌单名称、风格和ID",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSingers",
+      "description" : "搜索歌手信息：根据歌手名搜索，返回歌手基本信息",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "playSong",
+      "description" : "播放歌曲：用户说'播放XX'时调用此工具。自动搜索并播放，无需先调用搜索工具。songName 为必填的歌名。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "songName" : {
+            "type" : "string"
+          },
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "songName", "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongs",
+      "description" : "搜索歌曲（仅搜索，不播放）：根据歌名关键词在数据库中搜索匹配的歌曲。用户想搜索/查找歌曲时用，想播放时用 playSong。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "recommendSongs",
+      "description" : "推荐歌曲：根据用户的心情或场景推荐热门歌曲，mood 如'开心'、'伤感'、'放松'、'励志'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "mood" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "mood" ]
+      }
+    }
+  } ]
+}
+
+2026-06-22 20:59:36 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP response:
+- status code: 200
+- headers: [:status: 200], [access-control-allow-credentials: true], [age: 0], [content-type: application/json], [date: Mon, 22 Jun 2026 12:59:35 GMT], [eo-cache-status: MISS], [eo-log-uuid: 15265625862256293840], [server: openresty], [strict-transport-security: max-age=31536000; includeSubDomains; preload], [vary: origin, access-control-request-method, access-control-request-headers], [x-content-type-options: nosniff], [x-ds-trace-id: a69266e977bd06b3402f53166ec2dd40]
+- body: {"id":"76ebcb81-d44b-40d0-93b7-3ecaf239a11b","object":"chat.completion","created":1782133175,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"好的，马上为你播放张杰的《何必在一起》！🎵","tool_calls":[{"index":0,"id":"call_00_JrRm7IWXZ7ykIskSNz4C6109","type":"function","function":{"name":"playSong","arguments":"{\"songName\": \"何必在一起\", \"singerName\": \"张杰\"}"}}]},"logprobs":null,"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":1604,"completion_tokens":79,"total_tokens":1683,"prompt_tokens_details":{"cached_tokens":1024},"prompt_cache_hit_tokens":1024,"prompt_cache_miss_tokens":580},"system_fingerprint":"fp_8b330d02d0_prod0820_fp8_kvcache_20260402"}
+
+2026-06-22 20:59:36 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP request:
+- method: POST
+- url: https://api.deepseek.com/chat/completions
+- headers: [Authorization: Beare...5f], [User-Agent: langchain4j-openai], [Content-Type: application/json]
+- body: {
+  "model" : "deepseek-chat",
+  "messages" : [ {
+    "role" : "system",
+    "content" : "你是音乐助手\"小音\"，拥有音乐知识库，可回答创作背景、歌词含义等。\n\n工具：\n- searchSongs / searchSongsBySinger：搜索歌曲/歌手\n- getRankList：排行榜\n- getSongLists / searchSongListByStyle：浏览歌单\n- searchSingers：搜索歌手信息\n- recommendSongs：推荐歌曲\n- playSong(songName)：播放歌曲（用户说\"播放XX\"时直接调用）\n- pausePlayback / resumePlayback / nextSong / setVolume：播放控制\n\n规则：\n- 用户说\"播放XX\"，直接调用 playSong，调用后告知用户即可。\n- 推荐歌曲列3-5首并简介，等用户选择后再播放。\n- 只回答音乐相关问题，中文，语气温暖。\n"
+  }, {
+    "role" : "user",
+    "content" : "播放何必在一起\n\nAnswer using the following information:\n张杰-何必在一起|张杰\r\n这首歌由梁晓雪作曲、李焯雄填词，收录于张杰2009年发行的专辑《穿越三部曲》中。创作背景源于对爱情中“强求”与“放手”的思考，歌词直接而痛彻地探讨了当感情已无法挽回时，勉强在一起只会让彼此更受伤的现实。主题核心在于“既然爱已不在，不如潇洒放手”，那句“何必在一起，其实我们都没有错”道出了许多人在感情尽头的心声。音乐风格上，歌曲采用流行摇滚的编曲，以电吉他的失真音色和有力的鼓点营造出强烈的情绪张力，张杰的演唱从低吟到高亢，极具爆发力。整首歌表达的情感是复杂而决绝的，既有对过往的无奈与痛楚，也有一种“长痛不如短痛”的清醒与释然，激励听者在面对破碎感情时学会勇敢告别。\n\n【个人特质】以幽默风趣著称，舞台上充满活力，被誉为\"行走的CD\"——意指现场演唱水准与录音室无异。\n\n【社会影响】作为90后华语女歌手的领军人物，她在社交媒体拥有数千万粉丝，是年轻一代的音乐偶像和榜样。\n\n【粉丝文化】张杰的粉丝名为\"星星\"，他多次在音乐创作中融入与粉丝的情感，如《仰望星空》由粉丝参与副歌和声录制。他的演唱会以\"星星\"荧光海闻名。\n\n陈奕迅-不要说话|陈奕迅\r\n这首歌曲由小柯作词作曲，收录于陈奕迅2008年发行的专辑《不想放手》中。创作背景源于对现代人情感表达困境的观察——人们往往在深爱时反而沉默，用行动而非言语传递心意。歌词以“爱一个人是不是应该有默契”开篇，探讨了“沉默之爱”的主题：真正的爱无需多言，一个眼神、一个动作便能心意相通，但沉默也可能成为误解的源头。歌曲风格以钢琴为主导的抒情慢板，陈奕迅标志性的低沉嗓音缓缓铺陈，副歌部分旋律层层递进，营造出克制而深情的氛围。整首歌表达的情感复杂而细腻，既有暗恋者不敢言说的忐忑，也有对纯粹情感的向往，最终落点在“愿意用一支黑色的铅笔，画一出沉默舞台剧”的温柔守护上，令人动容。"
+  }, {
+    "role" : "assistant",
+    "content" : "好的，马上为你播放张杰的《何必在一起》！🎵",
+    "tool_calls" : [ {
+      "id" : "call_00_JrRm7IWXZ7ykIskSNz4C6109",
+      "type" : "function",
+      "function" : {
+        "name" : "playSong",
+        "arguments" : "{\"songName\": \"何必在一起\", \"singerName\": \"张杰\"}"
+      }
+    } ]
+  }, {
+    "role" : "tool",
+    "tool_call_id" : "call_00_JrRm7IWXZ7ykIskSNz4C6109",
+    "content" : "已找到「张杰-何必在一起」- 张杰，系统已自动为用户播放，你只需要告知用户正在播放即可。"
+  } ],
+  "stream" : false,
+  "tools" : [ {
+    "type" : "function",
+    "function" : {
+      "name" : "nextSong",
+      "description" : "下一首",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getRankList",
+      "description" : "获取排行榜：type 可选 day(日榜)、week(周榜)、month(月榜)，默认 day",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "type" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "pausePlayback",
+      "description" : "暂停播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "resumePlayback",
+      "description" : "继续播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongListByStyle",
+      "description" : "搜索歌单（仅搜索歌单列表，不播放歌曲）：根据风格关键词搜索歌单，如'伤感'、'摇滚'、'古风'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "style" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "style" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongsBySinger",
+      "description" : "根据歌手名搜索：搜索指定歌手的所有歌曲。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "setVolume",
+      "description" : "设置音量：volume 取值范围 0-100",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "volume" : {
+            "type" : "integer"
+          }
+        },
+        "required" : [ "volume" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getSongLists",
+      "description" : "获取所有歌单列表，返回歌单名称、风格和ID",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSingers",
+      "description" : "搜索歌手信息：根据歌手名搜索，返回歌手基本信息",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "playSong",
+      "description" : "播放歌曲：用户说'播放XX'时调用此工具。自动搜索并播放，无需先调用搜索工具。songName 为必填的歌名。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "songName" : {
+            "type" : "string"
+          },
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "songName", "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongs",
+      "description" : "搜索歌曲（仅搜索，不播放）：根据歌名关键词在数据库中搜索匹配的歌曲。用户想搜索/查找歌曲时用，想播放时用 playSong。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "recommendSongs",
+      "description" : "推荐歌曲：根据用户的心情或场景推荐热门歌曲，mood 如'开心'、'伤感'、'放松'、'励志'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "mood" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "mood" ]
+      }
+    }
+  } ]
+}
+
+2026-06-22 20:59:38 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP response:
+- status code: 200
+- headers: [:status: 200], [access-control-allow-credentials: true], [age: 0], [content-type: application/json], [date: Mon, 22 Jun 2026 12:59:36 GMT], [eo-cache-status: MISS], [eo-log-uuid: 16873470460091340570], [server: openresty], [strict-transport-security: max-age=31536000; includeSubDomains; preload], [vary: origin, access-control-request-method, access-control-request-headers], [x-content-type-options: nosniff], [x-ds-trace-id: 5b83dc2f14146f618f2b6ba0254ecf7f]
+- body: {"id":"2a70e389-a953-417e-bb6d-918a369aafbd","object":"chat.completion","created":1782133176,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"正在为你播放 **张杰** 的《何必在一起》🎶\n\n这首歌收录于张杰2009年的专辑《穿越三部曲》，歌词探讨了感情无法挽回时，不如潇洒放手的主题。那句“何必在一起，其实我们都没有错”，道出了多少人心中的无奈与释然呀～\n\n用心聆听吧，小音陪你一起感受这首歌里的情感起伏 ❤️"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1722,"completion_tokens":81,"total_tokens":1803,"prompt_tokens_details":{"cached_tokens":1664},"prompt_cache_hit_tokens":1664,"prompt_cache_miss_tokens":58},"system_fingerprint":"fp_8b330d02d0_prod0820_fp8_kvcache_20260402"}
+
+2026-06-22 20:59:38 INFO [com.example.yin.service.impl.AiServiceImpl]: Agent 回复: 正在为你播放 **张杰** 的《何必在一起》🎶
+
+这首歌收录于张杰2009年的专辑《穿越三部曲》，歌词探讨了感情无法挽回时，不如潇洒放手的主题。那句“何必在一起，其实我们都没有错”，道出了多少人心中的无奈与释然呀～
+
+用心聆听吧，小音陪你一起感受这首歌里的情感起伏 ❤️[PLAY:7]
+2026-06-22 20:59:48 INFO [com.example.yin.service.impl.AiServiceImpl]: 用户 [u-64b21eaf-9859-433f-8d4e-c246925e6ac1] 消息: 播放因为爱情
+2026-06-22 20:59:48 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP request:
+- method: POST
+- url: https://api.deepseek.com/chat/completions
+- headers: [Authorization: Beare...5f], [User-Agent: langchain4j-openai], [Content-Type: application/json]
+- body: {
+  "model" : "deepseek-chat",
+  "messages" : [ {
+    "role" : "system",
+    "content" : "你是音乐助手\"小音\"，拥有音乐知识库，可回答创作背景、歌词含义等。\n\n工具：\n- searchSongs / searchSongsBySinger：搜索歌曲/歌手\n- getRankList：排行榜\n- getSongLists / searchSongListByStyle：浏览歌单\n- searchSingers：搜索歌手信息\n- recommendSongs：推荐歌曲\n- playSong(songName)：播放歌曲（用户说\"播放XX\"时直接调用）\n- pausePlayback / resumePlayback / nextSong / setVolume：播放控制\n\n规则：\n- 用户说\"播放XX\"，直接调用 playSong，调用后告知用户即可。\n- 推荐歌曲列3-5首并简介，等用户选择后再播放。\n- 只回答音乐相关问题，中文，语气温暖。\n"
+  }, {
+    "role" : "user",
+    "content" : "播放因为爱情\n\nAnswer using the following information:\n陈奕迅 + 王菲-因为爱情|陈奕迅\r\n这首歌由小柯作词作曲，是2011年电影《将爱情进行到底》的主题曲。创作背景与电影剧情紧密相连——影片讲述了大学恋人多年后的重逢与选择，歌曲正是对“爱情能否经得起时间考验”这一命题的回应。歌词以“因为爱情，不会轻易悲伤”开篇，用平实的语言描绘了爱情在岁月中的沉淀与变化，既有对青春回忆的温暖，也有对现实无奈的感慨。风格上，歌曲采用舒缓的流行抒情编曲，以钢琴和吉他为主，营造出简约而深情的氛围。陈奕迅低沉磁性的嗓音与王菲空灵清澈的声线交织，形成了极具层次感的情感对话。整首歌表达的情感是复杂而真挚的，它既是对纯真爱情的怀念与致敬，也承认了爱情随时间流逝可能产生的疏离与遗憾，但最终落点在“依然随时可以为你疯狂”的执着上，令人听后既感动又唏嘘。\n\n【社会影响】作为90后华语女歌手的领军人物，她在社交媒体拥有数千万粉丝，是年轻一代的音乐偶像和榜样。\n\n林俊杰-关键词|林俊杰\r\n《关键词》是林俊杰2015年专辑《和自己对话》中的歌曲，由林俊杰作曲，林怡凤作词。\n\n【创作背景】这首歌的创作灵感来源于林俊杰对\"爱\"这一抽象概念的具象化思考。他试图用音乐捕捉那些能瞬间唤起情感共鸣的\"关键词\"——如\"眼泪\"、\"拥抱\"、\"永远\"等。这首歌也是林俊杰\"人头录音\"实验专辑《和自己对话》中的重要作品，该专辑首创华语流行音乐使用假人头麦克风录音，让听众获得如同置身现场的3D听觉体验。\n\n【主题含义】歌词以\"你是我的关键词\"为核心意象，将恋人比作生命中不可或缺的密码。\"你在我心里留下了一首歌\"等诗意表达，诠释了爱情如何成为理解自我与世界的钥匙。在不同的关系阶段，\"关键词\"可能是初恋时的心跳声、热恋时的\"我爱你\"，或分手后的\"谢谢你\"。\n\n【音乐风格】流行与R&B融合，轻快的电子合成器音色和律动感十足的鼓点打底，副歌部分旋律上扬且朗朗上口。林俊杰温暖声线和标志性转音技巧充分展现，整首歌情感明亮而坚定——在纷繁复杂的世界里，爱就是那个能解锁一切美好的\"关键词\"。\n\n陈奕迅-不要说话|陈奕迅\r\n这首歌曲由小柯作词作曲，收录于陈奕迅2008年发行的专辑《不想放手》中。创作背景源于对现代人情感表达困境的观察——人们往往在深爱时反而沉默，用行动而非言语传递心意。歌词以“爱一个人是不是应该有默契”开篇，探讨了“沉默之爱”的主题：真正的爱无需多言，一个眼神、一个动作便能心意相通，但沉默也可能成为误解的源头。歌曲风格以钢琴为主导的抒情慢板，陈奕迅标志性的低沉嗓音缓缓铺陈，副歌部分旋律层层递进，营造出克制而深情的氛围。整首歌表达的情感复杂而细腻，既有暗恋者不敢言说的忐忑，也有对纯粹情感的向往，最终落点在“愿意用一支黑色的铅笔，画一出沉默舞台剧”的温柔守护上，令人动容。\n\n林俊杰-期待爱|林俊杰\r\n《期待爱》是林俊杰与金莎合唱的一首对唱情歌，收录于林俊杰2007年的专辑《西界》中。这首歌的创作背景源于林俊杰对“纯粹爱情”的向往，他希望通过音乐传递出在快节奏时代中依然保持对爱情的美好期待。歌词以“期待”为核心，描述了两个人从相遇、相知到相互靠近的甜蜜过程，主题强调“爱需要勇气和耐心”，而非急功近利的索取。歌曲风格偏向轻快的流行R&B，节奏明快，旋律流畅，林俊杰与金莎的声线搭配和谐，营造出一种青春洋溢的恋爱氛围。情感表达上，这首歌充满了温暖与希望，它鼓励听众在爱情面前不要退缩，保持一颗开放的心去迎接可能的美好。整首歌像一封写给未来的情书，传递出“爱情值得等待”的积极信念。"
+  } ],
+  "stream" : false,
+  "tools" : [ {
+    "type" : "function",
+    "function" : {
+      "name" : "nextSong",
+      "description" : "下一首",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getRankList",
+      "description" : "获取排行榜：type 可选 day(日榜)、week(周榜)、month(月榜)，默认 day",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "type" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "pausePlayback",
+      "description" : "暂停播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "resumePlayback",
+      "description" : "继续播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongListByStyle",
+      "description" : "搜索歌单（仅搜索歌单列表，不播放歌曲）：根据风格关键词搜索歌单，如'伤感'、'摇滚'、'古风'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "style" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "style" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongsBySinger",
+      "description" : "根据歌手名搜索：搜索指定歌手的所有歌曲。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "setVolume",
+      "description" : "设置音量：volume 取值范围 0-100",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "volume" : {
+            "type" : "integer"
+          }
+        },
+        "required" : [ "volume" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getSongLists",
+      "description" : "获取所有歌单列表，返回歌单名称、风格和ID",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSingers",
+      "description" : "搜索歌手信息：根据歌手名搜索，返回歌手基本信息",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "playSong",
+      "description" : "播放歌曲：用户说'播放XX'时调用此工具。自动搜索并播放，无需先调用搜索工具。songName 为必填的歌名。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "songName" : {
+            "type" : "string"
+          },
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "songName", "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongs",
+      "description" : "搜索歌曲（仅搜索，不播放）：根据歌名关键词在数据库中搜索匹配的歌曲。用户想搜索/查找歌曲时用，想播放时用 playSong。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "recommendSongs",
+      "description" : "推荐歌曲：根据用户的心情或场景推荐热门歌曲，mood 如'开心'、'伤感'、'放松'、'励志'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "mood" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "mood" ]
+      }
+    }
+  } ]
+}
+
+2026-06-22 20:59:49 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP response:
+- status code: 200
+- headers: [:status: 200], [access-control-allow-credentials: true], [age: 0], [content-type: application/json], [date: Mon, 22 Jun 2026 12:59:48 GMT], [eo-cache-status: MISS], [eo-log-uuid: 5932155561206530660], [server: openresty], [strict-transport-security: max-age=31536000; includeSubDomains; preload], [vary: origin, access-control-request-method, access-control-request-headers], [x-content-type-options: nosniff], [x-ds-trace-id: 719f4c8de6c1733704c9bc0910688bc9]
+- body: {"id":"9ef59744-3b0c-4f08-9d70-cd5c3a3b42f8","object":"chat.completion","created":1782133188,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"好的，我来为你播放这首经典的《因为爱情》！","tool_calls":[{"index":0,"id":"call_00_9Vh0gNVbEQJr5nK7U2oo6057","type":"function","function":{"name":"playSong","arguments":"{\"songName\": \"因为爱情\", \"singerName\": \"陈奕迅\"}"}}]},"logprobs":null,"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":2029,"completion_tokens":76,"total_tokens":2105,"prompt_tokens_details":{"cached_tokens":1024},"prompt_cache_hit_tokens":1024,"prompt_cache_miss_tokens":1005},"system_fingerprint":"fp_8b330d02d0_prod0820_fp8_kvcache_20260402"}
+
+2026-06-22 20:59:49 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP request:
+- method: POST
+- url: https://api.deepseek.com/chat/completions
+- headers: [Authorization: Beare...5f], [User-Agent: langchain4j-openai], [Content-Type: application/json]
+- body: {
+  "model" : "deepseek-chat",
+  "messages" : [ {
+    "role" : "system",
+    "content" : "你是音乐助手\"小音\"，拥有音乐知识库，可回答创作背景、歌词含义等。\n\n工具：\n- searchSongs / searchSongsBySinger：搜索歌曲/歌手\n- getRankList：排行榜\n- getSongLists / searchSongListByStyle：浏览歌单\n- searchSingers：搜索歌手信息\n- recommendSongs：推荐歌曲\n- playSong(songName)：播放歌曲（用户说\"播放XX\"时直接调用）\n- pausePlayback / resumePlayback / nextSong / setVolume：播放控制\n\n规则：\n- 用户说\"播放XX\"，直接调用 playSong，调用后告知用户即可。\n- 推荐歌曲列3-5首并简介，等用户选择后再播放。\n- 只回答音乐相关问题，中文，语气温暖。\n"
+  }, {
+    "role" : "user",
+    "content" : "播放因为爱情\n\nAnswer using the following information:\n陈奕迅 + 王菲-因为爱情|陈奕迅\r\n这首歌由小柯作词作曲，是2011年电影《将爱情进行到底》的主题曲。创作背景与电影剧情紧密相连——影片讲述了大学恋人多年后的重逢与选择，歌曲正是对“爱情能否经得起时间考验”这一命题的回应。歌词以“因为爱情，不会轻易悲伤”开篇，用平实的语言描绘了爱情在岁月中的沉淀与变化，既有对青春回忆的温暖，也有对现实无奈的感慨。风格上，歌曲采用舒缓的流行抒情编曲，以钢琴和吉他为主，营造出简约而深情的氛围。陈奕迅低沉磁性的嗓音与王菲空灵清澈的声线交织，形成了极具层次感的情感对话。整首歌表达的情感是复杂而真挚的，它既是对纯真爱情的怀念与致敬，也承认了爱情随时间流逝可能产生的疏离与遗憾，但最终落点在“依然随时可以为你疯狂”的执着上，令人听后既感动又唏嘘。\n\n【社会影响】作为90后华语女歌手的领军人物，她在社交媒体拥有数千万粉丝，是年轻一代的音乐偶像和榜样。\n\n林俊杰-关键词|林俊杰\r\n《关键词》是林俊杰2015年专辑《和自己对话》中的歌曲，由林俊杰作曲，林怡凤作词。\n\n【创作背景】这首歌的创作灵感来源于林俊杰对\"爱\"这一抽象概念的具象化思考。他试图用音乐捕捉那些能瞬间唤起情感共鸣的\"关键词\"——如\"眼泪\"、\"拥抱\"、\"永远\"等。这首歌也是林俊杰\"人头录音\"实验专辑《和自己对话》中的重要作品，该专辑首创华语流行音乐使用假人头麦克风录音，让听众获得如同置身现场的3D听觉体验。\n\n【主题含义】歌词以\"你是我的关键词\"为核心意象，将恋人比作生命中不可或缺的密码。\"你在我心里留下了一首歌\"等诗意表达，诠释了爱情如何成为理解自我与世界的钥匙。在不同的关系阶段，\"关键词\"可能是初恋时的心跳声、热恋时的\"我爱你\"，或分手后的\"谢谢你\"。\n\n【音乐风格】流行与R&B融合，轻快的电子合成器音色和律动感十足的鼓点打底，副歌部分旋律上扬且朗朗上口。林俊杰温暖声线和标志性转音技巧充分展现，整首歌情感明亮而坚定——在纷繁复杂的世界里，爱就是那个能解锁一切美好的\"关键词\"。\n\n陈奕迅-不要说话|陈奕迅\r\n这首歌曲由小柯作词作曲，收录于陈奕迅2008年发行的专辑《不想放手》中。创作背景源于对现代人情感表达困境的观察——人们往往在深爱时反而沉默，用行动而非言语传递心意。歌词以“爱一个人是不是应该有默契”开篇，探讨了“沉默之爱”的主题：真正的爱无需多言，一个眼神、一个动作便能心意相通，但沉默也可能成为误解的源头。歌曲风格以钢琴为主导的抒情慢板，陈奕迅标志性的低沉嗓音缓缓铺陈，副歌部分旋律层层递进，营造出克制而深情的氛围。整首歌表达的情感复杂而细腻，既有暗恋者不敢言说的忐忑，也有对纯粹情感的向往，最终落点在“愿意用一支黑色的铅笔，画一出沉默舞台剧”的温柔守护上，令人动容。\n\n林俊杰-期待爱|林俊杰\r\n《期待爱》是林俊杰与金莎合唱的一首对唱情歌，收录于林俊杰2007年的专辑《西界》中。这首歌的创作背景源于林俊杰对“纯粹爱情”的向往，他希望通过音乐传递出在快节奏时代中依然保持对爱情的美好期待。歌词以“期待”为核心，描述了两个人从相遇、相知到相互靠近的甜蜜过程，主题强调“爱需要勇气和耐心”，而非急功近利的索取。歌曲风格偏向轻快的流行R&B，节奏明快，旋律流畅，林俊杰与金莎的声线搭配和谐，营造出一种青春洋溢的恋爱氛围。情感表达上，这首歌充满了温暖与希望，它鼓励听众在爱情面前不要退缩，保持一颗开放的心去迎接可能的美好。整首歌像一封写给未来的情书，传递出“爱情值得等待”的积极信念。"
+  }, {
+    "role" : "assistant",
+    "content" : "好的，我来为你播放这首经典的《因为爱情》！",
+    "tool_calls" : [ {
+      "id" : "call_00_9Vh0gNVbEQJr5nK7U2oo6057",
+      "type" : "function",
+      "function" : {
+        "name" : "playSong",
+        "arguments" : "{\"songName\": \"因为爱情\", \"singerName\": \"陈奕迅\"}"
+      }
+    } ]
+  }, {
+    "role" : "tool",
+    "tool_call_id" : "call_00_9Vh0gNVbEQJr5nK7U2oo6057",
+    "content" : "已找到「陈奕迅 + 王菲-因为爱情」- 陈奕迅，系统已自动为用户播放，你只需要告知用户正在播放即可。"
+  } ],
+  "stream" : false,
+  "tools" : [ {
+    "type" : "function",
+    "function" : {
+      "name" : "nextSong",
+      "description" : "下一首",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getRankList",
+      "description" : "获取排行榜：type 可选 day(日榜)、week(周榜)、month(月榜)，默认 day",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "type" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "pausePlayback",
+      "description" : "暂停播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "resumePlayback",
+      "description" : "继续播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongListByStyle",
+      "description" : "搜索歌单（仅搜索歌单列表，不播放歌曲）：根据风格关键词搜索歌单，如'伤感'、'摇滚'、'古风'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "style" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "style" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongsBySinger",
+      "description" : "根据歌手名搜索：搜索指定歌手的所有歌曲。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "setVolume",
+      "description" : "设置音量：volume 取值范围 0-100",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "volume" : {
+            "type" : "integer"
+          }
+        },
+        "required" : [ "volume" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getSongLists",
+      "description" : "获取所有歌单列表，返回歌单名称、风格和ID",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSingers",
+      "description" : "搜索歌手信息：根据歌手名搜索，返回歌手基本信息",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "playSong",
+      "description" : "播放歌曲：用户说'播放XX'时调用此工具。自动搜索并播放，无需先调用搜索工具。songName 为必填的歌名。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "songName" : {
+            "type" : "string"
+          },
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "songName", "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongs",
+      "description" : "搜索歌曲（仅搜索，不播放）：根据歌名关键词在数据库中搜索匹配的歌曲。用户想搜索/查找歌曲时用，想播放时用 playSong。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "recommendSongs",
+      "description" : "推荐歌曲：根据用户的心情或场景推荐热门歌曲，mood 如'开心'、'伤感'、'放松'、'励志'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "mood" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "mood" ]
+      }
+    }
+  } ]
+}
+
+2026-06-22 20:59:51 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP response:
+- status code: 200
+- headers: [:status: 200], [access-control-allow-credentials: true], [age: 0], [content-type: application/json], [date: Mon, 22 Jun 2026 12:59:49 GMT], [eo-cache-status: MISS], [eo-log-uuid: 777174672447375338], [server: openresty], [strict-transport-security: max-age=31536000; includeSubDomains; preload], [vary: origin, access-control-request-method, access-control-request-headers], [x-content-type-options: nosniff], [x-ds-trace-id: d1f1380967464b24dea95bdc0f4e2032]
+- body: {"id":"ffaa26b6-6a9b-41e9-8a4f-06c97f27ab64","object":"chat.completion","created":1782133189,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"🎵 **正在为你播放：《因为爱情》—— 陈奕迅 & 王菲** 🎵\n\n这首歌是由小柯作词作曲，作为2011年电影《将爱情进行到底》的主题曲，可以说是华语乐坛的经典对唱之作。陈奕迅低沉磁性的嗓音与王菲空灵清澈的声线交织在一起，把岁月沉淀后的爱情故事诠释得淋漓尽致，每次听都让人感动又唏嘘呢～\n\n希望你喜欢，好好享受音乐吧！😊"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":2150,"completion_tokens":106,"total_tokens":2256,"prompt_tokens_details":{"cached_tokens":2048},"prompt_cache_hit_tokens":2048,"prompt_cache_miss_tokens":102},"system_fingerprint":"fp_8b330d02d0_prod0820_fp8_kvcache_20260402"}
+
+2026-06-22 20:59:51 INFO [com.example.yin.service.impl.AiServiceImpl]: Agent 回复: 🎵 **正在为你播放：《因为爱情》—— 陈奕迅 & 王菲** 🎵
+
+这首歌是由小柯作词作曲，作为2011年电影《将爱情进行到底》的主题曲，可以说是华语乐坛的经典对唱之作。陈奕迅低沉磁性的嗓音与王菲空灵清澈的声线交织在一起，把岁月沉淀后的爱情故事诠释得淋漓尽致，每次听都让人感动又唏嘘呢～
+
+希望你喜欢，好好享受音乐吧！😊[PLAY:25]
+2026-06-22 21:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-22 21:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-22 21:00:00 INFO [com.example.yin.task.RankScheduledTask]: 开始同步播放量到数据库...
+2026-06-22 21:00:00 INFO [com.example.yin.task.RankScheduledTask]: 播放量同步完成，共更新 0 首歌曲
+2026-06-22 21:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-22 21:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-22 21:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-22 21:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-22 21:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-22 21:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-22 21:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-22 21:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-22 21:21:43 INFO [com.example.yin.controller.AdminController]: 收到演唱会发布请求: title=林俊杰演唱会, tiers=[ConcertRequest.TierRequest(tierName=第一档, price=100, totalStock=100), ConcertRequest.TierRequest(tierName=第二档, price=1000, totalStock=50)]
+2026-06-22 21:22:28 WARN [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver]: Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'concertId' for method parameter type Integer is not present]
+2026-06-22 21:23:00 INFO [com.example.yin.task.TicketScheduledTask]: 演唱会[3]自动开售
+2026-06-22 21:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-22 21:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-22 21:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-22 21:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档

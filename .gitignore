@@ -1,0 +1,13 @@
+.DS_Store
+.idea/
+logs/
+node_modules/
+dist/
+target/
+*.jar
+*.log
+*.tmp
+*.LCK*
+*.iml
+.env
+application-local.properties

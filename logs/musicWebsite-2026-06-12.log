@@ -1,0 +1,1373 @@
+2026-06-12 16:58:12 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 11320 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-12 16:58:12 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-12 16:58:12 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2026-06-12 16:58:12 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-12 16:58:12 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-12 17:05:05 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 37136 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-12 17:05:05 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-12 17:05:05 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2026-06-12 17:05:05 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-12 17:05:05 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-12 17:05:06 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-12 17:05:06 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-12 17:05:06 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
+2026-06-12 17:05:08 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-12 17:05:08 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2863 ms
+2026-06-12 17:05:09 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
+2026-06-12 17:05:09 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
+2026-06-12 17:05:10 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-12 17:05:10 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-12 17:05:10 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 5.602 seconds (JVM running for 6.629)
+2026-06-12 17:05:10 WARN [com.example.yin.service.rag.DocumentIngestionService]: RAG 文档目录不存在: C:\Study\简历项目\music-website-master 音乐\rag-docs，跳过知识库构建
+2026-06-12 17:05:10 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-06-12 17:05:11 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-06-12 17:05:11 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 7 个票档, 新初始化 0 个 key
+2026-06-12 17:06:00 WARN [com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta]: Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @58a9760d
+2026-06-12 17:09:44 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-06-12 17:09:44 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
+2026-06-12 17:09:53 WARN [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver]: Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "null"]
+2026-06-12 17:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 17:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 17:10:39 INFO [org.springframework.scheduling.annotation.AnnotationAsyncExecutionInterceptor]: More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [rankPlayExecutor, taskScheduler]
+2026-06-12 17:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 17:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 17:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 17:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 17:22:00 WARN [com.zaxxer.hikari.pool.PoolBase]: HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@59da4cba (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-06-12 17:22:00 WARN [com.zaxxer.hikari.pool.PoolBase]: HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7f4bdad0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-06-12 17:22:00 WARN [com.zaxxer.hikari.pool.PoolBase]: HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7ac29014 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-06-12 17:22:00 WARN [com.zaxxer.hikari.pool.PoolBase]: HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@756627f2 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-06-12 17:22:00 WARN [com.zaxxer.hikari.pool.PoolBase]: HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@77e126d0 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-06-12 17:22:00 WARN [com.zaxxer.hikari.pool.PoolBase]: HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@791f06d5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-06-12 17:22:00 WARN [com.zaxxer.hikari.pool.PoolBase]: HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@35688fde (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-06-12 17:22:00 WARN [com.zaxxer.hikari.pool.PoolBase]: HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@71f56736 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-06-12 17:22:00 WARN [com.zaxxer.hikari.pool.PoolBase]: HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@f5c087e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-06-12 17:22:00 WARN [com.zaxxer.hikari.pool.PoolBase]: HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@e749eee (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2026-06-12 17:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 17:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 17:29:21 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 16176 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-12 17:29:21 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-12 17:29:21 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2026-06-12 17:29:21 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-12 17:29:21 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-12 17:29:22 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-12 17:29:22 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-12 17:29:22 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2026-06-12 17:29:23 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-12 17:29:23 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2127 ms
+2026-06-12 17:29:24 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
+2026-06-12 17:29:24 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
+2026-06-12 17:29:25 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-12 17:29:25 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-12 17:29:25 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 4.414 seconds (JVM running for 5.152)
+2026-06-12 17:29:25 WARN [com.example.yin.service.rag.DocumentIngestionService]: RAG 文档目录不存在: C:\Study\简历项目\music-website-master 音乐\rag-docs，跳过知识库构建
+2026-06-12 17:29:25 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-06-12 17:29:25 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-06-12 17:29:25 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 7 个票档, 新初始化 0 个 key
+2026-06-12 17:30:00 WARN [com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta]: Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @58a9760d
+2026-06-12 17:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 17:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 17:31:39 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-06-12 17:31:39 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
+2026-06-12 17:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 17:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 17:38:39 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 30528 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-12 17:38:39 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-12 17:38:39 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2026-06-12 17:38:39 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-12 17:38:39 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-12 17:38:39 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-12 17:38:39 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-12 17:38:39 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2026-06-12 17:38:41 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-12 17:38:41 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 1967 ms
+2026-06-12 17:38:42 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
+2026-06-12 17:38:42 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
+2026-06-12 17:38:43 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-12 17:38:43 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-12 17:38:43 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 4.218 seconds (JVM running for 4.925)
+2026-06-12 17:38:43 WARN [com.example.yin.service.rag.DocumentIngestionService]: RAG 文档目录不存在: C:\Study\简历项目\music-website-master 音乐\rag-docs，跳过知识库构建
+2026-06-12 17:38:43 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-06-12 17:38:43 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-06-12 17:38:43 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 7 个票档, 新初始化 0 个 key
+2026-06-12 17:39:00 WARN [com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta]: Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @58a9760d
+2026-06-12 17:39:06 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-06-12 17:39:06 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 0 ms
+2026-06-12 17:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 17:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 17:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 17:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 17:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 17:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 17:54:53 INFO [org.springframework.scheduling.annotation.AnnotationAsyncExecutionInterceptor]: More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [rankPlayExecutor, taskScheduler]
+2026-06-12 17:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 17:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 17:55:16 INFO [com.example.yin.service.impl.AiServiceImpl]: 用户 [u-64b21eaf-9859-433f-8d4e-c246925e6ac1] 消息: 你好，我是小张
+2026-06-12 17:55:16 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP request:
+- method: POST
+- url: https://api.deepseek.com/chat/completions
+- headers: [Authorization: Beare...5f], [User-Agent: langchain4j-openai], [Content-Type: application/json]
+- body: {
+  "model" : "deepseek-chat",
+  "messages" : [ {
+    "role" : "system",
+    "content" : "你是音乐助手\"小音\"，拥有音乐知识库，可回答创作背景、歌词含义等。\n\n工具：\n- searchSongs / searchSongsBySinger：搜索歌曲/歌手\n- getRankList：排行榜\n- getSongLists / searchSongListByStyle：浏览歌单\n- searchSingers：搜索歌手信息\n- recommendSongs：推荐歌曲\n- playSong(songName)：播放歌曲（用户说\"播放XX\"时直接调用）\n- pausePlayback / resumePlayback / nextSong / setVolume：播放控制\n\n规则：\n- 用户说\"播放XX\"，直接调用 playSong，调用后告知用户即可。\n- 推荐歌曲列3-5首并简介，等用户选择后再播放。\n- 只回答音乐相关问题，中文，语气温暖。\n"
+  }, {
+    "role" : "user",
+    "content" : "你好，我是小张"
+  } ],
+  "stream" : false,
+  "tools" : [ {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongListByStyle",
+      "description" : "搜索歌单（仅搜索歌单列表，不播放歌曲）：根据风格关键词搜索歌单，如'伤感'、'摇滚'、'古风'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "style" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "style" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongsBySinger",
+      "description" : "根据歌手名搜索：搜索指定歌手的所有歌曲。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getRankList",
+      "description" : "获取排行榜：type 可选 day(日榜)、week(周榜)、month(月榜)，默认 day",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "type" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "resumePlayback",
+      "description" : "继续播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "pausePlayback",
+      "description" : "暂停播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "setVolume",
+      "description" : "设置音量：volume 取值范围 0-100",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "volume" : {
+            "type" : "integer"
+          }
+        },
+        "required" : [ "volume" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "nextSong",
+      "description" : "下一首",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "recommendSongs",
+      "description" : "推荐歌曲：根据用户的心情或场景推荐热门歌曲，mood 如'开心'、'伤感'、'放松'、'励志'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "mood" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "mood" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSingers",
+      "description" : "搜索歌手信息：根据歌手名搜索，返回歌手基本信息",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongs",
+      "description" : "搜索歌曲（仅搜索，不播放）：根据歌名关键词在数据库中搜索匹配的歌曲。用户想搜索/查找歌曲时用，想播放时用 playSong。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "playSong",
+      "description" : "播放歌曲：用户说'播放XX'时调用此工具。自动搜索并播放，无需先调用搜索工具。songName 为必填的歌名。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "songName" : {
+            "type" : "string"
+          },
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "songName", "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getSongLists",
+      "description" : "获取所有歌单列表，返回歌单名称、风格和ID",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  } ]
+}
+
+2026-06-12 17:55:18 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP response:
+- status code: 200
+- headers: [:status: 200], [access-control-allow-credentials: true], [age: 0], [content-type: application/json], [date: Fri, 12 Jun 2026 09:55:15 GMT], [eo-cache-status: MISS], [eo-log-uuid: 4831071884424360840], [server: openresty], [strict-transport-security: max-age=31536000; includeSubDomains; preload], [vary: origin, access-control-request-method, access-control-request-headers], [x-content-type-options: nosniff], [x-ds-trace-id: 76afebc5be940e94888b8fdc8bf7253e]
+- body: {"id":"c4cff182-eb0f-429e-ba2d-9aa2dac8b341","object":"chat.completion","created":1781258115,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"小张你好呀！我是你的音乐助手小音 🎵\n\n有什么关于音乐的问题尽管问我，比如：\n- 想找某首歌或某位歌手？\n- 想看音乐排行榜？\n- 想根据心情让我推荐几首好歌？\n- 想浏览歌单找找新风格？\n- 或者直接说\"播放XXX\"让我放给你听？\n\n你想做什么呢？😊"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1097,"completion_tokens":84,"total_tokens":1181,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":1097},"system_fingerprint":"fp_8b330d02d0_prod0820_fp8_kvcache_20260402"}
+
+2026-06-12 17:55:18 INFO [com.example.yin.service.impl.AiServiceImpl]: Agent 回复: 小张你好呀！我是你的音乐助手小音 🎵
+
+有什么关于音乐的问题尽管问我，比如：
+- 想找某首歌或某位歌手？
+- 想看音乐排行榜？
+- 想根据心情让我推荐几首好歌？
+- 想浏览歌单找找新风格？
+- 或者直接说"播放XXX"让我放给你听？
+
+你想做什么呢？😊
+2026-06-12 17:55:24 INFO [com.example.yin.service.impl.AiServiceImpl]: 用户 [u-64b21eaf-9859-433f-8d4e-c246925e6ac1] 消息: 我是谁
+2026-06-12 17:55:24 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP request:
+- method: POST
+- url: https://api.deepseek.com/chat/completions
+- headers: [Authorization: Beare...5f], [User-Agent: langchain4j-openai], [Content-Type: application/json]
+- body: {
+  "model" : "deepseek-chat",
+  "messages" : [ {
+    "role" : "system",
+    "content" : "你是音乐助手\"小音\"，拥有音乐知识库，可回答创作背景、歌词含义等。\n\n工具：\n- searchSongs / searchSongsBySinger：搜索歌曲/歌手\n- getRankList：排行榜\n- getSongLists / searchSongListByStyle：浏览歌单\n- searchSingers：搜索歌手信息\n- recommendSongs：推荐歌曲\n- playSong(songName)：播放歌曲（用户说\"播放XX\"时直接调用）\n- pausePlayback / resumePlayback / nextSong / setVolume：播放控制\n\n规则：\n- 用户说\"播放XX\"，直接调用 playSong，调用后告知用户即可。\n- 推荐歌曲列3-5首并简介，等用户选择后再播放。\n- 只回答音乐相关问题，中文，语气温暖。\n"
+  }, {
+    "role" : "user",
+    "content" : "我是谁"
+  } ],
+  "stream" : false,
+  "tools" : [ {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongListByStyle",
+      "description" : "搜索歌单（仅搜索歌单列表，不播放歌曲）：根据风格关键词搜索歌单，如'伤感'、'摇滚'、'古风'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "style" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "style" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongsBySinger",
+      "description" : "根据歌手名搜索：搜索指定歌手的所有歌曲。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getRankList",
+      "description" : "获取排行榜：type 可选 day(日榜)、week(周榜)、month(月榜)，默认 day",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "type" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "resumePlayback",
+      "description" : "继续播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "pausePlayback",
+      "description" : "暂停播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "setVolume",
+      "description" : "设置音量：volume 取值范围 0-100",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "volume" : {
+            "type" : "integer"
+          }
+        },
+        "required" : [ "volume" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "nextSong",
+      "description" : "下一首",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "recommendSongs",
+      "description" : "推荐歌曲：根据用户的心情或场景推荐热门歌曲，mood 如'开心'、'伤感'、'放松'、'励志'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "mood" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "mood" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSingers",
+      "description" : "搜索歌手信息：根据歌手名搜索，返回歌手基本信息",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongs",
+      "description" : "搜索歌曲（仅搜索，不播放）：根据歌名关键词在数据库中搜索匹配的歌曲。用户想搜索/查找歌曲时用，想播放时用 playSong。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "playSong",
+      "description" : "播放歌曲：用户说'播放XX'时调用此工具。自动搜索并播放，无需先调用搜索工具。songName 为必填的歌名。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "songName" : {
+            "type" : "string"
+          },
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "songName", "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getSongLists",
+      "description" : "获取所有歌单列表，返回歌单名称、风格和ID",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  } ]
+}
+
+2026-06-12 17:55:26 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP response:
+- status code: 200
+- headers: [:status: 200], [access-control-allow-credentials: true], [age: 0], [content-type: application/json], [date: Fri, 12 Jun 2026 09:55:23 GMT], [eo-cache-status: MISS], [eo-log-uuid: 3984704905438475114], [server: openresty], [strict-transport-security: max-age=31536000; includeSubDomains; preload], [vary: origin, access-control-request-method, access-control-request-headers], [x-content-type-options: nosniff], [x-ds-trace-id: b2d3d0866a016ddfa67e93037b80840c]
+- body: {"id":"4e0d824a-1e28-4bdd-a77a-dcc387a1420b","object":"chat.completion","created":1781258123,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"你好呀～你是正在和我聊天的一位爱音乐的朋友呀！😊 不过我还不知道你的名字呢，方便告诉我吗？或者你此刻想听点什么音乐，我可以为你推荐哦～🎵"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1094,"completion_tokens":42,"total_tokens":1136,"prompt_tokens_details":{"cached_tokens":1024},"prompt_cache_hit_tokens":1024,"prompt_cache_miss_tokens":70},"system_fingerprint":"fp_8b330d02d0_prod0820_fp8_kvcache_20260402"}
+
+2026-06-12 17:55:26 INFO [com.example.yin.service.impl.AiServiceImpl]: Agent 回复: 你好呀～你是正在和我聊天的一位爱音乐的朋友呀！😊 不过我还不知道你的名字呢，方便告诉我吗？或者你此刻想听点什么音乐，我可以为你推荐哦～🎵
+2026-06-12 17:55:39 INFO [com.example.yin.service.impl.AiServiceImpl]: 用户 [u-64b21eaf-9859-433f-8d4e-c246925e6ac1] 消息: 播放晴天
+2026-06-12 17:55:39 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP request:
+- method: POST
+- url: https://api.deepseek.com/chat/completions
+- headers: [Authorization: Beare...5f], [User-Agent: langchain4j-openai], [Content-Type: application/json]
+- body: {
+  "model" : "deepseek-chat",
+  "messages" : [ {
+    "role" : "system",
+    "content" : "你是音乐助手\"小音\"，拥有音乐知识库，可回答创作背景、歌词含义等。\n\n工具：\n- searchSongs / searchSongsBySinger：搜索歌曲/歌手\n- getRankList：排行榜\n- getSongLists / searchSongListByStyle：浏览歌单\n- searchSingers：搜索歌手信息\n- recommendSongs：推荐歌曲\n- playSong(songName)：播放歌曲（用户说\"播放XX\"时直接调用）\n- pausePlayback / resumePlayback / nextSong / setVolume：播放控制\n\n规则：\n- 用户说\"播放XX\"，直接调用 playSong，调用后告知用户即可。\n- 推荐歌曲列3-5首并简介，等用户选择后再播放。\n- 只回答音乐相关问题，中文，语气温暖。\n"
+  }, {
+    "role" : "user",
+    "content" : "播放晴天"
+  } ],
+  "stream" : false,
+  "tools" : [ {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongListByStyle",
+      "description" : "搜索歌单（仅搜索歌单列表，不播放歌曲）：根据风格关键词搜索歌单，如'伤感'、'摇滚'、'古风'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "style" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "style" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongsBySinger",
+      "description" : "根据歌手名搜索：搜索指定歌手的所有歌曲。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getRankList",
+      "description" : "获取排行榜：type 可选 day(日榜)、week(周榜)、month(月榜)，默认 day",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "type" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "resumePlayback",
+      "description" : "继续播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "pausePlayback",
+      "description" : "暂停播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "setVolume",
+      "description" : "设置音量：volume 取值范围 0-100",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "volume" : {
+            "type" : "integer"
+          }
+        },
+        "required" : [ "volume" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "nextSong",
+      "description" : "下一首",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "recommendSongs",
+      "description" : "推荐歌曲：根据用户的心情或场景推荐热门歌曲，mood 如'开心'、'伤感'、'放松'、'励志'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "mood" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "mood" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSingers",
+      "description" : "搜索歌手信息：根据歌手名搜索，返回歌手基本信息",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongs",
+      "description" : "搜索歌曲（仅搜索，不播放）：根据歌名关键词在数据库中搜索匹配的歌曲。用户想搜索/查找歌曲时用，想播放时用 playSong。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "playSong",
+      "description" : "播放歌曲：用户说'播放XX'时调用此工具。自动搜索并播放，无需先调用搜索工具。songName 为必填的歌名。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "songName" : {
+            "type" : "string"
+          },
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "songName", "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getSongLists",
+      "description" : "获取所有歌单列表，返回歌单名称、风格和ID",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  } ]
+}
+
+2026-06-12 17:55:40 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP response:
+- status code: 200
+- headers: [:status: 200], [access-control-allow-credentials: true], [age: 0], [content-type: application/json], [date: Fri, 12 Jun 2026 09:55:38 GMT], [eo-cache-status: MISS], [eo-log-uuid: 13259223015794061074], [server: openresty], [strict-transport-security: max-age=31536000; includeSubDomains; preload], [vary: origin, access-control-request-method, access-control-request-headers], [x-content-type-options: nosniff], [x-ds-trace-id: 87191bd77d7c9d7b18aaf9880a17b3e7]
+- body: {"id":"e3242a45-6978-4658-b14a-5fab83d5c9f1","object":"chat.completion","created":1781258138,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"","tool_calls":[{"index":0,"id":"call_00_AO6SrzAofmtAz1RzDQyq4681","type":"function","function":{"name":"playSong","arguments":"{\"songName\": \"晴天\"}"}}]},"logprobs":null,"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":1094,"completion_tokens":44,"total_tokens":1138,"prompt_tokens_details":{"cached_tokens":1024},"prompt_cache_hit_tokens":1024,"prompt_cache_miss_tokens":70},"system_fingerprint":"fp_8b330d02d0_prod0820_fp8_kvcache_20260402"}
+
+2026-06-12 17:55:40 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP request:
+- method: POST
+- url: https://api.deepseek.com/chat/completions
+- headers: [Authorization: Beare...5f], [User-Agent: langchain4j-openai], [Content-Type: application/json]
+- body: {
+  "model" : "deepseek-chat",
+  "messages" : [ {
+    "role" : "system",
+    "content" : "你是音乐助手\"小音\"，拥有音乐知识库，可回答创作背景、歌词含义等。\n\n工具：\n- searchSongs / searchSongsBySinger：搜索歌曲/歌手\n- getRankList：排行榜\n- getSongLists / searchSongListByStyle：浏览歌单\n- searchSingers：搜索歌手信息\n- recommendSongs：推荐歌曲\n- playSong(songName)：播放歌曲（用户说\"播放XX\"时直接调用）\n- pausePlayback / resumePlayback / nextSong / setVolume：播放控制\n\n规则：\n- 用户说\"播放XX\"，直接调用 playSong，调用后告知用户即可。\n- 推荐歌曲列3-5首并简介，等用户选择后再播放。\n- 只回答音乐相关问题，中文，语气温暖。\n"
+  }, {
+    "role" : "user",
+    "content" : "播放晴天"
+  }, {
+    "role" : "assistant",
+    "tool_calls" : [ {
+      "id" : "call_00_AO6SrzAofmtAz1RzDQyq4681",
+      "type" : "function",
+      "function" : {
+        "name" : "playSong",
+        "arguments" : "{\"songName\": \"晴天\"}"
+      }
+    } ]
+  }, {
+    "role" : "tool",
+    "tool_call_id" : "call_00_AO6SrzAofmtAz1RzDQyq4681",
+    "content" : "已找到「周杰伦-晴天」- 周杰伦，系统已自动为用户播放，你只需要告知用户正在播放即可。"
+  } ],
+  "stream" : false,
+  "tools" : [ {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongListByStyle",
+      "description" : "搜索歌单（仅搜索歌单列表，不播放歌曲）：根据风格关键词搜索歌单，如'伤感'、'摇滚'、'古风'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "style" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "style" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongsBySinger",
+      "description" : "根据歌手名搜索：搜索指定歌手的所有歌曲。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getRankList",
+      "description" : "获取排行榜：type 可选 day(日榜)、week(周榜)、month(月榜)，默认 day",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "type" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "resumePlayback",
+      "description" : "继续播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "pausePlayback",
+      "description" : "暂停播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "setVolume",
+      "description" : "设置音量：volume 取值范围 0-100",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "volume" : {
+            "type" : "integer"
+          }
+        },
+        "required" : [ "volume" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "nextSong",
+      "description" : "下一首",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "recommendSongs",
+      "description" : "推荐歌曲：根据用户的心情或场景推荐热门歌曲，mood 如'开心'、'伤感'、'放松'、'励志'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "mood" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "mood" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSingers",
+      "description" : "搜索歌手信息：根据歌手名搜索，返回歌手基本信息",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongs",
+      "description" : "搜索歌曲（仅搜索，不播放）：根据歌名关键词在数据库中搜索匹配的歌曲。用户想搜索/查找歌曲时用，想播放时用 playSong。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "playSong",
+      "description" : "播放歌曲：用户说'播放XX'时调用此工具。自动搜索并播放，无需先调用搜索工具。songName 为必填的歌名。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "songName" : {
+            "type" : "string"
+          },
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "songName", "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getSongLists",
+      "description" : "获取所有歌单列表，返回歌单名称、风格和ID",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  } ]
+}
+
+2026-06-12 17:55:42 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP response:
+- status code: 200
+- headers: [:status: 200], [access-control-allow-credentials: true], [age: 0], [content-type: application/json], [date: Fri, 12 Jun 2026 09:55:39 GMT], [eo-cache-status: MISS], [eo-log-uuid: 14516843008817676875], [server: openresty], [strict-transport-security: max-age=31536000; includeSubDomains; preload], [vary: origin, access-control-request-method, access-control-request-headers], [x-content-type-options: nosniff], [x-ds-trace-id: f07af778ea678054bc8255dda94d00a4]
+- body: {"id":"87b1f477-6b3c-4545-b2bc-cf5272f6fd58","object":"chat.completion","created":1781258139,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"好的，现在为你播放周杰伦的经典歌曲《晴天》🎵\n\n这首歌收录在周杰伦2003年的专辑《叶惠美》中，前奏的钢琴旋律超级经典，充满了青春校园的气息～希望你能喜欢！☀️"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1178,"completion_tokens":54,"total_tokens":1232,"prompt_tokens_details":{"cached_tokens":1024},"prompt_cache_hit_tokens":1024,"prompt_cache_miss_tokens":154},"system_fingerprint":"fp_8b330d02d0_prod0820_fp8_kvcache_20260402"}
+
+2026-06-12 17:55:42 INFO [com.example.yin.service.impl.AiServiceImpl]: Agent 回复: 好的，现在为你播放周杰伦的经典歌曲《晴天》🎵
+
+这首歌收录在周杰伦2003年的专辑《叶惠美》中，前奏的钢琴旋律超级经典，充满了青春校园的气息～希望你能喜欢！☀️[PLAY:20]
+2026-06-12 17:55:51 INFO [com.example.yin.service.impl.AiServiceImpl]: 用户 [u-64b21eaf-9859-433f-8d4e-c246925e6ac1] 消息: 播放因为爱情
+2026-06-12 17:55:51 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP request:
+- method: POST
+- url: https://api.deepseek.com/chat/completions
+- headers: [Authorization: Beare...5f], [User-Agent: langchain4j-openai], [Content-Type: application/json]
+- body: {
+  "model" : "deepseek-chat",
+  "messages" : [ {
+    "role" : "system",
+    "content" : "你是音乐助手\"小音\"，拥有音乐知识库，可回答创作背景、歌词含义等。\n\n工具：\n- searchSongs / searchSongsBySinger：搜索歌曲/歌手\n- getRankList：排行榜\n- getSongLists / searchSongListByStyle：浏览歌单\n- searchSingers：搜索歌手信息\n- recommendSongs：推荐歌曲\n- playSong(songName)：播放歌曲（用户说\"播放XX\"时直接调用）\n- pausePlayback / resumePlayback / nextSong / setVolume：播放控制\n\n规则：\n- 用户说\"播放XX\"，直接调用 playSong，调用后告知用户即可。\n- 推荐歌曲列3-5首并简介，等用户选择后再播放。\n- 只回答音乐相关问题，中文，语气温暖。\n"
+  }, {
+    "role" : "user",
+    "content" : "播放因为爱情"
+  } ],
+  "stream" : false,
+  "tools" : [ {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongListByStyle",
+      "description" : "搜索歌单（仅搜索歌单列表，不播放歌曲）：根据风格关键词搜索歌单，如'伤感'、'摇滚'、'古风'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "style" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "style" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongsBySinger",
+      "description" : "根据歌手名搜索：搜索指定歌手的所有歌曲。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getRankList",
+      "description" : "获取排行榜：type 可选 day(日榜)、week(周榜)、month(月榜)，默认 day",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "type" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "resumePlayback",
+      "description" : "继续播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "pausePlayback",
+      "description" : "暂停播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "setVolume",
+      "description" : "设置音量：volume 取值范围 0-100",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "volume" : {
+            "type" : "integer"
+          }
+        },
+        "required" : [ "volume" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "nextSong",
+      "description" : "下一首",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "recommendSongs",
+      "description" : "推荐歌曲：根据用户的心情或场景推荐热门歌曲，mood 如'开心'、'伤感'、'放松'、'励志'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "mood" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "mood" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSingers",
+      "description" : "搜索歌手信息：根据歌手名搜索，返回歌手基本信息",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongs",
+      "description" : "搜索歌曲（仅搜索，不播放）：根据歌名关键词在数据库中搜索匹配的歌曲。用户想搜索/查找歌曲时用，想播放时用 playSong。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "playSong",
+      "description" : "播放歌曲：用户说'播放XX'时调用此工具。自动搜索并播放，无需先调用搜索工具。songName 为必填的歌名。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "songName" : {
+            "type" : "string"
+          },
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "songName", "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getSongLists",
+      "description" : "获取所有歌单列表，返回歌单名称、风格和ID",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  } ]
+}
+
+2026-06-12 17:55:51 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP response:
+- status code: 200
+- headers: [:status: 200], [access-control-allow-credentials: true], [age: 0], [content-type: application/json], [date: Fri, 12 Jun 2026 09:55:49 GMT], [eo-cache-status: MISS], [eo-log-uuid: 4650952230727410844], [server: openresty], [strict-transport-security: max-age=31536000; includeSubDomains; preload], [vary: origin, access-control-request-method, access-control-request-headers], [x-content-type-options: nosniff], [x-ds-trace-id: 92a09ec36af4b48dd61e38c2f137707b]
+- body: {"id":"852da3f2-af55-4608-808b-394a372368a6","object":"chat.completion","created":1781258149,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"好的，为您播放《因为爱情》！","tool_calls":[{"index":0,"id":"call_00_tUVI9eeJMbOpgRTr9PxN7014","type":"function","function":{"name":"playSong","arguments":"{\"songName\": \"因为爱情\"}"}}]},"logprobs":null,"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":1095,"completion_tokens":54,"total_tokens":1149,"prompt_tokens_details":{"cached_tokens":1024},"prompt_cache_hit_tokens":1024,"prompt_cache_miss_tokens":71},"system_fingerprint":"fp_8b330d02d0_prod0820_fp8_kvcache_20260402"}
+
+2026-06-12 17:55:51 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP request:
+- method: POST
+- url: https://api.deepseek.com/chat/completions
+- headers: [Authorization: Beare...5f], [User-Agent: langchain4j-openai], [Content-Type: application/json]
+- body: {
+  "model" : "deepseek-chat",
+  "messages" : [ {
+    "role" : "system",
+    "content" : "你是音乐助手\"小音\"，拥有音乐知识库，可回答创作背景、歌词含义等。\n\n工具：\n- searchSongs / searchSongsBySinger：搜索歌曲/歌手\n- getRankList：排行榜\n- getSongLists / searchSongListByStyle：浏览歌单\n- searchSingers：搜索歌手信息\n- recommendSongs：推荐歌曲\n- playSong(songName)：播放歌曲（用户说\"播放XX\"时直接调用）\n- pausePlayback / resumePlayback / nextSong / setVolume：播放控制\n\n规则：\n- 用户说\"播放XX\"，直接调用 playSong，调用后告知用户即可。\n- 推荐歌曲列3-5首并简介，等用户选择后再播放。\n- 只回答音乐相关问题，中文，语气温暖。\n"
+  }, {
+    "role" : "user",
+    "content" : "播放因为爱情"
+  }, {
+    "role" : "assistant",
+    "content" : "好的，为您播放《因为爱情》！",
+    "tool_calls" : [ {
+      "id" : "call_00_tUVI9eeJMbOpgRTr9PxN7014",
+      "type" : "function",
+      "function" : {
+        "name" : "playSong",
+        "arguments" : "{\"songName\": \"因为爱情\"}"
+      }
+    } ]
+  }, {
+    "role" : "tool",
+    "tool_call_id" : "call_00_tUVI9eeJMbOpgRTr9PxN7014",
+    "content" : "已找到「陈奕迅 + 王菲-因为爱情」- 陈奕迅，系统已自动为用户播放，你只需要告知用户正在播放即可。"
+  } ],
+  "stream" : false,
+  "tools" : [ {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongListByStyle",
+      "description" : "搜索歌单（仅搜索歌单列表，不播放歌曲）：根据风格关键词搜索歌单，如'伤感'、'摇滚'、'古风'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "style" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "style" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongsBySinger",
+      "description" : "根据歌手名搜索：搜索指定歌手的所有歌曲。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getRankList",
+      "description" : "获取排行榜：type 可选 day(日榜)、week(周榜)、month(月榜)，默认 day",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "type" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "resumePlayback",
+      "description" : "继续播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "pausePlayback",
+      "description" : "暂停播放",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "setVolume",
+      "description" : "设置音量：volume 取值范围 0-100",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "volume" : {
+            "type" : "integer"
+          }
+        },
+        "required" : [ "volume" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "nextSong",
+      "description" : "下一首",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "recommendSongs",
+      "description" : "推荐歌曲：根据用户的心情或场景推荐热门歌曲，mood 如'开心'、'伤感'、'放松'、'励志'",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "mood" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "mood" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSingers",
+      "description" : "搜索歌手信息：根据歌手名搜索，返回歌手基本信息",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "searchSongs",
+      "description" : "搜索歌曲（仅搜索，不播放）：根据歌名关键词在数据库中搜索匹配的歌曲。用户想搜索/查找歌曲时用，想播放时用 playSong。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "keyword" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "keyword" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "playSong",
+      "description" : "播放歌曲：用户说'播放XX'时调用此工具。自动搜索并播放，无需先调用搜索工具。songName 为必填的歌名。",
+      "parameters" : {
+        "type" : "object",
+        "properties" : {
+          "songName" : {
+            "type" : "string"
+          },
+          "singerName" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "songName", "singerName" ]
+      }
+    }
+  }, {
+    "type" : "function",
+    "function" : {
+      "name" : "getSongLists",
+      "description" : "获取所有歌单列表，返回歌单名称、风格和ID",
+      "parameters" : {
+        "type" : "object",
+        "properties" : { },
+        "required" : [ ]
+      }
+    }
+  } ]
+}
+
+2026-06-12 17:55:53 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP response:
+- status code: 200
+- headers: [:status: 200], [access-control-allow-credentials: true], [age: 0], [content-type: application/json], [date: Fri, 12 Jun 2026 09:55:50 GMT], [eo-cache-status: MISS], [eo-log-uuid: 8809768858353714600], [server: openresty], [strict-transport-security: max-age=31536000; includeSubDomains; preload], [vary: origin, access-control-request-method, access-control-request-headers], [x-content-type-options: nosniff], [x-ds-trace-id: c64d25d813d85ec39a8a9eded15145fa]
+- body: {"id":"45e7f9fb-ec28-4515-aab9-f7e53345e0db","object":"chat.completion","created":1781258150,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"🎵 正在为您播放 **陈奕迅 & 王菲** 的经典对唱《因为爱情》～这首歌是电影《将爱情进行到底》的主题曲，王菲空灵的嗓音搭配Eason深情的声线，真的百听不厌！希望这首歌能带给您温暖的感觉 ❤️"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1193,"completion_tokens":66,"total_tokens":1259,"prompt_tokens_details":{"cached_tokens":1024},"prompt_cache_hit_tokens":1024,"prompt_cache_miss_tokens":169},"system_fingerprint":"fp_8b330d02d0_prod0820_fp8_kvcache_20260402"}
+
+2026-06-12 17:55:53 INFO [com.example.yin.service.impl.AiServiceImpl]: Agent 回复: 🎵 正在为您播放 **陈奕迅 & 王菲** 的经典对唱《因为爱情》～这首歌是电影《将爱情进行到底》的主题曲，王菲空灵的嗓音搭配Eason深情的声线，真的百听不厌！希望这首歌能带给您温暖的感觉 ❤️[PLAY:25]
+2026-06-12 17:58:16 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 32616 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-12 17:58:16 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-12 17:58:16 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2026-06-12 17:58:16 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-12 17:58:16 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-12 17:58:18 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-12 17:58:18 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-12 17:58:18 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2026-06-12 17:58:20 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-12 17:58:20 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 3508 ms
+2026-06-12 17:58:21 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
+2026-06-12 17:58:21 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
+2026-06-12 17:58:22 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-12 17:58:22 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-12 17:58:22 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 6.005 seconds (JVM running for 6.742)
+2026-06-12 17:58:22 WARN [com.example.yin.service.rag.DocumentIngestionService]: RAG 文档目录不存在: C:\Study\简历项目\music-website-master 音乐\rag-docs，跳过知识库构建
+2026-06-12 17:58:22 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-06-12 17:58:22 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-06-12 17:58:23 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 7 个票档, 新初始化 0 个 key
+2026-06-12 17:58:35 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-06-12 17:58:35 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
+2026-06-12 17:59:00 WARN [com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta]: Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @58a9760d
+2026-06-12 18:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 18:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 18:00:00 INFO [com.example.yin.task.RankScheduledTask]: 开始同步播放量到数据库...
+2026-06-12 18:00:00 INFO [com.example.yin.task.RankScheduledTask]: 播放量同步完成，共更新 0 首歌曲
+2026-06-12 18:03:52 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 11224 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-12 18:03:52 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-12 18:03:52 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2026-06-12 18:03:52 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-12 18:03:52 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-12 18:03:52 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-12 18:03:52 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-12 18:03:52 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2026-06-12 18:03:54 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-12 18:03:54 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2078 ms
+2026-06-12 18:03:55 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
+2026-06-12 18:03:55 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
+2026-06-12 18:03:56 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-12 18:03:56 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-12 18:03:56 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 4.511 seconds (JVM running for 5.3)
+2026-06-12 18:03:56 WARN [com.example.yin.service.rag.DocumentIngestionService]: RAG 文档目录不存在: C:\Study\简历项目\music-website-master 音乐\rag-docs，跳过知识库构建
+2026-06-12 18:03:56 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-06-12 18:03:56 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-06-12 18:03:56 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 7 个票档, 新初始化 0 个 key
+2026-06-12 18:04:00 WARN [com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta]: Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @58a9760d
+2026-06-12 18:04:07 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-06-12 18:04:07 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 0 ms
+2026-06-12 18:04:38 INFO [org.springframework.scheduling.annotation.AnnotationAsyncExecutionInterceptor]: More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [rankPlayExecutor, taskScheduler]
+2026-06-12 18:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 18:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 18:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 18:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 18:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 18:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 18:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 18:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 18:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 18:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 18:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 18:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 18:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 18:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-12 19:03:20 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 9256 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-12 19:03:20 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-12 19:03:20 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2026-06-12 19:03:20 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-12 19:03:20 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-12 19:03:21 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-12 19:03:21 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-12 19:03:21 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2026-06-12 19:03:22 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-12 19:03:22 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2324 ms
+2026-06-12 19:03:24 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
+2026-06-12 19:03:24 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
+2026-06-12 19:03:24 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-12 19:03:24 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-12 19:03:24 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 4.864 seconds (JVM running for 5.628)
+2026-06-12 19:03:24 WARN [com.example.yin.service.rag.DocumentIngestionService]: RAG 文档目录不存在: C:\Study\简历项目\music-website-master 音乐\rag-docs，跳过知识库构建
+2026-06-12 19:03:25 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-06-12 19:03:25 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-06-12 19:03:25 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 7 个票档, 新初始化 0 个 key
+2026-06-12 19:03:53 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-06-12 19:03:53 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 2 ms
+2026-06-12 19:04:00 WARN [com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta]: Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @58a9760d
+2026-06-12 19:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-12 19:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档

@@ -1,0 +1,36 @@
+ 1. 为什么 song 还没放到 Redis？
+
+  因为你还没做第4步——改造 SongServiceImpl。
+
+  现在 SongServiceImpl.allSong() 长这样：
+
+  public R allSong() {
+      return R.success(null, songMapper.selectList(null));  // 直接查DB，完全没碰Redis
+  }
+
+  CacheProtectionUtil 只是一个工具类，它不会自动拦截所有 DB 查询。你得主动调用它才会生效，也就是第4步要做的事。
+
+  ---
+  2. 为什么每次都要通过 cacheUtil.getWithProtection() 调用？
+
+  这是 Cache-Aside 模式 的标准做法。getWithProtection 这一个方法内部已经帮你处理了全部三种情况：
+
+  getWithProtection(key, ...)
+    ├─ 1. 先查 Redis
+    │    ├─ 命中真实数据 → 直接返回（不查DB）
+    │    └─ 命中 NULL_PLACEHOLDER → 返回null（穿透保护）
+    │
+    ├─ 2. 未命中 → SETNX 抢锁（击穿保护：只有一个线程去查DB）
+    │    └─ 抢不到锁 → 等100ms重试，最多10次
+    │
+    └─ 3. 抢到锁 → 查DB → 写入Redis（带随机TTL，雪崩保护）
+         ├─ 查到数据 → 缓存数据（TTL ±20%随机）
+         └─ 查不到 → 缓存 NULL_PLACEHOLDER（2分钟短TTL，穿透保护）
+    │    └─ 抢不到锁 → 等100ms重试，最多10次
+    │
+    └─ 3. 抢到锁 → 查DB → 写入Redis（带随机TTL，雪崩保护）
+         ├─ 查到数据 → 缓存数据（TTL ±20%随机）
+         └─ 查不到 → 缓存 NULL_PLACEHOLDER（2分钟短TTL，穿透保护）
+         └─ 查不到 → 缓存 NULL_PLACEHOLDER（2分钟短TTL，穿透保护）
+
+  实际运行时：第一次请求走完整流程查DB并写缓存，之后所有请求直接从 Redis 返回，根本不去 DB。

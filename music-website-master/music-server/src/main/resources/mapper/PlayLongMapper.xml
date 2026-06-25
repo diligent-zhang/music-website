@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace 对应你的 Mapper 接口全路径 -->
+<mapper namespace="com.example.yin.model.domain.PlayLog">
+
+    <!--
+        根据时间范围查询歌曲播放量排行
+        参数：map 或实体类，包含 startTime, endTime, limit
+        返回：歌曲ID + 播放次数
+    -->
+    <select id="selectSongPlayCountRank" resultType="java.util.Map">
+        SELECT
+            pl.song_id AS songId,
+            COUNT(1) AS playCount
+        FROM play_log pl
+        WHERE
+            pl.play_time BETWEEN #{startTime} AND #{endTime}
+        GROUP BY
+            pl.song_id
+        ORDER BY
+            playCount DESC
+            LIMIT #{limit}
+    </select>
+
+</mapper>
