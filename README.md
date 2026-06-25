@@ -2,7 +2,7 @@
 
 > 在线音乐网站 —— Vue3 + Spring Boot + MyBatis-Plus 全栈项目
 
-[![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](music-website-master/LICENSE)
 
 ## 项目介绍
 
@@ -45,7 +45,7 @@
 | AI | LangChain4j + DeepSeek API + BGE-small-zh 嵌入模型 |
 | 部署 | Docker Compose |
 
-> 详细架构说明见 [ARCHITECTURE.md](./ARCHITECTURE.md)
+> 详细架构说明见 [ARCHITECTURE.md](music-website-master/ARCHITECTURE.md)
 
 ---
 
@@ -268,6 +268,6 @@ docker compose up --build
 
 ## 开源协议
 
-本项目基于 [CC BY-NC 4.0](LICENSE) 协议开源，仅供学习交流使用，**禁止商业用途**。
+本项目基于 [CC BY-NC 4.0](music-website-master/LICENSE) 协议开源，仅供学习交流使用，**禁止商业用途**。
 
 Copyright (c) 2018-2025 Yin-Hongwei
