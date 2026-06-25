@@ -112,8 +112,8 @@ const HttpManager = {
     addConcert: (data: any) => post('admin/concert/add', data),
     updateConcert: (data: any) => put('admin/concert/update', data),
     updateConcertStatus: (params: any) => put(`admin/concert/status?concertId=${params.concertId}&status=${params.status}`),
-    getTicketOrders: (params: any) => get('ticket/orders', params),
-    getTicketStats: (concertId: number) => get(`ticket/stats/${concertId}`),
+    getTicketOrders: (params: any) => get('admin/ticket/orders', params),
+    getTicketStats: (concertId: number) => get(`admin/ticket/stats/${concertId}`),
     uploadConcertCover: (id: number) => `${getBaseURL()}/admin/concert/cover/update?id=${id}`,
     uploadConcertCoverOnly: `${getBaseURL()}/admin/concert/cover/upload`,
 }

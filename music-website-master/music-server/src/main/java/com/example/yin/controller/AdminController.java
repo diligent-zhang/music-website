@@ -175,7 +175,7 @@ public class AdminController {
      * 查询某演唱会的所有订单（分页）
      * 关联 consumer 表显示用户名，方便运营查看
      */
-    @GetMapping("/ticket/orders")
+    @GetMapping("/admin/ticket/orders")
     public R ticketOrders(@RequestParam Integer concertId,
                           @RequestParam(defaultValue = "1") Integer page,
                           @RequestParam(defaultValue = "20") Integer size) {
@@ -194,7 +194,7 @@ public class AdminController {
      * 售票统计：按票档汇总已售/剩余数量
      * 从 MySQL 直接 COUNT 订单，保证数据准确（不依赖 Redis 缓存）
      */
-    @GetMapping("/ticket/stats/{concertId}")
+    @GetMapping("/admin/ticket/stats/{concertId}")
     public R ticketStats(@PathVariable Integer concertId) {
         // 查该演唱会所有票档
         List<TicketTier> tiers = ticketTierMapper.selectList(
@@ -224,7 +224,7 @@ public class AdminController {
      * 删除订单（管理员操作）
      * 清理订单的同时归还 Redis 库存、释放用户购买标记
      */
-    @DeleteMapping("/ticket/order/{id}")
+    @DeleteMapping("/admin/ticket/order/{id}")
     public R deleteTicketOrder(@PathVariable Integer id) {
         return ticketService.cancelOrder(id);
     }
