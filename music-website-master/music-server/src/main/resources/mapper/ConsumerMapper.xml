@@ -18,5 +18,15 @@
   <sql id="Base_Column_List">
     id, username, password, sex, phone_num, email, birth, introduction, location, avator, create_time, update_time
   </sql>
+  <update id="debitYinbi">
+    update consumer
+    set yinbi = yinbi-#{amount}
+    where id = #{userId} and  yinbi>=#{amount}
+  </update>
+  <update id="rechargeYinbi">
+    update consumer
+    set yinbi = yinbi+#{amount}
+    where id = #{userId}
+  </update>
 
 </mapper>

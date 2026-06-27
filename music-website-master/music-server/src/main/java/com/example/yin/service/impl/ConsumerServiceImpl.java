@@ -83,16 +83,13 @@ public class ConsumerServiceImpl extends ServiceImpl<ConsumerMapper, Consumer>
         return R.success("充值成功",Map.of("balance",consumer.getYinbi()));
     }
     @Override
-    public R payByYinbi(Integer userId, BigDecimal amount){
-        Consumer consumer = consumerMapper.selectById(userId);
-        if (consumer == null)
-            return R.error("用户不存在");
-        if (consumer.getYinbi() == null) consumer.setYinbi(BigDecimal.ZERO);
-        if(consumer.getYinbi().compareTo(amount) < 0)
+    public R payByYinbi(Integer userId, BigDecimal amount) {
+        int rows = consumerMapper.debitYinbi(userId, amount);
+        if (rows == 0) {
             return R.error("余额不足");
-        consumer.setYinbi(consumer.getYinbi().subtract(amount));
-        consumerMapper.updateById(consumer);
-        return R.success("支付成功",Map.of("balance",consumer.getYinbi()));
+        }
+        Consumer consumer = consumerMapper.selectById(userId);
+        return R.success("支付成功", Map.of("balance", consumer.getYinbi()));
     }
 
     // ==================== 写操作（更新DB后清理缓存）====================

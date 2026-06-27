@@ -3,6 +3,8 @@ package com.example.yin.constant;
 public class TicketRedisKey {
 
     // ========== Key 前缀 ==========
+    //添加过期时间常量
+    public static final long PURCHASED_TTL_SECONDS = 30 * 60;  // 30分钟
 
     // 库存计数器（String），key: ticket:stock:{tierId}
     public static final String STOCK_PREFIX = "ticket:stock:";

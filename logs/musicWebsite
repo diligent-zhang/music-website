@@ -1,41 +1,32 @@
-2026-06-25 15:41:48 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 59940 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
-2026-06-25 15:41:48 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
-2026-06-25 15:41:48 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
-2026-06-25 15:41:48 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-06-25 15:41:48 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-06-25 15:41:50 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
-2026-06-25 15:41:50 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-06-25 15:41:50 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
-2026-06-25 15:41:52 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
-2026-06-25 15:41:52 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 4205 ms
-2026-06-25 15:41:54 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
-2026-06-25 15:41:54 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
-2026-06-25 15:41:55 WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext]: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'ticketController' method 
-com.example.yin.controller.TicketController#cancelOrder(Integer, Integer)
-to {DELETE [/ticket/order/{id}]}: There is already 'adminController' bean method
-com.example.yin.controller.AdminController#deleteTicketOrder(Integer) mapped.
-2026-06-25 15:41:55 INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener]: 
+2026-06-27 13:20:34 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 26748 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-27 13:20:34 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-27 13:20:34 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2026-06-27 13:20:34 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-27 13:20:34 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-27 13:20:36 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-27 13:20:36 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-27 13:20:36 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2026-06-27 13:20:38 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-27 13:20:38 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 3521 ms
+2026-06-27 13:20:39 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
+2026-06-27 13:20:39 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
+2026-06-27 13:20:40 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-27 13:20:40 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-27 13:20:40 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 6.137 seconds (JVM running for 6.864)
+2026-06-27 13:20:41 INFO [com.example.yin.service.rag.DocumentIngestionService]: 加载 117 个文档，开始切割...
+2026-06-27 13:20:41 INFO [com.example.yin.service.rag.DocumentIngestionService]: 切割完成，共 144 个文本片段，开始向量化...
+2026-06-27 13:20:42 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 50/144
+2026-06-27 13:20:43 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 100/144
+2026-06-27 13:20:43 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 144/144
+2026-06-27 13:20:43 INFO [com.example.yin.service.rag.DocumentIngestionService]: RAG 知识库构建完成！共 117 个文档 → 144 个向量片段
+2026-06-27 13:20:44 INFO [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener]: 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2026-06-25 15:41:55 ERROR [org.springframework.boot.SpringApplication]: Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'ticketController' method 
-com.example.yin.controller.TicketController#cancelOrder(Integer, Integer)
-to {DELETE [/ticket/order/{id}]}: There is already 'adminController' bean method
-com.example.yin.controller.AdminController#deleteTicketOrder(Integer) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+2026-06-27 13:20:44 ERROR [org.springframework.boot.SpringApplication]: Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:770)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:751)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
 	at com.example.yin.YinMusicApplication.main(YinMusicApplication.java:14)
@@ -44,672 +35,382 @@ com.example.yin.controller.AdminController#deleteTicketOrder(Integer) mapped.
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'ticketController' method 
-com.example.yin.controller.TicketController#cancelOrder(Integer, Integer)
-to {DELETE [/ticket/order/{id}]}: There is already 'adminController' bean method
-com.example.yin.controller.AdminController#deleteTicketOrder(Integer) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
-	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
-	... 21 more
-2026-06-25 15:44:22 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 58960 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
-2026-06-25 15:44:22 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
-2026-06-25 15:44:22 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
-2026-06-25 15:44:22 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-06-25 15:44:22 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-06-25 15:44:23 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
-2026-06-25 15:44:23 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-06-25 15:44:23 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
-2026-06-25 15:44:24 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
-2026-06-25 15:44:24 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2249 ms
-2026-06-25 15:44:26 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
-2026-06-25 15:44:26 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
-2026-06-25 15:44:27 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
-2026-06-25 15:44:27 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
-2026-06-25 15:44:27 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 4.871 seconds (JVM running for 5.526)
-2026-06-25 15:44:28 INFO [com.example.yin.service.rag.DocumentIngestionService]: 加载 117 个文档，开始切割...
-2026-06-25 15:44:28 INFO [com.example.yin.service.rag.DocumentIngestionService]: 切割完成，共 144 个文本片段，开始向量化...
-2026-06-25 15:44:28 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 50/144
-2026-06-25 15:44:29 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 100/144
-2026-06-25 15:44:30 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 144/144
-2026-06-25 15:44:30 INFO [com.example.yin.service.rag.DocumentIngestionService]: RAG 知识库构建完成！共 117 个文档 → 144 个向量片段
-2026-06-25 15:44:30 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
-2026-06-25 15:44:31 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
-2026-06-25 15:44:31 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 9 个票档, 新初始化 0 个 key
-2026-06-25 15:47:09 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 50996 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
-2026-06-25 15:47:09 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
-2026-06-25 15:47:09 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
-2026-06-25 15:47:09 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-06-25 15:47:09 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-06-25 15:47:10 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
-2026-06-25 15:47:10 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-06-25 15:47:10 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
-2026-06-25 15:47:11 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
-2026-06-25 15:47:12 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2399 ms
-2026-06-25 15:47:13 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
-2026-06-25 15:47:13 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
-2026-06-25 15:47:14 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
-2026-06-25 15:47:14 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
-2026-06-25 15:47:14 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 5.231 seconds (JVM running for 6.113)
-2026-06-25 15:47:14 INFO [com.example.yin.service.rag.DocumentIngestionService]: 加载 117 个文档，开始切割...
-2026-06-25 15:47:14 INFO [com.example.yin.service.rag.DocumentIngestionService]: 切割完成，共 144 个文本片段，开始向量化...
-2026-06-25 15:47:15 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 50/144
-2026-06-25 15:47:16 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 100/144
-2026-06-25 15:47:17 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 144/144
-2026-06-25 15:47:17 INFO [com.example.yin.service.rag.DocumentIngestionService]: RAG 知识库构建完成！共 117 个文档 → 144 个向量片段
-2026-06-25 15:47:17 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
-2026-06-25 15:47:17 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
-2026-06-25 15:47:17 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 9 个票档, 新初始化 0 个 key
-2026-06-25 15:47:23 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
-2026-06-25 15:47:23 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 1 ms
-2026-06-25 15:47:35 INFO [org.springframework.scheduling.annotation.AnnotationAsyncExecutionInterceptor]: More than one TaskExecutor bean found within the context, and none is named 'taskExecutor'. Mark one of them as primary or name it 'taskExecutor' (possibly as an alias) in order to use it for async processing: [rankPlayExecutor, taskScheduler]
-2026-06-25 15:48:00 WARN [com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta]: Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @58a9760d
-2026-06-25 15:49:04 INFO [com.example.yin.service.impl.AiServiceImpl]: 用户 [u-64b21eaf-9859-433f-8d4e-c246925e6ac1] 消息: 你好
-2026-06-25 15:49:04 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP request:
-- method: POST
-- url: https://api.deepseek.com/chat/completions
-- headers: [Authorization: Beare...5f], [User-Agent: langchain4j-openai], [Content-Type: application/json]
-- body: {
-  "model" : "deepseek-chat",
-  "messages" : [ {
-    "role" : "system",
-    "content" : "你是音乐助手\"小音\"，拥有音乐知识库，可回答创作背景、歌词含义等。\n\n工具：\n- searchSongs / searchSongsBySinger：搜索歌曲/歌手\n- getRankList：排行榜\n- getSongLists / searchSongListByStyle：浏览歌单\n- searchSingers：搜索歌手信息\n- recommendSongs：推荐歌曲\n- playSong(songName)：播放歌曲（用户说\"播放XX\"时直接调用）\n- pausePlayback / resumePlayback / nextSong / setVolume：播放控制\n\n规则：\n- 用户说\"播放XX\"，直接调用 playSong，调用后告知用户即可。\n- 推荐歌曲列3-5首并简介，等用户选择后再播放。\n- 只回答音乐相关问题，中文，语气温暖。\n"
-  }, {
-    "role" : "user",
-    "content" : "你好\n\nAnswer using the following information:\nG.E.M.邓紫棋-你好|G.E.M.邓紫棋\r\n《你好》收录于邓紫棋2022年的专辑《启示录》，是她为“启示录”音乐连续剧创作的第14首歌曲。创作背景源于她对社会人际关系的反思——现代人在虚拟世界中频繁“说你好”，却常因冷漠与隔阂而无法真正“看见”彼此。歌词以“你好”这一日常问候为切入点，探讨人与人之间真诚连接的珍贵：“你好，是开始也是结束，是陌生也是熟悉”。音乐风格上，这首歌融合了流行、R&B与电子元素，主歌部分以轻快的鼓点和合成器铺垫，副歌则逐渐上扬，邓紫棋的嗓音在真假音转换中游走，既有少女的清新，又不失力量感。情感上，它传递出一种对温暖相遇的渴望，以及突破孤独、主动拥抱世界的勇气，听来既治愈又引人深思。\n\n林俊杰-关键词|林俊杰\r\n《关键词》是林俊杰2015年专辑《和自己对话》中的歌曲，由林俊杰作曲，林怡凤作词。\n\n【创作背景】这首歌的创作灵感来源于林俊杰对\"爱\"这一抽象概念的具象化思考。他试图用音乐捕捉那些能瞬间唤起情感共鸣的\"关键词\"——如\"眼泪\"、\"拥抱\"、\"永远\"等。这首歌也是林俊杰\"人头录音\"实验专辑《和自己对话》中的重要作品，该专辑首创华语流行音乐使用假人头麦克风录音，让听众获得如同置身现场的3D听觉体验。\n\n【主题含义】歌词以\"你是我的关键词\"为核心意象，将恋人比作生命中不可或缺的密码。\"你在我心里留下了一首歌\"等诗意表达，诠释了爱情如何成为理解自我与世界的钥匙。在不同的关系阶段，\"关键词\"可能是初恋时的心跳声、热恋时的\"我爱你\"，或分手后的\"谢谢你\"。\n\n【音乐风格】流行与R&B融合，轻快的电子合成器音色和律动感十足的鼓点打底，副歌部分旋律上扬且朗朗上口。林俊杰温暖声线和标志性转音技巧充分展现，整首歌情感明亮而坚定——在纷繁复杂的世界里，爱就是那个能解锁一切美好的\"关键词\"。\n\n【个人特质】以幽默风趣著称，舞台上充满活力，被誉为\"行走的CD\"——意指现场演唱水准与录音室无异。\n\n【音乐风格】周杰伦自评\"这首歌曲让创作回到根本，用最简单的音乐与歌词来表达励志之意\"。被形容为\"周式疗伤嘻哈民谣风\"——融合民谣吉他与嘻哈饶舌，前奏蟋蟀声营造夏日稻田的沉浸感，编曲清新质朴，是周杰伦2000年代末期最具人文情怀的歌曲之一。\n\n【社会影响】作为90后华语女歌手的领军人物，她在社交媒体拥有数千万粉丝，是年轻一代的音乐偶像和榜样。"
-  } ],
-  "stream" : false,
-  "tools" : [ {
-    "type" : "function",
-    "function" : {
-      "name" : "getRankList",
-      "description" : "获取排行榜：type 可选 day(日榜)、week(周榜)、month(月榜)，默认 day",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "type" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "type" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "pausePlayback",
-      "description" : "暂停播放",
-      "parameters" : {
-        "type" : "object",
-        "properties" : { },
-        "required" : [ ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "resumePlayback",
-      "description" : "继续播放",
-      "parameters" : {
-        "type" : "object",
-        "properties" : { },
-        "required" : [ ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "nextSong",
-      "description" : "下一首",
-      "parameters" : {
-        "type" : "object",
-        "properties" : { },
-        "required" : [ ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "setVolume",
-      "description" : "设置音量：volume 取值范围 0-100",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "volume" : {
-            "type" : "integer"
-          }
-        },
-        "required" : [ "volume" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "searchSingers",
-      "description" : "搜索歌手信息：根据歌手名搜索，返回歌手基本信息",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "keyword" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "keyword" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "playSong",
-      "description" : "播放歌曲：用户说'播放XX'时调用此工具。自动搜索并播放，无需先调用搜索工具。songName 为必填的歌名。",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "songName" : {
-            "type" : "string"
-          },
-          "singerName" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "songName", "singerName" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "recommendSongs",
-      "description" : "推荐歌曲：根据用户的心情或场景推荐热门歌曲，mood 如'开心'、'伤感'、'放松'、'励志'",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "mood" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "mood" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "searchSongs",
-      "description" : "搜索歌曲（仅搜索，不播放）：根据歌名关键词在数据库中搜索匹配的歌曲。用户想搜索/查找歌曲时用，想播放时用 playSong。",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "keyword" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "keyword" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "getSongLists",
-      "description" : "获取所有歌单列表，返回歌单名称、风格和ID",
-      "parameters" : {
-        "type" : "object",
-        "properties" : { },
-        "required" : [ ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "searchSongListByStyle",
-      "description" : "搜索歌单（仅搜索歌单列表，不播放歌曲）：根据风格关键词搜索歌单，如'伤感'、'摇滚'、'古风'",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "style" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "style" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "searchSongsBySinger",
-      "description" : "根据歌手名搜索：搜索指定歌手的所有歌曲。",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "singerName" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "singerName" ]
-      }
-    }
-  } ]
-}
-
-2026-06-25 15:49:09 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP response:
-- status code: 200
-- headers: [:status: 200], [access-control-allow-credentials: true], [age: 0], [content-type: application/json], [date: Thu, 25 Jun 2026 07:49:04 GMT], [eo-cache-status: MISS], [eo-log-uuid: 2530036267646414329], [server: openresty], [strict-transport-security: max-age=31536000; includeSubDomains; preload], [vary: origin, access-control-request-method, access-control-request-headers], [x-content-type-options: nosniff], [x-ds-trace-id: 1100f8aa2fc64749e64ab0e66bcbbc8b]
-- body: {"id":"1c7d6c37-5b30-492a-bf0f-a56245fdbe32","object":"chat.completion","created":1782373744,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"你好呀！👋 我是你的音乐助手小音，很高兴认识你！\n\n我这里有超丰富的音乐知识，无论是想了解某首歌的创作背景、歌词含义，还是想找好听的歌、看排行榜、听推荐，我都能帮你哦！只要你开口说\"播放XX\"，我还能立刻给你放歌呢 🎵\n\n今天想聊聊什么音乐相关的话题呀？😊"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":1727,"completion_tokens":83,"total_tokens":1810,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":1727},"system_fingerprint":"fp_8b330d02d0_prod0820_fp8_kvcache_20260402"}
-
-2026-06-25 15:49:09 INFO [com.example.yin.service.impl.AiServiceImpl]: Agent 回复: 你好呀！👋 我是你的音乐助手小音，很高兴认识你！
-
-我这里有超丰富的音乐知识，无论是想了解某首歌的创作背景、歌词含义，还是想找好听的歌、看排行榜、听推荐，我都能帮你哦！只要你开口说"播放XX"，我还能立刻给你放歌呢 🎵
-
-今天想聊聊什么音乐相关的话题呀？😊
-2026-06-25 15:49:16 INFO [com.example.yin.service.impl.AiServiceImpl]: 用户 [u-64b21eaf-9859-433f-8d4e-c246925e6ac1] 消息: 播放因为爱情
-2026-06-25 15:49:16 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP request:
-- method: POST
-- url: https://api.deepseek.com/chat/completions
-- headers: [Authorization: Beare...5f], [User-Agent: langchain4j-openai], [Content-Type: application/json]
-- body: {
-  "model" : "deepseek-chat",
-  "messages" : [ {
-    "role" : "system",
-    "content" : "你是音乐助手\"小音\"，拥有音乐知识库，可回答创作背景、歌词含义等。\n\n工具：\n- searchSongs / searchSongsBySinger：搜索歌曲/歌手\n- getRankList：排行榜\n- getSongLists / searchSongListByStyle：浏览歌单\n- searchSingers：搜索歌手信息\n- recommendSongs：推荐歌曲\n- playSong(songName)：播放歌曲（用户说\"播放XX\"时直接调用）\n- pausePlayback / resumePlayback / nextSong / setVolume：播放控制\n\n规则：\n- 用户说\"播放XX\"，直接调用 playSong，调用后告知用户即可。\n- 推荐歌曲列3-5首并简介，等用户选择后再播放。\n- 只回答音乐相关问题，中文，语气温暖。\n"
-  }, {
-    "role" : "user",
-    "content" : "播放因为爱情\n\nAnswer using the following information:\n陈奕迅 + 王菲-因为爱情|陈奕迅\r\n这首歌由小柯作词作曲，是2011年电影《将爱情进行到底》的主题曲。创作背景与电影剧情紧密相连——影片讲述了大学恋人多年后的重逢与选择，歌曲正是对“爱情能否经得起时间考验”这一命题的回应。歌词以“因为爱情，不会轻易悲伤”开篇，用平实的语言描绘了爱情在岁月中的沉淀与变化，既有对青春回忆的温暖，也有对现实无奈的感慨。风格上，歌曲采用舒缓的流行抒情编曲，以钢琴和吉他为主，营造出简约而深情的氛围。陈奕迅低沉磁性的嗓音与王菲空灵清澈的声线交织，形成了极具层次感的情感对话。整首歌表达的情感是复杂而真挚的，它既是对纯真爱情的怀念与致敬，也承认了爱情随时间流逝可能产生的疏离与遗憾，但最终落点在“依然随时可以为你疯狂”的执着上，令人听后既感动又唏嘘。\n\n【社会影响】作为90后华语女歌手的领军人物，她在社交媒体拥有数千万粉丝，是年轻一代的音乐偶像和榜样。\n\n林俊杰-关键词|林俊杰\r\n《关键词》是林俊杰2015年专辑《和自己对话》中的歌曲，由林俊杰作曲，林怡凤作词。\n\n【创作背景】这首歌的创作灵感来源于林俊杰对\"爱\"这一抽象概念的具象化思考。他试图用音乐捕捉那些能瞬间唤起情感共鸣的\"关键词\"——如\"眼泪\"、\"拥抱\"、\"永远\"等。这首歌也是林俊杰\"人头录音\"实验专辑《和自己对话》中的重要作品，该专辑首创华语流行音乐使用假人头麦克风录音，让听众获得如同置身现场的3D听觉体验。\n\n【主题含义】歌词以\"你是我的关键词\"为核心意象，将恋人比作生命中不可或缺的密码。\"你在我心里留下了一首歌\"等诗意表达，诠释了爱情如何成为理解自我与世界的钥匙。在不同的关系阶段，\"关键词\"可能是初恋时的心跳声、热恋时的\"我爱你\"，或分手后的\"谢谢你\"。\n\n【音乐风格】流行与R&B融合，轻快的电子合成器音色和律动感十足的鼓点打底，副歌部分旋律上扬且朗朗上口。林俊杰温暖声线和标志性转音技巧充分展现，整首歌情感明亮而坚定——在纷繁复杂的世界里，爱就是那个能解锁一切美好的\"关键词\"。\n\n陈奕迅-不要说话|陈奕迅\r\n这首歌曲由小柯作词作曲，收录于陈奕迅2008年发行的专辑《不想放手》中。创作背景源于对现代人情感表达困境的观察——人们往往在深爱时反而沉默，用行动而非言语传递心意。歌词以“爱一个人是不是应该有默契”开篇，探讨了“沉默之爱”的主题：真正的爱无需多言，一个眼神、一个动作便能心意相通，但沉默也可能成为误解的源头。歌曲风格以钢琴为主导的抒情慢板，陈奕迅标志性的低沉嗓音缓缓铺陈，副歌部分旋律层层递进，营造出克制而深情的氛围。整首歌表达的情感复杂而细腻，既有暗恋者不敢言说的忐忑，也有对纯粹情感的向往，最终落点在“愿意用一支黑色的铅笔，画一出沉默舞台剧”的温柔守护上，令人动容。\n\n林俊杰-期待爱|林俊杰\r\n《期待爱》是林俊杰与金莎合唱的一首对唱情歌，收录于林俊杰2007年的专辑《西界》中。这首歌的创作背景源于林俊杰对“纯粹爱情”的向往，他希望通过音乐传递出在快节奏时代中依然保持对爱情的美好期待。歌词以“期待”为核心，描述了两个人从相遇、相知到相互靠近的甜蜜过程，主题强调“爱需要勇气和耐心”，而非急功近利的索取。歌曲风格偏向轻快的流行R&B，节奏明快，旋律流畅，林俊杰与金莎的声线搭配和谐，营造出一种青春洋溢的恋爱氛围。情感表达上，这首歌充满了温暖与希望，它鼓励听众在爱情面前不要退缩，保持一颗开放的心去迎接可能的美好。整首歌像一封写给未来的情书，传递出“爱情值得等待”的积极信念。"
-  } ],
-  "stream" : false,
-  "tools" : [ {
-    "type" : "function",
-    "function" : {
-      "name" : "getRankList",
-      "description" : "获取排行榜：type 可选 day(日榜)、week(周榜)、month(月榜)，默认 day",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "type" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "type" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "pausePlayback",
-      "description" : "暂停播放",
-      "parameters" : {
-        "type" : "object",
-        "properties" : { },
-        "required" : [ ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "resumePlayback",
-      "description" : "继续播放",
-      "parameters" : {
-        "type" : "object",
-        "properties" : { },
-        "required" : [ ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "nextSong",
-      "description" : "下一首",
-      "parameters" : {
-        "type" : "object",
-        "properties" : { },
-        "required" : [ ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "setVolume",
-      "description" : "设置音量：volume 取值范围 0-100",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "volume" : {
-            "type" : "integer"
-          }
-        },
-        "required" : [ "volume" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "searchSingers",
-      "description" : "搜索歌手信息：根据歌手名搜索，返回歌手基本信息",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "keyword" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "keyword" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "playSong",
-      "description" : "播放歌曲：用户说'播放XX'时调用此工具。自动搜索并播放，无需先调用搜索工具。songName 为必填的歌名。",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "songName" : {
-            "type" : "string"
-          },
-          "singerName" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "songName", "singerName" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "recommendSongs",
-      "description" : "推荐歌曲：根据用户的心情或场景推荐热门歌曲，mood 如'开心'、'伤感'、'放松'、'励志'",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "mood" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "mood" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "searchSongs",
-      "description" : "搜索歌曲（仅搜索，不播放）：根据歌名关键词在数据库中搜索匹配的歌曲。用户想搜索/查找歌曲时用，想播放时用 playSong。",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "keyword" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "keyword" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "getSongLists",
-      "description" : "获取所有歌单列表，返回歌单名称、风格和ID",
-      "parameters" : {
-        "type" : "object",
-        "properties" : { },
-        "required" : [ ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "searchSongListByStyle",
-      "description" : "搜索歌单（仅搜索歌单列表，不播放歌曲）：根据风格关键词搜索歌单，如'伤感'、'摇滚'、'古风'",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "style" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "style" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "searchSongsBySinger",
-      "description" : "根据歌手名搜索：搜索指定歌手的所有歌曲。",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "singerName" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "singerName" ]
-      }
-    }
-  } ]
-}
-
-2026-06-25 15:49:18 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP response:
-- status code: 200
-- headers: [:status: 200], [access-control-allow-credentials: true], [age: 0], [content-type: application/json], [date: Thu, 25 Jun 2026 07:49:15 GMT], [eo-cache-status: MISS], [eo-log-uuid: 8975885594577195337], [server: openresty], [strict-transport-security: max-age=31536000; includeSubDomains; preload], [vary: origin, access-control-request-method, access-control-request-headers], [x-content-type-options: nosniff], [x-ds-trace-id: c7b049afbb1d4788f1a82b916bc20ba4]
-- body: {"id":"4608a738-cc72-40ad-845f-bfc91b198254","object":"chat.completion","created":1782373755,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"好的，马上为你播放《因为爱情》！","tool_calls":[{"index":0,"id":"call_00_kjqTHYQ5iNXVSEQYpbtT9582","type":"function","function":{"name":"playSong","arguments":"{\"songName\": \"因为爱情\", \"singerName\": \"陈奕迅\"}"}}]},"logprobs":null,"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":2029,"completion_tokens":74,"total_tokens":2103,"prompt_tokens_details":{"cached_tokens":0},"prompt_cache_hit_tokens":0,"prompt_cache_miss_tokens":2029},"system_fingerprint":"fp_8b330d02d0_prod0820_fp8_kvcache_20260402"}
-
-2026-06-25 15:49:18 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP request:
-- method: POST
-- url: https://api.deepseek.com/chat/completions
-- headers: [Authorization: Beare...5f], [User-Agent: langchain4j-openai], [Content-Type: application/json]
-- body: {
-  "model" : "deepseek-chat",
-  "messages" : [ {
-    "role" : "system",
-    "content" : "你是音乐助手\"小音\"，拥有音乐知识库，可回答创作背景、歌词含义等。\n\n工具：\n- searchSongs / searchSongsBySinger：搜索歌曲/歌手\n- getRankList：排行榜\n- getSongLists / searchSongListByStyle：浏览歌单\n- searchSingers：搜索歌手信息\n- recommendSongs：推荐歌曲\n- playSong(songName)：播放歌曲（用户说\"播放XX\"时直接调用）\n- pausePlayback / resumePlayback / nextSong / setVolume：播放控制\n\n规则：\n- 用户说\"播放XX\"，直接调用 playSong，调用后告知用户即可。\n- 推荐歌曲列3-5首并简介，等用户选择后再播放。\n- 只回答音乐相关问题，中文，语气温暖。\n"
-  }, {
-    "role" : "user",
-    "content" : "播放因为爱情\n\nAnswer using the following information:\n陈奕迅 + 王菲-因为爱情|陈奕迅\r\n这首歌由小柯作词作曲，是2011年电影《将爱情进行到底》的主题曲。创作背景与电影剧情紧密相连——影片讲述了大学恋人多年后的重逢与选择，歌曲正是对“爱情能否经得起时间考验”这一命题的回应。歌词以“因为爱情，不会轻易悲伤”开篇，用平实的语言描绘了爱情在岁月中的沉淀与变化，既有对青春回忆的温暖，也有对现实无奈的感慨。风格上，歌曲采用舒缓的流行抒情编曲，以钢琴和吉他为主，营造出简约而深情的氛围。陈奕迅低沉磁性的嗓音与王菲空灵清澈的声线交织，形成了极具层次感的情感对话。整首歌表达的情感是复杂而真挚的，它既是对纯真爱情的怀念与致敬，也承认了爱情随时间流逝可能产生的疏离与遗憾，但最终落点在“依然随时可以为你疯狂”的执着上，令人听后既感动又唏嘘。\n\n【社会影响】作为90后华语女歌手的领军人物，她在社交媒体拥有数千万粉丝，是年轻一代的音乐偶像和榜样。\n\n林俊杰-关键词|林俊杰\r\n《关键词》是林俊杰2015年专辑《和自己对话》中的歌曲，由林俊杰作曲，林怡凤作词。\n\n【创作背景】这首歌的创作灵感来源于林俊杰对\"爱\"这一抽象概念的具象化思考。他试图用音乐捕捉那些能瞬间唤起情感共鸣的\"关键词\"——如\"眼泪\"、\"拥抱\"、\"永远\"等。这首歌也是林俊杰\"人头录音\"实验专辑《和自己对话》中的重要作品，该专辑首创华语流行音乐使用假人头麦克风录音，让听众获得如同置身现场的3D听觉体验。\n\n【主题含义】歌词以\"你是我的关键词\"为核心意象，将恋人比作生命中不可或缺的密码。\"你在我心里留下了一首歌\"等诗意表达，诠释了爱情如何成为理解自我与世界的钥匙。在不同的关系阶段，\"关键词\"可能是初恋时的心跳声、热恋时的\"我爱你\"，或分手后的\"谢谢你\"。\n\n【音乐风格】流行与R&B融合，轻快的电子合成器音色和律动感十足的鼓点打底，副歌部分旋律上扬且朗朗上口。林俊杰温暖声线和标志性转音技巧充分展现，整首歌情感明亮而坚定——在纷繁复杂的世界里，爱就是那个能解锁一切美好的\"关键词\"。\n\n陈奕迅-不要说话|陈奕迅\r\n这首歌曲由小柯作词作曲，收录于陈奕迅2008年发行的专辑《不想放手》中。创作背景源于对现代人情感表达困境的观察——人们往往在深爱时反而沉默，用行动而非言语传递心意。歌词以“爱一个人是不是应该有默契”开篇，探讨了“沉默之爱”的主题：真正的爱无需多言，一个眼神、一个动作便能心意相通，但沉默也可能成为误解的源头。歌曲风格以钢琴为主导的抒情慢板，陈奕迅标志性的低沉嗓音缓缓铺陈，副歌部分旋律层层递进，营造出克制而深情的氛围。整首歌表达的情感复杂而细腻，既有暗恋者不敢言说的忐忑，也有对纯粹情感的向往，最终落点在“愿意用一支黑色的铅笔，画一出沉默舞台剧”的温柔守护上，令人动容。\n\n林俊杰-期待爱|林俊杰\r\n《期待爱》是林俊杰与金莎合唱的一首对唱情歌，收录于林俊杰2007年的专辑《西界》中。这首歌的创作背景源于林俊杰对“纯粹爱情”的向往，他希望通过音乐传递出在快节奏时代中依然保持对爱情的美好期待。歌词以“期待”为核心，描述了两个人从相遇、相知到相互靠近的甜蜜过程，主题强调“爱需要勇气和耐心”，而非急功近利的索取。歌曲风格偏向轻快的流行R&B，节奏明快，旋律流畅，林俊杰与金莎的声线搭配和谐，营造出一种青春洋溢的恋爱氛围。情感表达上，这首歌充满了温暖与希望，它鼓励听众在爱情面前不要退缩，保持一颗开放的心去迎接可能的美好。整首歌像一封写给未来的情书，传递出“爱情值得等待”的积极信念。"
-  }, {
-    "role" : "assistant",
-    "content" : "好的，马上为你播放《因为爱情》！",
-    "tool_calls" : [ {
-      "id" : "call_00_kjqTHYQ5iNXVSEQYpbtT9582",
-      "type" : "function",
-      "function" : {
-        "name" : "playSong",
-        "arguments" : "{\"songName\": \"因为爱情\", \"singerName\": \"陈奕迅\"}"
-      }
-    } ]
-  }, {
-    "role" : "tool",
-    "tool_call_id" : "call_00_kjqTHYQ5iNXVSEQYpbtT9582",
-    "content" : "已找到「陈奕迅 + 王菲-因为爱情」- 陈奕迅，系统已自动为用户播放，你只需要告知用户正在播放即可。"
-  } ],
-  "stream" : false,
-  "tools" : [ {
-    "type" : "function",
-    "function" : {
-      "name" : "getRankList",
-      "description" : "获取排行榜：type 可选 day(日榜)、week(周榜)、month(月榜)，默认 day",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "type" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "type" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "pausePlayback",
-      "description" : "暂停播放",
-      "parameters" : {
-        "type" : "object",
-        "properties" : { },
-        "required" : [ ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "resumePlayback",
-      "description" : "继续播放",
-      "parameters" : {
-        "type" : "object",
-        "properties" : { },
-        "required" : [ ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "nextSong",
-      "description" : "下一首",
-      "parameters" : {
-        "type" : "object",
-        "properties" : { },
-        "required" : [ ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "setVolume",
-      "description" : "设置音量：volume 取值范围 0-100",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "volume" : {
-            "type" : "integer"
-          }
-        },
-        "required" : [ "volume" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "searchSingers",
-      "description" : "搜索歌手信息：根据歌手名搜索，返回歌手基本信息",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "keyword" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "keyword" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "playSong",
-      "description" : "播放歌曲：用户说'播放XX'时调用此工具。自动搜索并播放，无需先调用搜索工具。songName 为必填的歌名。",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "songName" : {
-            "type" : "string"
-          },
-          "singerName" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "songName", "singerName" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "recommendSongs",
-      "description" : "推荐歌曲：根据用户的心情或场景推荐热门歌曲，mood 如'开心'、'伤感'、'放松'、'励志'",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "mood" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "mood" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "searchSongs",
-      "description" : "搜索歌曲（仅搜索，不播放）：根据歌名关键词在数据库中搜索匹配的歌曲。用户想搜索/查找歌曲时用，想播放时用 playSong。",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "keyword" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "keyword" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "getSongLists",
-      "description" : "获取所有歌单列表，返回歌单名称、风格和ID",
-      "parameters" : {
-        "type" : "object",
-        "properties" : { },
-        "required" : [ ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "searchSongListByStyle",
-      "description" : "搜索歌单（仅搜索歌单列表，不播放歌曲）：根据风格关键词搜索歌单，如'伤感'、'摇滚'、'古风'",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "style" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "style" ]
-      }
-    }
-  }, {
-    "type" : "function",
-    "function" : {
-      "name" : "searchSongsBySinger",
-      "description" : "根据歌手名搜索：搜索指定歌手的所有歌曲。",
-      "parameters" : {
-        "type" : "object",
-        "properties" : {
-          "singerName" : {
-            "type" : "string"
-          }
-        },
-        "required" : [ "singerName" ]
-      }
-    }
-  } ]
-}
-
-2026-06-25 15:49:20 INFO [dev.langchain4j.http.client.log.LoggingHttpClient]: HTTP response:
-- status code: 200
-- headers: [:status: 200], [access-control-allow-credentials: true], [age: 0], [content-type: application/json], [date: Thu, 25 Jun 2026 07:49:17 GMT], [eo-cache-status: MISS], [eo-log-uuid: 431111780175518861], [server: openresty], [strict-transport-security: max-age=31536000; includeSubDomains; preload], [vary: origin, access-control-request-method, access-control-request-headers], [x-content-type-options: nosniff], [x-ds-trace-id: b6fe499c3ec7b244ddf144dd8894cda5]
-- body: {"id":"4274c57e-a2d1-4949-ba90-67b16a4d7ef4","object":"chat.completion","created":1782373757,"model":"deepseek-v4-flash","choices":[{"index":0,"message":{"role":"assistant","content":"🎵 正在为你播放 **陈奕迅 & 王菲** 的经典对唱 **《因为爱情》**～\n\n这首歌是电影《将爱情进行到底》的主题曲，由小柯创作，陈奕迅的低沉磁性遇上王菲的空灵清澈，真的是百听不厌的经典之作！每次听到那句 **\"因为爱情，不会轻易悲伤，所以一切都是幸福的模样\"**，心里总会泛起满满的感动。\n\n希望这首歌能带给你美好的心情～💕"},"logprobs":null,"finish_reason":"stop"}],"usage":{"prompt_tokens":2148,"completion_tokens":101,"total_tokens":2249,"prompt_tokens_details":{"cached_tokens":2048},"prompt_cache_hit_tokens":2048,"prompt_cache_miss_tokens":100},"system_fingerprint":"fp_8b330d02d0_prod0820_fp8_kvcache_20260402"}
-
-2026-06-25 15:49:20 INFO [com.example.yin.service.impl.AiServiceImpl]: Agent 回复: 🎵 正在为你播放 **陈奕迅 & 王菲** 的经典对唱 **《因为爱情》**～
-
-这首歌是电影《将爱情进行到底》的主题曲，由小柯创作，陈奕迅的低沉磁性遇上王菲的空灵清澈，真的是百听不厌的经典之作！每次听到那句 **"因为爱情，不会轻易悲伤，所以一切都是幸福的模样"**，心里总会泛起满满的感动。
-
-希望这首歌能带给你美好的心情～💕[PLAY:25]
-2026-06-25 15:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
-2026-06-25 15:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
-2026-06-25 15:50:11 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Shutdown initiated...
-2026-06-25 15:50:11 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Shutdown completed.
+Caused by: org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1/<unresolved>:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1689)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1597)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1383)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1366)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:1093)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:421)
+	at org.springframework.data.redis.core.RedisConnectionUtils.fetchConnection(RedisConnectionUtils.java:193)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:144)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:105)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:210)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:190)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:97)
+	at org.springframework.data.redis.core.DefaultZSetOperations.zCard(DefaultZSetOperations.java:617)
+	at org.springframework.data.redis.core.DefaultZSetOperations.size(DefaultZSetOperations.java:606)
+	at com.example.yin.config.RankDataInitializer.run(RankDataInitializer.java:30)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:767)
+	... 10 more
+Caused by: org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1/<unresolved>:6379
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:109)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1595)
+	... 24 more
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 127.0.0.1/<unresolved>:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:330)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:216)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.lambda$null$0(LettucePoolingConnectionProvider.java:97)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:211)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:201)
+	at org.apache.commons.pool2.BasePooledObjectFactory.makeObject(BasePooledObjectFactory.java:70)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:571)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:298)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:223)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:122)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:117)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:103)
+	... 25 more
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: getsockopt: /127.0.0.1:6379
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:710)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2026-06-27 13:21:47 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 34368 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-27 13:21:47 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-27 13:21:47 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2026-06-27 13:21:47 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-27 13:21:47 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-27 13:21:48 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-27 13:21:48 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-27 13:21:48 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2026-06-27 13:21:49 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-27 13:21:49 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 2216 ms
+2026-06-27 13:21:51 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
+2026-06-27 13:21:51 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
+2026-06-27 13:21:51 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-27 13:21:52 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-27 13:21:52 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 4.648 seconds (JVM running for 5.269)
+2026-06-27 13:21:52 INFO [com.example.yin.service.rag.DocumentIngestionService]: 加载 117 个文档，开始切割...
+2026-06-27 13:21:52 INFO [com.example.yin.service.rag.DocumentIngestionService]: 切割完成，共 144 个文本片段，开始向量化...
+2026-06-27 13:21:52 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 50/144
+2026-06-27 13:21:53 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 100/144
+2026-06-27 13:21:54 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 144/144
+2026-06-27 13:21:54 INFO [com.example.yin.service.rag.DocumentIngestionService]: RAG 知识库构建完成！共 117 个文档 → 144 个向量片段
+2026-06-27 13:21:55 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-06-27 13:21:55 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-06-27 13:21:55 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 9 个票档, 新初始化 0 个 key
+2026-06-27 13:22:00 WARN [com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta]: Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @58a9760d
+2026-06-27 13:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 13:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-27 13:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 13:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-27 13:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 13:35:00 WARN [com.example.yin.task.TicketScheduledTask]: 库存校正: tierId=10, tierName=VIP票, 期望=100, Redis原值=0
+2026-06-27 13:35:00 WARN [com.example.yin.task.TicketScheduledTask]: 库存校正: tierId=11, tierName=普通票, 期望=200, Redis原值=0
+2026-06-27 13:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 2 个票档
+2026-06-27 13:38:01 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Shutdown initiated...
+2026-06-27 13:38:01 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Shutdown completed.
+2026-06-27 13:38:04 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 49092 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-27 13:38:04 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-27 13:38:04 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2026-06-27 13:38:04 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-27 13:38:04 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-27 13:38:06 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-27 13:38:06 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-27 13:38:06 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2026-06-27 13:38:07 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-27 13:38:07 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 3613 ms
+2026-06-27 13:38:09 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
+2026-06-27 13:38:09 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
+2026-06-27 13:38:09 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-27 13:38:09 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-27 13:38:09 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 5.963 seconds (JVM running for 6.69)
+2026-06-27 13:38:10 INFO [com.example.yin.service.rag.DocumentIngestionService]: 加载 117 个文档，开始切割...
+2026-06-27 13:38:10 INFO [com.example.yin.service.rag.DocumentIngestionService]: 切割完成，共 144 个文本片段，开始向量化...
+2026-06-27 13:38:11 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 50/144
+2026-06-27 13:38:12 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 100/144
+2026-06-27 13:38:13 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 144/144
+2026-06-27 13:38:13 INFO [com.example.yin.service.rag.DocumentIngestionService]: RAG 知识库构建完成！共 117 个文档 → 144 个向量片段
+2026-06-27 13:38:13 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-06-27 13:38:13 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-06-27 13:38:13 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 11 个票档, 新初始化 0 个 key
+2026-06-27 13:38:15 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-06-27 13:38:15 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 0 ms
+2026-06-27 13:39:00 WARN [com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta]: Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @58a9760d
+2026-06-27 13:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 13:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-27 13:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 13:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-27 13:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 13:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-27 13:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 13:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-27 14:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 14:00:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-27 14:00:00 INFO [com.example.yin.task.RankScheduledTask]: 开始同步播放量到数据库...
+2026-06-27 14:00:00 INFO [com.example.yin.task.RankScheduledTask]: 播放量同步完成，共更新 0 首歌曲
+2026-06-27 14:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 14:05:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-27 14:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 14:10:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878944106, userId=107, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878944643, userId=91, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878949603, userId=95, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878946995, userId=100, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878948155, userId=97, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878940980, userId=83, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878949245, userId=69, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878947229, userId=71, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878949223, userId=90, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878948317, userId=101, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878948888, userId=92, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878945492, userId=88, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878949166, userId=104, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878945026, userId=76, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878942293, userId=81, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878947966, userId=89, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878941477, userId=96, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878946468, userId=68, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878944668, userId=84, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878946704, userId=105, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878941155, userId=87, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878942185, userId=77, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878943643, userId=98, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878948519, userId=103, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878949300, userId=80, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878946695, userId=67, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878945311, userId=79, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878941868, userId=102, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878947552, userId=78, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878948547, userId=85, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878949967, userId=99, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878946551, userId=86, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878949121, userId=73, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878949732, userId=75, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878945017, userId=93, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878949200, userId=94, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878945352, userId=70, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878942668, userId=82, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878948095, userId=74, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878943031, userId=72, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878942745, userId=66, tierId=8, price=100.00 =====
+2026-06-27 14:13:07 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407878941348, userId=106, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887211184, userId=136, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887225745, userId=140, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887222027, userId=139, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887224755, userId=135, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887226332, userId=141, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887213144, userId=113, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887219003, userId=109, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887210150, userId=138, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887218521, userId=108, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887232759, userId=129, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887257244, userId=134, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887243028, userId=144, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887245407, userId=115, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887236888, userId=114, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887323613, userId=124, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887230027, userId=133, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887250212, userId=132, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887229537, userId=111, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887221822, userId=130, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887313605, userId=123, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887278620, userId=117, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887355604, userId=145, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887390874, userId=126, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887449795, userId=121, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887329360, userId=128, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887371063, userId=142, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887368192, userId=110, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887359892, userId=148, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887327342, userId=137, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887311587, userId=116, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887368242, userId=122, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887382119, userId=127, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887386181, userId=146, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887395790, userId=118, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887439885, userId=147, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887416599, userId=125, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887433996, userId=120, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887368111, userId=131, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887452568, userId=119, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887459192, userId=112, tierId=8, price=100.00 =====
+2026-06-27 14:13:08 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407887437154, userId=143, tierId=8, price=100.00 =====
+2026-06-27 14:13:09 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407897477953, userId=151, tierId=8, price=100.00 =====
+2026-06-27 14:13:09 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407897471705, userId=170, tierId=8, price=100.00 =====
+2026-06-27 14:13:09 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407897529026, userId=162, tierId=8, price=100.00 =====
+2026-06-27 14:13:09 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407897508303, userId=168, tierId=8, price=100.00 =====
+2026-06-27 14:13:09 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407897539889, userId=173, tierId=8, price=100.00 =====
+2026-06-27 14:13:09 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407897531942, userId=175, tierId=8, price=100.00 =====
+2026-06-27 14:13:09 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407897470575, userId=150, tierId=8, price=100.00 =====
+2026-06-27 14:13:09 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407897494546, userId=161, tierId=8, price=100.00 =====
+2026-06-27 14:13:09 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407897478690, userId=149, tierId=8, price=100.00 =====
+2026-06-27 14:13:09 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407897537340, userId=159, tierId=8, price=100.00 =====
+2026-06-27 14:13:09 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407897499442, userId=171, tierId=8, price=100.00 =====
+2026-06-27 14:13:09 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407897497116, userId=164, tierId=8, price=100.00 =====
+2026-06-27 14:13:09 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407897530683, userId=152, tierId=8, price=100.00 =====
+2026-06-27 14:13:09 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407897528380, userId=153, tierId=8, price=100.00 =====
+2026-06-27 14:13:09 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407897540713, userId=156, tierId=8, price=100.00 =====
+2026-06-27 14:13:09 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407897475485, userId=163, tierId=8, price=100.00 =====
+2026-06-27 14:13:09 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825407897558036, userId=169, tierId=8, price=100.00 =====
+2026-06-27 14:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 14:15:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-27 14:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 14:20:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-27 14:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 14:25:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-27 14:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 14:30:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453281015, userId=89, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453302714, userId=90, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453302267, userId=82, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453305548, userId=71, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453304183, userId=66, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453309392, userId=83, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453329868, userId=76, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453308188, userId=80, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453305652, userId=77, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453342247, userId=81, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453348592, userId=85, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453346336, userId=69, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453345599, userId=91, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453348437, userId=86, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453347803, userId=78, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453395767, userId=88, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453311471, userId=74, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453436331, userId=67, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453446876, userId=73, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453345371, userId=79, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453314643, userId=72, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453302917, userId=84, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453319120, userId=68, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453343395, userId=75, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453511669, userId=87, tierId=8, price=100.00 =====
+2026-06-27 14:30:45 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418453511652, userId=70, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463627014, userId=108, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463649493, userId=110, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463645374, userId=113, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463647830, userId=96, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463648170, userId=115, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463648067, userId=114, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463640207, userId=93, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463641212, userId=102, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463645781, userId=95, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463677570, userId=105, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463672902, userId=111, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463675071, userId=98, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463674505, userId=106, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463644403, userId=107, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463651812, userId=103, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463640808, userId=97, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463648786, userId=92, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463648219, userId=109, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463647571, userId=100, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463674365, userId=112, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463680052, userId=104, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463692691, userId=101, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463699277, userId=99, tierId=8, price=100.00 =====
+2026-06-27 14:30:46 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825418463686140, userId=94, tierId=8, price=100.00 =====
+2026-06-27 14:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 14:35:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-27 14:35:45 INFO [com.example.yin.YinMusicApplication]: Starting YinMusicApplication using Java 17.0.16 on LAPTOP-0E25MM1F with PID 49096 (C:\Study\简历项目\music-website-master 音乐\music-website-master\music-server\target\classes started by zhang in C:\Study\简历项目\music-website-master 音乐)
+2026-06-27 14:35:45 INFO [com.example.yin.YinMusicApplication]: The following profiles are active: dev
+2026-06-27 14:35:45 INFO [org.springframework.boot.devtools.restart.ChangeableUrls]: The Class-Path manifest attribute in C:\Users\zhang\.m2\repository\org\apache\opennlp\opennlp-tools\2.5.4\opennlp-tools-2.5.4.jar referenced one or more files that do not exist: file:/C:/Users/zhang/.m2/repository/org/apache/opennlp/opennlp-tools/2.5.4/slf4j-api-2.0.17.jar
+2026-06-27 14:35:45 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-27 14:35:46 INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor]: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-27 14:35:46 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-06-27 14:35:46 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-27 14:35:46 INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate]: Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2026-06-27 14:35:47 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat initialized with port(s): 8888 (http)
+2026-06-27 14:35:47 INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]: Root WebApplicationContext: initialization completed in 1929 ms
+2026-06-27 14:35:49 INFO [ai.djl.util.Platform]: Found matching platform from: jar:file:/C:/Users/zhang/.m2/repository/ai/djl/huggingface/tokenizers/0.31.1/tokenizers-0.31.1.jar!/native/lib/tokenizers.properties
+2026-06-27 14:35:49 WARN [ai.djl.huggingface.tokenizers.HuggingFaceTokenizer]: maxLength is not explicitly specified, use modelMaxLength: 512
+2026-06-27 14:35:49 INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer]: LiveReload server is running on port 35729
+2026-06-27 14:35:49 INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer]: Tomcat started on port(s): 8888 (http) with context path ''
+2026-06-27 14:35:49 INFO [com.example.yin.YinMusicApplication]: Started YinMusicApplication in 4.125 seconds (JVM running for 4.775)
+2026-06-27 14:35:49 INFO [com.example.yin.service.rag.DocumentIngestionService]: 加载 117 个文档，开始切割...
+2026-06-27 14:35:49 INFO [com.example.yin.service.rag.DocumentIngestionService]: 切割完成，共 144 个文本片段，开始向量化...
+2026-06-27 14:35:50 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 50/144
+2026-06-27 14:35:51 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 100/144
+2026-06-27 14:35:52 INFO [com.example.yin.service.rag.DocumentIngestionService]: 向量化进度: 144/144
+2026-06-27 14:35:52 INFO [com.example.yin.service.rag.DocumentIngestionService]: RAG 知识库构建完成！共 117 个文档 → 144 个向量片段
+2026-06-27 14:35:52 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Starting...
+2026-06-27 14:35:52 INFO [com.zaxxer.hikari.HikariDataSource]: HikariPool-1 - Start completed.
+2026-06-27 14:35:52 INFO [com.example.yin.config.TicketDataInitializer]: 票档库存预热完成, 共 11 个票档, 新初始化 0 个 key
+2026-06-27 14:36:00 WARN [com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta]: Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @58a9760d
+2026-06-27 14:36:45 INFO [org.springframework.web.servlet.DispatcherServlet]: Initializing Servlet 'dispatcherServlet'
+2026-06-27 14:36:45 INFO [org.springframework.web.servlet.DispatcherServlet]: Completed initialization in 0 ms
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621875046, userId=69, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621871178, userId=72, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621872870, userId=81, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621870624, userId=79, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621875906, userId=75, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621872753, userId=70, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621873840, userId=66, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621877189, userId=83, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621875532, userId=74, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621877762, userId=84, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621873710, userId=76, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621871933, userId=77, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621876291, userId=88, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621872752, userId=86, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621879840, userId=71, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621876523, userId=89, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621872712, userId=73, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621879705, userId=87, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621871177, userId=91, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621877835, userId=78, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621873794, userId=90, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621870658, userId=68, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621873184, userId=67, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621878159, userId=82, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621874174, userId=85, tierId=8, price=100.00 =====
+2026-06-27 14:37:42 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422621879530, userId=80, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631865793, userId=114, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631912996, userId=112, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631919070, userId=107, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631912815, userId=96, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631947870, userId=105, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631934183, userId=97, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631935668, userId=113, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631910854, userId=101, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631917661, userId=109, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631911049, userId=92, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631916231, userId=94, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631918726, userId=95, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631930910, userId=93, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631947886, userId=98, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631911187, userId=102, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631957261, userId=115, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631956589, userId=108, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631965880, userId=106, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631960475, userId=103, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631958552, userId=104, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631962256, userId=111, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631959300, userId=100, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631944149, userId=110, tierId=8, price=100.00 =====
+2026-06-27 14:37:43 INFO [com.example.yin.service.impl.TicketServiceImpl]: ===== 购票成功: orderNo=TK17825422631949518, userId=99, tierId=8, price=100.00 =====
+2026-06-27 14:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 14:40:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-27 14:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 14:45:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-27 14:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 14:50:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档
+2026-06-27 14:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账开始...
+2026-06-27 14:55:00 INFO [com.example.yin.task.TicketScheduledTask]: 库存对账完成, 校正 0 个票档

@@ -52,6 +52,15 @@
 
 ---
 
+## 性能优化专项
+
+| 文档 | 方向 | 核心技术 | 优化效果 |
+|------|------|---------|---------|
+| [高并发抢票优化](music-website-master/docs/ticket-concurrency-optimization.md) | 票务抢购 | Redis Lua 原子扣库存、SETNX 去重、@Async 异步写库、原子 SQL 扣余额 | 响应中位数 29ms，200 并发 0 超卖 0 重复 |
+| [歌单查询优化](music-website-master/docs/performance-optimization-summary.md) | 列表查询 | MyBatis-Plus 分页、三表 JOIN 合并、Redis 分页缓存 | 100 首歌加载 3s → 300ms |
+
+---
+
 ## 快速开始
 
 ### 环境要求

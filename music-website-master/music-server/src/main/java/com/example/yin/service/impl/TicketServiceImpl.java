@@ -21,8 +21,11 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
+import java.util.concurrent.TimeUnit;
 
 import java.util.*;
+import java.util.concurrent.TimeUnit;
+
 @Service
 public class TicketServiceImpl implements TicketService {
     private static final Logger log = LoggerFactory.getLogger(TicketServiceImpl.class);
@@ -94,30 +97,27 @@ public class TicketServiceImpl implements TicketService {
         }
        // log.info("步骤①通过: tierName={}, price={}, totalStock={}",
          //       tier.getTierName(), tier.getPrice(), tier.getTotalStock());
-        // ===== 音符支付：先扣款 =====
-        if ("yinbi".equals(request.getPayMethod())) {
-            Consumer consumer = consumerMapper.selectById(request.getUserId());
-            if (consumer.getYinbi() == null
-                    || consumer.getYinbi().compareTo(tier.getPrice()) < 0) {
-                return R.error("音符余额不足");
-            }
-            consumer.setYinbi(consumer.getYinbi().subtract(tier.getPrice()));
-            consumerMapper.updateById(consumer);
-        }
-        // 扫码支付 "qrcode"：不扣余额，直接走后续下单流程
-
-        // ===== 步骤 ②：SETNX 用户去重 =====
+        // ===== 步骤 ②：SETNX 用户去重（先于扣款，防止重复扣音符）=====
         String purchasedKey = TicketRedisKey.purchasedKey(
                 request.getUserId(), request.getTierId());
         Boolean isFirst = stringRedisTemplate.opsForValue()
-                .setIfAbsent(purchasedKey, "1");
+                .setIfAbsent(purchasedKey, "1",
+                        TicketRedisKey.PURCHASED_TTL_SECONDS, TimeUnit.SECONDS);
+
         if (Boolean.FALSE.equals(isFirst)) {
-//            log.warn("购票失败: 用户已购买过该票档, userId={}, tierId={}, key={}",
-//                    request.getUserId(), request.getTierId(), purchasedKey);
             return R.error("您已购买过该票档");
         }
-        //log.info("步骤②通过: SETNX 成功, key={}", purchasedKey);
 
+        // ===== 音符支付：SETNX 通过后再扣款 =====
+        if ("yinbi".equals(request.getPayMethod())) {
+            int rows = consumerMapper.debitYinbi(request.getUserId(), tier.getPrice());
+            if (rows == 0) {
+                // 扣款失败，释放去重标记让用户可重试
+                stringRedisTemplate.delete(purchasedKey);
+                return R.error("音符余额不足");
+            }
+        }
+        // 扫码支付 "qrcode"：不扣余额，直接走后续下单流程
         // ===== 步骤 ③：Lua 脚本原子扣库存 =====
         String stockKey = TicketRedisKey.stockKey(request.getTierId());
         //log.info("步骤③: 库存 key={}", stockKey);
@@ -139,8 +139,6 @@ public class TicketServiceImpl implements TicketService {
             try {
                 Long.parseLong(currentStock.toString());
             } catch (NumberFormatException e) {
-//                log.error("步骤③: Redis 库存值不是有效数字! key={}, value={}, 从 DB 覆盖写入",
-//                        stockKey, currentStock);
                 if (tier.getTotalStock() != null) {
                     stringRedisTemplate.opsForValue().set(stockKey, String.valueOf(tier.getTotalStock()));
                    // log.info("步骤③: 已用 DB 值覆盖无效 Redis 值, newValue={}", tier.getTotalStock());
@@ -158,6 +156,10 @@ public class TicketServiceImpl implements TicketService {
             //log.warn("购票失败: 库存扣减失败, result={}, stockAfter={}, key={}",
               //      result, stockAfter, stockKey);
             stringRedisTemplate.delete(purchasedKey);
+            //回滚音符(如果之前扣了)
+            if ("yinbi".equals(request.getPayMethod())) {
+                consumerMapper.rechargeYinbi(request.getUserId(),tier.getPrice());
+            }
             return R.error("已售罄");
         }
 
@@ -190,7 +192,8 @@ public class TicketServiceImpl implements TicketService {
 
             String json = objectMapper.writeValueAsString(orderCache);
             stringRedisTemplate.opsForValue().set(
-                    TicketRedisKey.orderKey(orderNo), json);
+                    TicketRedisKey.orderKey(orderNo), json,
+                    TicketRedisKey.ORDER_TTL_SECONDS, TimeUnit.SECONDS);
         } catch (Exception e) {
             // Redis 缓存写入失败不影响主流程（订单数据仍在后续异步写入 MySQL）
             log.error("写入订单缓存失败", e);
@@ -220,7 +223,7 @@ public class TicketServiceImpl implements TicketService {
      *   2. DEL 释放已购标记 → 让用户可以重新购买
      *   （不抛异常给用户，因为用户已经拿到"购票成功"的响应了）
      */
-    @Async
+    @Async("ticketOrderExecutor")  //指定线程池异步执行
     public void asyncInsertOrder(TicketBuyRequest request, String orderNo,
                                  String qrCodeToken, TicketTier tier) {
         try {
