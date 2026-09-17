@@ -38,6 +38,7 @@
 
 <script>
 import axios from 'axios';
+import { getBaseURL } from "@/api/request";
 export default {
   
 
@@ -54,7 +55,7 @@ export default {
     async sendVerificationCode() {
       try {
          const email =document.getElementById('email').value;
-         const response = await axios.get('http://localhost:8888/user/sendVerificationCode',({params: {
+         const response = await axios.get(`${getBaseURL()}/user/sendVerificationCode`,({params: {
          email: email
   }}));
          console.log(response.data);
@@ -82,7 +83,7 @@ export default {
       password: password,
       confirmPassword: confirmPassword
     };
-    const response = await axios.post('http://localhost:8888/user/resetPassword', data);
+    const response = await axios.post(`${getBaseURL()}/user/resetPassword`, data);
     console.log(response.data);
     this.$message({
       message: response.data,

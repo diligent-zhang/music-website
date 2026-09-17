@@ -53,6 +53,23 @@ public class ConsumerController {
     public R loginStatus(@RequestBody ConsumerRequest loginRequest, HttpSession session) {
         return consumerService.loginStatus(loginRequest, session);
     }
+
+    /**
+     * 根据 JWT 返回当前登录用户信息
+     * 由 AuthInterceptor 校验令牌后注入 userId attribute
+     */
+    @GetMapping("/user/me")
+    public R currentUser(javax.servlet.http.HttpServletRequest request) {
+        Object userId = request.getAttribute("userId");
+        if (userId == null) {
+            return R.error("未登录，请先登录");
+        }
+        Consumer user = consumerService.getById((Integer) userId);
+        if (user == null) {
+            return R.error("用户不存在");
+        }
+        return R.success("ok", user);
+    }
     /**
      * email登录
      */
@@ -76,8 +93,6 @@ public class ConsumerController {
         }
         ConsumerRequest consumerRequest=new ConsumerRequest();
         BeanUtils.copyProperties(user, consumerRequest);
-        System.out.println(user);
-        System.out.println(consumerRequest);
         consumerRequest.setPassword(passwordRequest.getPassword());
         consumerServiceimpl.updatePassword01(consumerRequest);
 
@@ -145,7 +160,13 @@ public class ConsumerController {
      * 删除用户
      */
     @GetMapping("/user/delete")
-    public R deleteUser(@RequestParam int id) {
+    public R deleteUser(@RequestParam int id, javax.servlet.http.HttpServletRequest request) {
+        String role = (String) request.getAttribute("role");
+        Integer userId = (Integer) request.getAttribute("userId");
+        // 普通用户只能注销自己的账号，管理员可删除任意用户
+        if (!"admin".equals(role) && (userId == null || userId != id)) {
+            return R.error("无权删除该账号");
+        }
         return consumerService.deleteUser(id);
     }
 

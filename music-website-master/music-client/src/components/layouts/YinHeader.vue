@@ -32,6 +32,7 @@ import YinHeaderNav from "./YinHeaderNav.vue";
 import mixin from "@/mixins/mixin";
 import { HEADERNAVLIST, SIGNLIST, MENULIST, Icon, MUSICNAME, RouterName, NavName } from "@/enums";
 import { HttpManager } from "@/api";
+import { clearToken } from "@/api/request";
 
 export default defineComponent({
   components: {
@@ -67,6 +68,7 @@ export default defineComponent({
 
     function goMenuList(path) {
       if (path == RouterName.SignOut) {
+        clearToken();
         proxy.$store.commit("setToken", false);
         changeIndex(NavName.Home);
         routerManager(RouterName.Home, { path: RouterName.Home });

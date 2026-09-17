@@ -61,16 +61,17 @@ export default defineComponent({
     });
     const userId = computed(() => store.getters.userId);
 
-    async function getUserInfo(id) {
-      const result = (await HttpManager.getUserOfId(id)) as ResponseBody;
-      registerForm.username = result.data[0].username;
-      registerForm.sex = result.data[0].sex;
-      registerForm.phoneNum = result.data[0].phoneNum;
-      registerForm.email = result.data[0].email;
-      registerForm.birth = result.data[0].birth;
-      registerForm.introduction = result.data[0].introduction;
-      registerForm.location = result.data[0].location;
-      registerForm.userPic = result.data[0].avator;
+    async function getUserInfo() {
+      const result = (await HttpManager.getUserInfo()) as ResponseBody;
+      if (!result.success) return;
+      registerForm.username = result.data.username;
+      registerForm.sex = result.data.sex;
+      registerForm.phoneNum = result.data.phoneNum;
+      registerForm.email = result.data.email;
+      registerForm.birth = result.data.birth;
+      registerForm.introduction = result.data.introduction;
+      registerForm.location = result.data.location;
+      registerForm.userPic = result.data.avator;
     }
 
     async function saveMsg() {
@@ -101,7 +102,7 @@ export default defineComponent({
     }
 
     onMounted(() => {
-      getUserInfo(userId.value);
+      getUserInfo();
     });
 
     return {

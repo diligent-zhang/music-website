@@ -18,11 +18,11 @@ public interface TicketService {
     R buy(TicketBuyRequest request);
 
     /**
-     * 查询单个订单详情
+     * 查询单个订单详情（仅订单所有者或管理员可见，身份证/手机号统一脱敏）
      * 查询策略：先查 Redis 缓存（内存级速度），未命中再查 MySQL
-     * 使用场景：用户下单后跳转订单页、入场核验扫码时展示订单信息
+     * 使用场景：用户下单后跳转订单页
      */
-    R getOrder(String orderNo);
+    R getOrder(String orderNo, Integer requesterId, String role);
 
     /**
      * 查询某用户的所有购票订单

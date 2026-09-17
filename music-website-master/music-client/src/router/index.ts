@@ -74,6 +74,9 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: "/personal-data",
         name: "personal-data",
+        meta: {
+          requireAuth: true,
+        },
         component: () => import("@/views/setting/PersonalData.vue"),
       },
       {
@@ -99,6 +102,9 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/ticket/order/:orderNo',
         name: 'ticket-order',
+        meta: {
+          requireAuth: true,
+        },
         component: () => import('@/views/ticket/TicketOrder.vue'),
       },
       {
@@ -143,6 +149,16 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+});
+
+// 路由守卫：requireAuth 页面未登录时跳转登录页
+router.beforeEach((to, _from, next) => {
+  const requiresAuth = to.matched.some((record) => record.meta.requireAuth);
+  if (requiresAuth && !localStorage.getItem("yin_token")) {
+    next({ path: "/sign-in" });
+    return;
+  }
+  next();
 });
 
 export default router;

@@ -42,7 +42,7 @@
         
     <template v-slot="scope">
       <el-upload
-        :action="'http://localhost:8888/user/avatar/update?id=' + scope.row.id" 
+        :action="avatarUploadUrl(scope.row.id)"
         :show-file-list="false"
         :on-success="handleAvatarSuccess"
         :before-upload="beforeAvatarUpload">
@@ -73,6 +73,7 @@
 import { defineComponent, getCurrentInstance, watch, ref, reactive, computed } from "vue";
 import mixin from "@/mixins/mixin";
 import { HttpManager } from "@/api";
+import { getBaseURL, getToken } from "@/api/request";
 import { RouterName } from "@/enums";
 import YinDelDialog from "@/components/dialog/YinDelDialog.vue";
 import { getBirth } from "@/utils";
@@ -179,6 +180,11 @@ export default defineComponent({
      location.reload();
    }
 
+   // el-upload 非 axios 上传，token 放 query 参数
+   function avatarUploadUrl(id) {
+     return `${getBaseURL()}/user/avatar/update?id=${id}&token=${getToken()}`;
+   }
+
 
 
 
@@ -196,6 +202,7 @@ export default defineComponent({
       getBirth,
       deleteRow,
       handleAvatarSuccess,
+      avatarUploadUrl,
       confirm,
       goCollectPage,
       attachImageUrl: HttpManager.attachImageUrl,

@@ -106,6 +106,7 @@
 import {computed, defineComponent, getCurrentInstance, reactive, ref, watch} from "vue";
 import mixin from "@/mixins/mixin";
 import {HttpManager} from "@/api/index";
+import {getToken, getBaseURL} from "@/api/request";
 import {RouterName} from "@/enums";
 import YinDelDialog from "@/components/dialog/YinDelDialog.vue";
 import axios from 'axios';
@@ -156,7 +157,7 @@ export default defineComponent({
     function exportPlaylist() {
       axios({
         method: 'get',
-        url: 'http://localhost:8888/excle',
+        url: `${getBaseURL()}/excle`,
         responseType: 'blob', // 设置响应类型为blob
       })
         .then((response) => {
@@ -179,7 +180,7 @@ export default defineComponent({
     }
 
     function uploadUrl(id) {
-      return HttpManager.attachImageUrl(`/songList/img/update?id=${id}`);
+      return HttpManager.attachImageUrl(`/songList/img/update?id=${id}&token=${getToken()}`);
     }
 
     // 更新图片

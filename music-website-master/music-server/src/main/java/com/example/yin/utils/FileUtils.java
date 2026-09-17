@@ -1,6 +1,7 @@
 package com.example.yin.utils;
 
 import com.example.yin.constant.Constants;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -9,6 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.UUID;
 
+@Slf4j
 public class FileUtils {
 
     /**
@@ -29,7 +31,7 @@ public class FileUtils {
             throw new IOException("MinIO 上传失败: " + e.getMessage(), e);
         }
         String relativePath = "/" + objectName;
-        System.out.println("MinIO 上传成功: " + relativePath);
+        log.info("MinIO 上传成功: {}", relativePath);
         return relativePath;
     }
 
@@ -44,7 +46,7 @@ public class FileUtils {
             minioService.delete(objectName);
             return true;
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("MinIO 删除文件失败: {}", filePath, e);
             return false;
         }
     }
@@ -60,7 +62,7 @@ public class FileUtils {
         Path filePath = targetDir.resolve(fileName);
         Files.copy(file.getInputStream(), filePath, java.nio.file.StandardCopyOption.REPLACE_EXISTING);
         String relativePath = "/" + subDir + "/" + fileName;
-        System.out.println("保存文件路径: " + relativePath + " (完整路径: " + filePath.toString() + ")");
+        log.info("保存文件路径: {} (完整路径: {})", relativePath, filePath);
         return relativePath;
     }
 

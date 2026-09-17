@@ -64,7 +64,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue';
+import { defineComponent, ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { HttpManager } from '@/api/index';
 
@@ -101,7 +101,26 @@ export default defineComponent({
     const defaultCover =
         'https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg';
 
-    onMounted(() => fetchList());
+    // 定时静默刷新(不闪骨架屏),让"演出到点"在页面停留时也能自动翻成下架
+    let pollTimer: ReturnType<typeof setInterval> | null = null;
+    onMounted(() => {
+      fetchList();
+      pollTimer = setInterval(refreshListSilent, 60000);
+    });
+    onUnmounted(() => {
+      if (pollTimer) clearInterval(pollTimer);
+    });
+
+    /** 静默拉取当前页(不切换 loading,避免周期闪烁) */
+    function refreshListSilent() {
+      const params: any = { page: currentPage.value, size: pageSize.value };
+      if (activeTab.value !== '') params.status = activeTab.value;
+      HttpManager.getConcertList(params)
+          .then((res: any) => {
+            concerts.value = res.data?.records || [];
+            total.value = res.data?.total || 0;
+          });
+    }
 
     /** 拉取演唱会列表 */
     function fetchList() {

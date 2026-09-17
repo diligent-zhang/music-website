@@ -9,9 +9,7 @@ import com.example.yin.model.domain.Concert;
 import com.example.yin.model.domain.TicketOrder;
 import com.example.yin.model.domain.TicketTier;
 import lombok.extern.slf4j.Slf4j;
-import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.cache.CacheProperties;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -47,6 +45,16 @@ public class TicketScheduledTask {
     public void refreshConcertStatus(){
         List<Concert> concerts = concertMapper.selectList(null);
         for(Concert c : concerts){
+            //演出已过 → 自动下架(优先于开售/售罄判断,使 DB 收敛到真实终态)
+            if (c.getShowTime()!=null
+                    && c.getShowTime().getTime()<=System.currentTimeMillis()
+                    && (c.getStatus()==1||c.getStatus()==2||c.getStatus()==3)){
+                c.setStatus(0);
+                concertMapper.updateById(c);
+                redisTemplate.delete(TicketRedisKey.onSaleKey(c.getId()));
+                log.info("演唱会[{}] 演出时间已过，自动下架", c.getId());
+                continue;
+            }
             //预告--售票中：开票时间已到
             if (c.getStatus()==1 && c.getSaleStartTime()!=null
                     && c.getSaleStartTime().getTime()<=System.currentTimeMillis()){

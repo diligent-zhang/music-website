@@ -26,6 +26,7 @@ import { defineComponent, reactive, getCurrentInstance } from "vue";
 import mixin from "@/mixins/mixin";
 import YinLoginLogo from "@/components/layouts/YinLoginLogo.vue";
 import { HttpManager } from "@/api";
+import { saveToken } from "@/api/request";
 import { NavName, RouterName, SignInRules } from "@/enums";
 
 export default defineComponent({
@@ -60,10 +61,12 @@ export default defineComponent({
         });
 
         if (result.success) {
-          proxy.$store.commit("setUserId", result.data[0].id);
-          proxy.$store.commit("setUsername", result.data[0].username);
-          proxy.$store.commit("setUserPic", result.data[0].avator);
-          proxy.$store.commit("setToken", true);
+          const user = result.data.user;
+          saveToken(result.data.token);
+          proxy.$store.commit("setUserId", user.id);
+          proxy.$store.commit("setUsername", user.username);
+          proxy.$store.commit("setUserPic", user.avator);
+          proxy.$store.commit("setToken", result.data.token);
           changeIndex(NavName.Home);
           routerManager(RouterName.Home, { path: RouterName.Home });
         }

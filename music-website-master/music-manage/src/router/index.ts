@@ -69,4 +69,13 @@ const router = createRouter({
   routes
 })
 
+// 路由守卫：未登录跳转登录页
+router.beforeEach((to, _from, next) => {
+  if (to.path !== "/" && !localStorage.getItem("yin_admin_token")) {
+    next({ path: "/" })
+    return
+  }
+  next()
+})
+
 export default router

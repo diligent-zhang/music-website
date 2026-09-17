@@ -21,6 +21,7 @@
 import { defineComponent, getCurrentInstance, ref, reactive } from "vue";
 import mixin from "@/mixins/mixin";
 import { HttpManager } from "@/api/index";
+import { saveToken } from "@/api/request";
 import { RouterName, MUSICNAME } from "@/enums";
 
 export default defineComponent({
@@ -46,7 +47,10 @@ export default defineComponent({
         type: result.type,
       });
 
-      if (result.success) routerManager(RouterName.Info, { path: RouterName.Info });
+      if (result.success) {
+        saveToken(result.data.token);
+        routerManager(RouterName.Info, { path: RouterName.Info });
+      }
     }
     return {
       nusicName,

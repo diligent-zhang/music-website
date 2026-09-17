@@ -9,6 +9,33 @@ axios.defaults.baseURL = BASE_URL;
 // Content-Type 响应头
 axios.defaults.headers.post["Content-Type"] = "application/json;charset=UTF-8";
 
+// =======================> JWT 令牌管理
+const TOKEN_KEY = "yin_token";
+
+export function getToken() {
+  return localStorage.getItem(TOKEN_KEY) || "";
+}
+
+export function saveToken(token) {
+  localStorage.setItem(TOKEN_KEY, token);
+}
+
+export function clearToken() {
+  localStorage.removeItem(TOKEN_KEY);
+}
+
+// 请求拦截器：自动携带 Authorization 头
+axios.interceptors.request.use(
+  (config) => {
+    const token = getToken();
+    if (token) {
+      (config.headers as any)["Authorization"] = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
 // 响应拦截器
 axios.interceptors.response.use(
   (response) => {
@@ -22,10 +49,12 @@ axios.interceptors.response.use(
   },
   // 服务器状态码不是2开头的的情况
   (error) => {
-    if (error.response.status) {
+    // 网络错误/后端未启动时 error.response 为 null，必须先判空再取状态码
+    if (error.response) {
       switch (error.response.status) {
-        // 401: 未登录
+        // 401: 未登录 / 登录过期
         case 401:
+          clearToken();
           router.replace({
             path: "/",
             query: {
@@ -53,6 +82,7 @@ axios.interceptors.response.use(
       }
       return Promise.reject(error.response);
     }
+    return Promise.reject(error);
   }
 );
 

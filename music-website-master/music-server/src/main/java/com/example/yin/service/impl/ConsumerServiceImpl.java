@@ -11,6 +11,7 @@ import com.example.yin.model.request.ConsumerRequest;
 import com.example.yin.service.ConsumerService;
 import com.example.yin.utils.CacheProtectionUtil;
 import com.example.yin.utils.FileUtils;
+import com.example.yin.util.JwtUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,8 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -42,6 +45,9 @@ public class ConsumerServiceImpl extends ServiceImpl<ConsumerMapper, Consumer>
     @Autowired
     private CacheProtectionUtil cacheUtil;
 
+    @Autowired
+    private JwtUtils jwtUtils;
+
     // ==================== 读操作（高频，走缓存）====================
 
     @Override
@@ -57,8 +63,21 @@ public class ConsumerServiceImpl extends ServiceImpl<ConsumerMapper, Consumer>
 
     @Override
     public R userOfId(Integer id) {
+        // 公开接口：只返回评论区展示所需的字段，禁止泄露密码/手机/邮箱等 PII
         List<Consumer> users = consumerMapper.selectList(new QueryWrapper<Consumer>().eq("id", id));
-        return R.success(null, users);
+        List<Map<String, Object>> safeUsers = new ArrayList<>();
+        for (Consumer u : users) {
+            Map<String, Object> item = new HashMap<>();
+            item.put("id", u.getId());
+            item.put("username", u.getUsername());
+            item.put("sex", u.getSex());
+            item.put("birth", u.getBirth());
+            item.put("introduction", u.getIntroduction());
+            item.put("location", u.getLocation());
+            item.put("avator", u.getAvator());
+            safeUsers.add(item);
+        }
+        return R.success(null, safeUsers);
     }
     //实现
     @Override
@@ -234,29 +253,36 @@ public class ConsumerServiceImpl extends ServiceImpl<ConsumerMapper, Consumer>
     public R loginStatus(ConsumerRequest loginRequest, HttpSession session) {
         String username = loginRequest.getUsername();
         String password = loginRequest.getPassword();
-        if (this.verityPasswd(username, password)) {
-            session.setAttribute("username", username);
-            Consumer consumer = new Consumer();
-            consumer.setUsername(username);
-            return R.success("登录成功", consumerMapper.selectList(new QueryWrapper<>(consumer)));
-        } else {
+        if (!this.verityPasswd(username, password)) {
             return R.error("用户名或密码错误");
         }
+        Consumer user = consumerMapper.selectOne(new QueryWrapper<Consumer>().eq("username", username));
+        session.setAttribute("username", username);
+        String token = jwtUtils.generateToken(user.getId(), user.getUsername(), "user");
+        Map<String, Object> data = new HashMap<>();
+        data.put("token", token);
+        data.put("user", user);
+        return R.success("登录成功", data);
     }
 
     @Override
     public R loginEmailStatus(ConsumerRequest loginRequest, HttpSession session) {
         String email = loginRequest.getEmail();
         String password = loginRequest.getPassword();
-        Consumer consumer1 = findByEmail(email);
-        if (this.verityPasswd(consumer1.getUsername(), password)) {
-            session.setAttribute("username", consumer1.getUsername());
-            Consumer consumer = new Consumer();
-            consumer.setUsername(consumer1.getUsername());
-            return R.success("登录成功", consumerMapper.selectList(new QueryWrapper<>(consumer)));
-        } else {
+        Consumer user = findByEmail(email);
+        if (user == null) {
+            return R.error("该邮箱未注册");
+        }
+        if (!this.verityPasswd(user.getUsername(), password)) {
             return R.error("用户名或密码错误");
         }
+        session.setAttribute("username", user.getUsername());
+        // 邮箱登录同样返回 JWT，前端凭 token 访问受保护接口
+        String token = jwtUtils.generateToken(user.getId(), user.getUsername(), "user");
+        Map<String, Object> data = new HashMap<>();
+        data.put("token", token);
+        data.put("user", user);
+        return R.success("登录成功", data);
     }
 
     @Override

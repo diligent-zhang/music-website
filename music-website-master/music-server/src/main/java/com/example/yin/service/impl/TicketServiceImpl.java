@@ -13,6 +13,7 @@ import com.example.yin.model.domain.TicketOrder;
 import com.example.yin.model.domain.TicketTier;
 import com.example.yin.model.request.TicketBuyRequest;
 import com.example.yin.service.TicketService;
+import com.example.yin.util.ConcertStatusResolver;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +22,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
-import java.util.concurrent.TimeUnit;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -67,36 +67,33 @@ public class TicketServiceImpl implements TicketService {
      */
     @Override
     public R buy(TicketBuyRequest request) {
-//        log.info("===== 购票开始: userId={}, concertId={}, tierId={} =====",
-//                request.getUserId(), request.getConcertId(), request.getTierId());
-
         // ===== 步骤 ①：参数校验 =====
         if (request.getUserId() == null || request.getConcertId() == null
                 || request.getTierId() == null) {
-           // log.warn("购票失败: 参数不完整, request={}", request);
             return R.error("参数不完整");
         }
 
         Concert concert = concertMapper.selectById(request.getConcertId());
         if (concert == null) {
-           // log.warn("购票失败: 演唱会不存在, concertId={}", request.getConcertId());
             return R.error("演唱会不存在");
         }
-        if (concert.getStatus() != 2) {
-//            log.warn("购票失败: 演唱会状态不允许购买, concertId={}, status={}",
-//                    request.getConcertId(), concert.getStatus());
+        // 用"真实时钟推导的有效状态"校验,而不是盲信 DB status:
+        // 演出时间已过(推导=0)或未到开售(推导=1)的场次,即使 DB 仍标 2 也不能买
+        Integer effectiveStatus = ConcertStatusResolver.resolve(
+                concert, new Date());
+        if (effectiveStatus == null || effectiveStatus != 2) {
+            boolean showOver = concert.getShowTime() != null
+                    && System.currentTimeMillis() >= concert.getShowTime().getTime();
+            if (showOver) {
+                return R.error("演出已结束，无法购票");
+            }
             return R.error("当前不可购票");
         }
-       // log.info("步骤①通过: concert={}, status={}", concert.getTitle(), concert.getStatus());
 
         TicketTier tier = ticketTierMapper.selectById(request.getTierId());
         if (tier == null || !tier.getConcertId().equals(request.getConcertId())) {
-//            log.warn("购票失败: 票档不存在或归属不对, tierId={}, tierConcertId={}",
-//                    request.getTierId(), tier != null ? tier.getConcertId() : "null");
             return R.error("票档不存在");
         }
-       // log.info("步骤①通过: tierName={}, price={}, totalStock={}",
-         //       tier.getTierName(), tier.getPrice(), tier.getTotalStock());
         // ===== 步骤 ②：SETNX 用户去重（先于扣款，防止重复扣音符）=====
         String purchasedKey = TicketRedisKey.purchasedKey(
                 request.getUserId(), request.getTierId());
@@ -120,19 +117,12 @@ public class TicketServiceImpl implements TicketService {
         // 扫码支付 "qrcode"：不扣余额，直接走后续下单流程
         // ===== 步骤 ③：Lua 脚本原子扣库存 =====
         String stockKey = TicketRedisKey.stockKey(request.getTierId());
-        //log.info("步骤③: 库存 key={}", stockKey);
-
-        // 打印 Redis 中当前库存值
         Object currentStock = stringRedisTemplate.opsForValue().get(stockKey);
-        //log.info("步骤③: Redis 当前库存原始值 = {}", currentStock);
 
         // 兜底：如果 Redis 库存 key 不存在或值无效，从 DB 初始化
         if (currentStock == null) {
             if (tier.getTotalStock() != null) {
-                //log.warn("步骤③: key 不存在，从 DB 初始化 stock={}", tier.getTotalStock());
                 stringRedisTemplate.opsForValue().setIfAbsent(stockKey, String.valueOf(tier.getTotalStock()));
-            } else {
-                //log.error("步骤③: key 不存在且 DB totalStock 也为 null, tierId={}", request.getTierId());
             }
         } else {
             // 检查值是否可转为数字
@@ -141,7 +131,6 @@ public class TicketServiceImpl implements TicketService {
             } catch (NumberFormatException e) {
                 if (tier.getTotalStock() != null) {
                     stringRedisTemplate.opsForValue().set(stockKey, String.valueOf(tier.getTotalStock()));
-                   // log.info("步骤③: 已用 DB 值覆盖无效 Redis 值, newValue={}", tier.getTotalStock());
                 }
             }
         }
@@ -149,12 +138,8 @@ public class TicketServiceImpl implements TicketService {
         script.setScriptText(TicketRedisKey.LUA_DECR_STOCK);
         script.setResultType(Long.class);
         Long result = stringRedisTemplate.execute(script, Collections.singletonList(stockKey));
-       // log.info("步骤③: Lua 脚本执行结果 result={} (0=库存不足, 1=扣减成功, null=异常)", result);
 
         if (result == null || result == 0) {
-            Object stockAfter = stringRedisTemplate.opsForValue().get(stockKey);
-            //log.warn("购票失败: 库存扣减失败, result={}, stockAfter={}, key={}",
-              //      result, stockAfter, stockKey);
             stringRedisTemplate.delete(purchasedKey);
             //回滚音符(如果之前扣了)
             if ("yinbi".equals(request.getPayMethod())) {
@@ -268,7 +253,7 @@ public class TicketServiceImpl implements TicketService {
      */
 
     @Override
-    public R getOrder(String orderNo) {
+    public R getOrder(String orderNo, Integer requesterId, String role) {
         //第一层：redis缓存
         String cacheKey = TicketRedisKey.orderKey(orderNo);
         String cached = stringRedisTemplate.opsForValue().get(cacheKey);
@@ -279,6 +264,11 @@ public class TicketServiceImpl implements TicketService {
                         cached,
                         objectMapper.getTypeFactory()
                                 .constructMapType(Map.class, String.class, Object.class));
+                if (!canViewOrder(orderInfo.get("userId"), requesterId, role)) {
+                    return R.error("无权查看该订单");
+                }
+                orderInfo.put("idCard", maskIdCard((String) orderInfo.get("idCard")));
+                orderInfo.put("phone", maskPhone((String) orderInfo.get("phone")));
                 return R.success("成功", orderInfo);
             } catch (Exception e) {
                 log.warn("订单缓存反序列化失败: {}", e.getMessage());
@@ -292,20 +282,44 @@ public class TicketServiceImpl implements TicketService {
         if (order == null) {
             return R.error("订单不存在");
         }
+        if (!canViewOrder(order.getUserId(), requesterId, role)) {
+            return R.error("无权查看该订单");
+        }
 
-        // 手动组装返回数据，只暴露前端需要的字段
+        // 手动组装返回数据，只暴露前端需要的字段；身份证/手机号脱敏后返回
         Map<String, Object> result = new HashMap<>();
         result.put("orderNo", order.getOrderNo());
         result.put("userId", order.getUserId());
         result.put("concertId", order.getConcertId());
         result.put("tierName", order.getTierName());
         result.put("price", order.getPrice());
-        result.put("idCard", order.getIdCard());
-        result.put("phone", order.getPhone());
+        result.put("idCard", maskIdCard(order.getIdCard()));
+        result.put("phone", maskPhone(order.getPhone()));
         result.put("qrCodeToken", order.getQrCodeToken());
         result.put("payStatus", order.getPayStatus());
         result.put("verifyStatus", order.getVerifyStatus());
         return R.success("成功", result);
+    }
+
+    /** 订单仅所有者或管理员可查看（缓存路径 userId 反序列化为 Number） */
+    private boolean canViewOrder(Object orderUserId, Integer requesterId, String role) {
+        if ("admin".equals(role)) {
+            return true;
+        }
+        if (requesterId == null || orderUserId == null) {
+            return false;
+        }
+        return requesterId.equals(((Number) orderUserId).intValue());
+    }
+
+    /** 身份证脱敏：前4后4，中间打码 */
+    private static String maskIdCard(String s) {
+        return s == null || s.length() < 8 ? "***" : s.substring(0, 4) + "**********" + s.substring(s.length() - 4);
+    }
+
+    /** 手机号脱敏：前3后4，中间打码 */
+    private static String maskPhone(String s) {
+        return s == null || s.length() < 7 ? "***" : s.substring(0, 3) + "****" + s.substring(s.length() - 4);
     }
 
     /**
@@ -322,13 +336,18 @@ public class TicketServiceImpl implements TicketService {
 
     /**
      * 生成订单号
-     * 格式：TK + 13位毫秒时间戳 + 4位随机数
+     * 格式：TK + 13位毫秒时间戳 + 4位当日自增序号（Redis INCR，模 10000 保证长度不变）
      * 示例：TK16847412345670042
-     * 碰撞概率：同一毫秒内最多 10000 种可能，实际业务足够
+     * 用 Redis 计数器替代 Math.random()，同一毫秒内序号不重复，消除碰撞风险
      */
     private String generateOrderNo() {
+        String seqKey = "ticket:order:seq:" + java.time.LocalDate.now().toString().replace("-", "");
+        Long seq = stringRedisTemplate.opsForValue().increment(seqKey);
+        if (seq != null && seq == 1L) {
+            stringRedisTemplate.expire(seqKey, 2, TimeUnit.DAYS);
+        }
         return "TK" + System.currentTimeMillis()
-                + String.format("%04d", (int) (Math.random() * 10000));
+                + String.format("%04d", (seq == null ? 0 : seq) % 10000);
     }
     /**
      * 管理员删除订单 — 全量清理

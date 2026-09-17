@@ -58,7 +58,7 @@
         <el-form-item label="封面图片">
           <div style="display:flex; align-items:center; gap:12px;">
             <el-upload
-                :action="HttpManager.uploadConcertCoverOnly"
+                :action="HttpManager.uploadConcertCoverOnly()"
                 :before-upload="beforeImgUpload"
                 :show-file-list="false"
                 :on-success="onCoverSuccess"

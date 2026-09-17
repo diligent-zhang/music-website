@@ -37,6 +37,9 @@ public class RankScheduledTask {
     @Autowired
     private RankSnapshotMapper rankSnapshotMapper;
 
+    @Autowired
+    private com.example.yin.service.SongService songService;
+
     /**
      * 每日 00:03 重置日榜
      * 先保存昨日快照到 DB，再清空 Redis ZSet
@@ -115,29 +118,43 @@ public class RankScheduledTask {
         log.info("开始同步播放量到数据库...");
 
         List<Song> songs = songMapper.selectList(null);
-        int updated = 0;
+        if (songs.isEmpty()) {
+            return;
+        }
+        // 一次 multiGet 取回全部计数器，避免逐首 GET 的 N+1 往返
+        List<String> keys = new ArrayList<>(songs.size());
         for (Song song : songs) {
-            String key = RankRedisKey.PLAY_COUNT_PREFIX + song.getId();
-            Object countObj = redisTemplate.opsForValue().get(key);
-            if (countObj != null) {
-                long redisCount = Long.parseLong(countObj.toString());
-                Integer dbCount = song.getPlayCount();
-                if (dbCount == null || redisCount > dbCount) {
-                    song.setPlayCount((int) redisCount);
-                    songMapper.updateById(song);
-                    updated++;
-                }
+            keys.add(RankRedisKey.PLAY_COUNT_PREFIX + song.getId());
+        }
+        List<Object> counts = redisTemplate.opsForValue().multiGet(keys);
+
+        List<Song> changed = new ArrayList<>();
+        for (int i = 0; i < songs.size(); i++) {
+            Object countObj = counts == null ? null : counts.get(i);
+            if (countObj == null) {
+                continue;
+            }
+            Song song = songs.get(i);
+            long redisCount = Long.parseLong(countObj.toString());
+            Integer dbCount = song.getPlayCount();
+            if (dbCount == null || redisCount > dbCount) {
+                song.setPlayCount((int) redisCount);
+                changed.add(song);
             }
         }
 
-        log.info("播放量同步完成，共更新 {} 首歌曲", updated);
+        if (!changed.isEmpty()) {
+            songService.updateBatchById(changed);  // 批量更新，一条 batch 会话完成
+        }
+        log.info("播放量同步完成，共更新 {} 首歌曲", changed.size());
     }
 
     /**
      * 保存当前排行榜快照到 rank_snapshot 表
+     * public：管理员手动重置榜单前也需要先落快照保留历史
      */
     @SuppressWarnings("unchecked")
-    private void saveSnapshot(String zsetKey, String periodType) {
+    public void saveSnapshot(String zsetKey, String periodType) {
         Set<TypedTuple<Object>> topSet = redisTemplate.opsForZSet()
                 .reverseRangeWithScores(zsetKey, 0, 49);
 

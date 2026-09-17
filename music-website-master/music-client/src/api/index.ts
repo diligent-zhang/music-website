@@ -1,4 +1,4 @@
-import { getBaseURL, get, post, deletes } from "./request";
+import { getBaseURL, get, post, deletes, getToken } from "./request";
 
 const HttpManager = {
   // 获取图片信息
@@ -20,6 +20,8 @@ const HttpManager = {
   // 登录
   signIn: ({username,password}) => post(`user/login/status`, {username,password}),
   signInByemail: ({email,password})=>post(`user/email/status`, {email,password}),
+  // 根据 JWT 获取当前登录用户
+  getUserInfo: () => get(`user/me`),
   // 注册
   SignUp: ({username,password,sex,phoneNum,email,birth,introduction,location}) => post(`user/add`, {username,password,sex,phoneNum,email,birth,introduction,location}),
   // 删除用户
@@ -29,8 +31,8 @@ const HttpManager = {
   updateUserPassword: ({id,username,oldPassword,password}) => post(`user/updatePassword`, {id,username,oldPassword,password}),
   // 返回指定ID的用户
   getUserOfId: (id) => get(`user/detail?id=${id}`),
-  // 更新用户头像
-  uploadUrl: (userId) => `${getBaseURL()}/user/avatar/update?id=${userId}`,
+  // 更新用户头像（el-upload 非 axios 上传，token 放 query 参数）
+  uploadUrl: (userId) => `${getBaseURL()}/user/avatar/update?id=${userId}&token=${getToken()}`,
 
   // =======================> 歌单 API 完成
   // 获取全部歌单

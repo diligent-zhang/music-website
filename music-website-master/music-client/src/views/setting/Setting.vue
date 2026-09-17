@@ -21,6 +21,7 @@ import { Delete } from "@element-plus/icons-vue";
 import PersonalData from "./PersonalData.vue";
 import Password from "./Password.vue";
 import { HttpManager } from "@/api";
+import { clearToken } from "@/api/request";
 import { useStore } from "vuex";
 import mixin from "@/mixins/mixin";
 import { RouterName } from "@/enums";
@@ -43,6 +44,7 @@ export default defineComponent({
         message: result.message,
         type: result.type,
       });
+      clearToken();
       routerManager(RouterName.SignIn, { path: RouterName.SignIn });
       proxy.$store.commit("setToken", false);
     }

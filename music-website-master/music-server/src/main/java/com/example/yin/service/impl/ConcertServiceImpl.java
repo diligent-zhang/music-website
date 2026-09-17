@@ -11,6 +11,7 @@ import com.example.yin.model.domain.Concert;
 import com.example.yin.model.domain.TicketTier;
 import com.example.yin.model.request.ConcertRequest;
 import com.example.yin.service.ConcertService;
+import com.example.yin.util.ConcertStatusResolver;
 import com.example.yin.utils.FileUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -50,6 +51,10 @@ private TicketTierMapper ticketTierMapper;   //购票
         wrapper.orderByDesc(Concert::getSaleStartTime);
         wrapper.orderByAsc(Concert::getCreateTime);
         Page<Concert> result = baseMapper.selectPage(new Page<>(page, size), wrapper);
+        // 用户端列表按真实时钟推导"此刻该显示的状态",DB status 可能因定时任务低频而陈旧
+        if (excludeExpired) {
+            result.getRecords().forEach(c -> c.setStatus(ConcertStatusResolver.resolve(c, new Date())));
+        }
         Map<String, Object> data = new HashMap<>();
         data.put("records",result.getRecords());
         data.put("total",result.getTotal());
@@ -72,6 +77,8 @@ private TicketTierMapper ticketTierMapper;   //购票
             return R.error("演唱会不存在");
 
         }
+        //按真实时钟推导有效状态,使过期场次到点即显示"下架",前端据此隐藏购买入口
+        concert.setStatus(ConcertStatusResolver.resolve(concert, new Date()));
         //查询该演唱会下的所有票档
         List<TicketTier> tiers = ticketTierMapper.selectList(
                 new LambdaQueryWrapper<TicketTier>().eq(TicketTier::getConcertId, concertId)

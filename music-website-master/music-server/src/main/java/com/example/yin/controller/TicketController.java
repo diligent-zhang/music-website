@@ -4,7 +4,6 @@ package com.example.yin.controller;
 import com.example.yin.common.R;
 import com.example.yin.model.request.TicketBuyRequest;
 import com.example.yin.service.TicketService;
-import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -35,8 +34,10 @@ public class TicketController {
      * @return 订单完整信息（含二维码 token）
      */
     @GetMapping("/order/{orderNo}")
-    public R orderDetail(@PathVariable String orderNo){
-        return ticketService.getOrder(orderNo);
+    public R orderDetail(@PathVariable String orderNo, javax.servlet.http.HttpServletRequest request){
+        Integer userId = (Integer) request.getAttribute("userId");
+        String role = (String) request.getAttribute("role");
+        return ticketService.getOrder(orderNo, userId, role);
     }
     /**
      * 查询用户的所有购票订单
@@ -53,7 +54,16 @@ public class TicketController {
      */
     @DeleteMapping("/order/{id}")
     public R cancelOrder(@PathVariable Integer id,
-                         @RequestParam Integer userId) {
+                         @RequestParam Integer userId,
+                         javax.servlet.http.HttpServletRequest request) {
+        // 非管理员一律以令牌中的 userId 为准，防止传入他人 ID 越权取消订单
+        String role = (String) request.getAttribute("role");
+        if (!"admin".equals(role)) {
+            Integer tokenUserId = (Integer) request.getAttribute("userId");
+            if (tokenUserId != null) {
+                userId = tokenUserId;
+            }
+        }
         return ticketService.cancelOrderByUser(id, userId);
     }
 }

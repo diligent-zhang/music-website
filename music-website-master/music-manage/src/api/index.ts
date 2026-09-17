@@ -1,4 +1,4 @@
-import { deletes, get, getBaseURL, post, put } from './request'
+import { deletes, get, getBaseURL, getToken, post, put } from './request'
 
 const HttpManager = {
     // 获取图片信息
@@ -68,9 +68,10 @@ const HttpManager = {
         introduction,
         lyric
     }),
-    updateSongUrl: (id) => `${getBaseURL()}/song/url/update?id=${id}`,
-    updateSongImg: (id) => `${getBaseURL()}/song/img/update?id=${id}`,
-    updateSongLrc: (id) => `${getBaseURL()}/song/lrc/update?id=${id}`,
+    // el-upload 非 axios 上传，token 放 query 参数
+    updateSongUrl: (id) => `${getBaseURL()}/song/url/update?id=${id}&token=${getToken()}`,
+    updateSongImg: (id) => `${getBaseURL()}/song/img/update?id=${id}&token=${getToken()}`,
+    updateSongLrc: (id) => `${getBaseURL()}/song/lrc/update?id=${id}&token=${getToken()}`,
     // 删除歌曲
     deleteSong: (id) => deletes(`song/delete?id=${id}`),
 
@@ -114,8 +115,8 @@ const HttpManager = {
     updateConcertStatus: (params: any) => put(`admin/concert/status?concertId=${params.concertId}&status=${params.status}`),
     getTicketOrders: (params: any) => get('admin/ticket/orders', params),
     getTicketStats: (concertId: number) => get(`admin/ticket/stats/${concertId}`),
-    uploadConcertCover: (id: number) => `${getBaseURL()}/admin/concert/cover/update?id=${id}`,
-    uploadConcertCoverOnly: `${getBaseURL()}/admin/concert/cover/upload`,
+    uploadConcertCover: (id: number) => `${getBaseURL()}/admin/concert/cover/update?id=${id}&token=${getToken()}`,
+    uploadConcertCoverOnly: () => `${getBaseURL()}/admin/concert/cover/upload?token=${getToken()}`,
 }
 
 export {HttpManager}

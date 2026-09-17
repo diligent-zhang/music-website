@@ -28,6 +28,16 @@
       <div class="right-panel">
         <h2>选择票档</h2>
 
+        <!-- 演出已过/已下架 → 顶部停售提示 -->
+        <el-alert
+            v-if="isEnded || concert.status === 0"
+            :title="downReasonText"
+            type="info"
+            show-icon
+            :closable="false"
+            style="margin-bottom: 12px"
+        />
+
         <!-- 遍历票档列表 -->
         <div v-for="tier in tiers" :key="tier.id" class="tier-card">
           <div class="tier-info">
@@ -38,8 +48,12 @@
             剩余 {{ tier.remainingStock }} 张
           </div>
 
+          <!-- 演出已过 / 已下架 → 停售(不可点击) -->
+          <el-button v-if="isEnded || concert.status === 0" disabled class="tier-btn">
+            已下架
+          </el-button>
           <!-- 未到开售时间 → 倒计时按钮（不可点击） -->
-          <el-button v-if="isBeforeSale" type="warning" disabled class="tier-btn">
+          <el-button v-else-if="isBeforeSale" type="warning" disabled class="tier-btn">
             距开售 {{ countdown }}
           </el-button>
           <!-- 有库存且售票中 → 可购买 -->
@@ -160,17 +174,34 @@ export default defineComponent({
     const resultVisible = ref(false);
     const result = reactive({ success: false, orderNo: '', price: 0, message: '' });
 
-    // 开售倒计时
-    const countdown = ref('');
-    let timer: ReturnType<typeof setInterval> | null = null;
-
     const defaultCover =
         'https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg';
 
-    onMounted(() => fetchDetail());
-    onUnmounted(() => {
-      if (timer) clearInterval(timer);
+    // 每秒走一步的"本地时钟",让 showTime 到点在页面停留时也能 1 秒内翻转成下架
+    const nowTick = ref(Date.now());
+    let clockTimer: ReturnType<typeof setInterval> | null = null;
+    let syncedEnded = false; // 交叉瞬间已向服务端同步过,避免重复拉取
+
+    onMounted(() => {
+      startClock();
+      fetchDetail();
     });
+    onUnmounted(() => {
+      if (clockTimer) clearInterval(clockTimer);
+    });
+
+    function startClock() {
+      if (clockTimer) return;
+      clockTimer = setInterval(() => {
+        const wasEnded = isEnded.value;
+        nowTick.value = Date.now();
+        // showTime 刚被越过 → 从服务端同步一次最新状态/库存
+        if (!syncedEnded && !wasEnded && isEnded.value) {
+          syncedEnded = true;
+          fetchDetail();
+        }
+      }, 1000);
+    }
 
     /** 获取演唱会详情（含票档 + Redis 实时库存） */
     function fetchDetail() {
@@ -179,35 +210,42 @@ export default defineComponent({
           .then((res: any) => {
             concert.value = res.data?.concert;
             tiers.value = res.data?.tiers || [];
-            startCountdown();
+            syncedEnded = !!concert.value?.showTime
+                && Date.now() >= new Date(concert.value.showTime).getTime();
           })
           .finally(() => (loading.value = false));
     }
 
+    /** 演出时间已到/已过 → 该场已下架 */
+    const isEnded = computed(() => {
+      if (!concert.value?.showTime) return false;
+      return nowTick.value >= new Date(concert.value.showTime).getTime();
+    });
+
     /** 是否未到开售时间 */
     const isBeforeSale = computed(() => {
       if (!concert.value?.saleStartTime) return false;
-      return new Date(concert.value.saleStartTime).getTime() > Date.now();
+      return new Date(concert.value.saleStartTime).getTime() > nowTick.value;
     });
 
-    /** 启动开售倒计时（每秒刷新） */
-    function startCountdown() {
-      if (!isBeforeSale.value || timer) return;
-      timer = setInterval(() => {
-        const now = Date.now();
-        const target = new Date(concert.value.saleStartTime).getTime();
-        const diff = target - now;
-        if (diff <= 0) {
-          countdown.value = '';
-          if (timer) clearInterval(timer);
-          return;
-        }
-        const h = Math.floor(diff / 3600000);
-        const m = Math.floor((diff % 3600000) / 60000);
-        const s = Math.floor((diff % 60000) / 1000);
-        countdown.value = `${h}时${String(m).padStart(2, '0')}分${String(s).padStart(2, '0')}秒`;
-      }, 1000);
-    }
+    /** 开售倒计时文案（基于本地时钟每秒刷新） */
+    const countdown = computed(() => {
+      if (!isBeforeSale.value) return '';
+      const target = new Date(concert.value.saleStartTime).getTime();
+      const diff = target - nowTick.value;
+      const h = Math.floor(diff / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      return `${h}时${String(m).padStart(2, '0')}分${String(s).padStart(2, '0')}秒`;
+    });
+
+    /** 下架提示文案：演出已过 vs 手动下架 */
+    const downReasonText = computed(() => {
+      if (!concert.value?.showTime) return '本场已下架，暂停售票';
+      return isEnded.value
+          ? `本场演出已于 ${formatDateTime(concert.value.showTime)} 结束，已下架停售`
+          : '本场已下架，暂停售票';
+    });
 
     function showBuyDialog(tier: any) {
       selectedTier.value = tier;
@@ -269,7 +307,7 @@ export default defineComponent({
 
     return {
       loading, concert, tiers, defaultCover, attachImageUrl,
-      isBeforeSale, countdown,
+      isBeforeSale, isEnded, countdown, downReasonText,
       yinbi, payMethod,
       buyDialogVisible, selectedTier, buyForm, buying,
       showBuyDialog, doBuy,

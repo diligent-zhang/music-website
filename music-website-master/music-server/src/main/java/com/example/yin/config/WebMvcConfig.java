@@ -18,9 +18,17 @@ public class WebMvcConfig implements WebMvcConfigurer {
         return new CorsInterceptor();
     }
 
+    @Bean
+    public AuthInterceptor authInterceptor() {
+        return new AuthInterceptor();
+    }
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+        // CORS 在前的先执行，OPTIONS 预检在此处直接结束，避免被认证拦截
         registry.addInterceptor(corsInterceptor())
+                .addPathPatterns("/**");
+        registry.addInterceptor(authInterceptor())
                 .addPathPatterns("/**");
     }
 

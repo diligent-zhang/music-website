@@ -36,6 +36,9 @@ RankServiceImpl implements RankService {
     @Autowired
     private ObjectMapper objectMapper;
 
+    @Autowired
+    private com.example.yin.task.RankScheduledTask rankScheduledTask;
+
     private static final int DEFAULT_LIMIT = 20;
 
     // ==================== 查询排行榜 ====================
@@ -62,15 +65,15 @@ RankServiceImpl implements RankService {
             }
         }
 
-        // 第2步：从 Redis ZSet 取 Top-N
+        // 第2步：从 Redis ZSet 取 Top-N（成员+分数一次取回，避免逐条 score() 的 N+1 往返）
         String zsetKey = getZSetKey(type);
-        Set<Object> topSet = redisTemplate.opsForZSet()
-                .reverseRange(zsetKey, 0, limit - 1);
+        Set<org.springframework.data.redis.core.ZSetOperations.TypedTuple<Object>> topSet =
+                redisTemplate.opsForZSet().reverseRangeWithScores(zsetKey, 0, limit - 1);
 
         List<Map<String, Object>> result;
 
         if (topSet != null && !topSet.isEmpty()) {
-            result = buildRankListFromRedis(topSet, zsetKey, limit);
+            result = buildRankListFromRedis(topSet);
         } else {
             // 第3步：Redis 为空时回退到 DB（通过 play_log 表按时间段统计）
             result = getRankFromDatabase(type, limit);
@@ -117,10 +120,8 @@ RankServiceImpl implements RankService {
         log.setPlayTime(new Date());
         playLogMapper.insert(log);
 
-        // 5) 失效三个缓存 Key，让下次查询强制刷新
-        redisTemplate.delete(RankRedisKey.CACHE_DAILY);
-        redisTemplate.delete(RankRedisKey.CACHE_WEEKLY);
-        redisTemplate.delete(RankRedisKey.CACHE_MONTHLY);
+        // 榜单结果缓存不再每次播放都删除（高频播放下会造成缓存风暴），
+        // 依赖 5 分钟 TTL 自然过期；管理员改分/重置时仍会显式清缓存。
     }
 
     // ==================== 歌曲排名详情 ====================
@@ -157,15 +158,14 @@ RankServiceImpl implements RankService {
     // ==================== 内部方法 ====================
 
     private List<Map<String, Object>> buildRankListFromRedis(
-            Set<Object> topSet, String zsetKey, int limit) {
+            Set<org.springframework.data.redis.core.ZSetOperations.TypedTuple<Object>> topSet) {
         List<Integer> songIds = new ArrayList<>();
         List<Double> scores = new ArrayList<>();
-        for (Object songIdObj : topSet) {
-            Integer songId = parseSongId(songIdObj);
+        for (org.springframework.data.redis.core.ZSetOperations.TypedTuple<Object> tuple : topSet) {
+            Integer songId = parseSongId(tuple.getValue());
             if (songId == null) continue;
-            Double score = redisTemplate.opsForZSet().score(zsetKey, songId);
             songIds.add(songId);
-            scores.add(score);
+            scores.add(tuple.getScore());
         }
         return batchBuildResults(songIds, scores);
     }
@@ -317,6 +317,8 @@ RankServiceImpl implements RankService {
     @Override
     public void resetRank(String type) {
         String zsetKey = getZSetKey(type);
+        // 清空前先保存当前榜单快照，保留历史 top-50
+        rankScheduledTask.saveSnapshot(zsetKey, type.toLowerCase());
         redisTemplate.delete(zsetKey);
         redisTemplate.delete(getCacheKey(type));
         String tsKey;
@@ -325,8 +327,8 @@ RankServiceImpl implements RankService {
             case "month": tsKey = RankRedisKey.MONTHLY_RESET_TS; break;
             default:      tsKey = RankRedisKey.DAILY_RESET_TS; break;
         }
-        redisTemplate.opsForValue().set(tsKey,
-                String.valueOf(System.currentTimeMillis()));
+        // 必须写 LocalDate 字符串：定时任务用 today 字符串比较来跳过重复重置
+        redisTemplate.opsForValue().set(tsKey, LocalDate.now().toString());
     }
 
     @Override

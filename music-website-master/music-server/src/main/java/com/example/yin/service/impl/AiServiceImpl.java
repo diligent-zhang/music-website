@@ -105,8 +105,25 @@ public class AiServiceImpl implements AiService {
             return R.success("成功", respData);
         } catch (Exception e) {
             log.error("Agent 推理失败", e);
+            if (isAuthFailure(e)) {
+                return R.error("AI 服务认证失败：请在 application.properties 配置有效的 ai.api.key（DeepSeek 密钥），或设置环境变量 DEEPSEEK_API_KEY");
+            }
             return R.error("抱歉，我暂时无法回答，请稍后再试。");
         }
+    }
+
+    /** 判断异常链中是否包含 DeepSeek/OpenAI 认证失败（401、无效密钥），用于透出真实原因 */
+    private boolean isAuthFailure(Throwable e) {
+        for (Throwable t = e; t != null; t = t.getCause()) {
+            String name = t.getClass().getSimpleName();
+            String msg = t.getMessage() == null ? "" : t.getMessage().toLowerCase();
+            if (name.contains("Authentication") || name.contains("Unauthorized")
+                    || msg.contains("401") || msg.contains("invalid_api_key") || msg.contains("unauthorized")) {
+                return true;
+            }
+            if (t.getCause() == t) break;
+        }
+        return false;
     }
 
     /**

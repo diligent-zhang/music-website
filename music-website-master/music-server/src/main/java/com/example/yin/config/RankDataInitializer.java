@@ -27,33 +27,38 @@ public class RankDataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        Long size = redisTemplate.opsForZSet().size(RankRedisKey.DAILY_RANK_KEY);
-        if (size != null && size > 0) {
-            return;
-        }
-
-        List<Song> songs = songMapper.selectList(null);
-        if (songs == null || songs.isEmpty()) {
-            return;
-        }
-
-        for (Song song : songs) {
-            Integer playCount = song.getPlayCount();
-            if (playCount == null || playCount <= 0) {
-                continue;
+        try {
+            Long size = redisTemplate.opsForZSet().size(RankRedisKey.DAILY_RANK_KEY);
+            if (size != null && size > 0) {
+                return;
             }
 
-            double score = playCount.doubleValue();
+            List<Song> songs = songMapper.selectList(null);
+            if (songs == null || songs.isEmpty()) {
+                return;
+            }
 
-            // 日用 1/10 折算，周用 1/3 折算，月用全量
-            redisTemplate.opsForZSet().add(RankRedisKey.DAILY_RANK_KEY, song.getId(), score * 0.1);
-            redisTemplate.opsForZSet().add(RankRedisKey.WEEKLY_RANK_KEY, song.getId(), score * 0.3);
-            redisTemplate.opsForZSet().add(RankRedisKey.MONTHLY_RANK_KEY, song.getId(), score);
+            for (Song song : songs) {
+                Integer playCount = song.getPlayCount();
+                if (playCount == null || playCount <= 0) {
+                    continue;
+                }
 
-            redisTemplate.opsForValue().set(
-                    RankRedisKey.PLAY_COUNT_PREFIX + song.getId(), playCount);
+                double score = playCount.doubleValue();
+
+                // 日用 1/10 折算，周用 1/3 折算，月用全量
+                redisTemplate.opsForZSet().add(RankRedisKey.DAILY_RANK_KEY, song.getId(), score * 0.1);
+                redisTemplate.opsForZSet().add(RankRedisKey.WEEKLY_RANK_KEY, song.getId(), score * 0.3);
+                redisTemplate.opsForZSet().add(RankRedisKey.MONTHLY_RANK_KEY, song.getId(), score);
+
+                redisTemplate.opsForValue().set(
+                        RankRedisKey.PLAY_COUNT_PREFIX + song.getId(), playCount);
+            }
+
+            log.info("排行榜数据从数据库初始化完成，共 {} 首歌曲", songs.size());
+        } catch (Exception e) {
+            // Redis 不可用时不阻断应用启动，排行榜将在下次启动或定时任务时再初始化
+            log.warn("Redis 不可用，跳过排行榜数据初始化: {}", e.getMessage());
         }
-
-        log.info("排行榜数据从数据库初始化完成，共 {} 首歌曲", songs.size());
     }
 }

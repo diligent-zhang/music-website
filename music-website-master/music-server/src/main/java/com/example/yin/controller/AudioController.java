@@ -1,6 +1,7 @@
 package com.example.yin.controller;
 
 import com.example.yin.utils.MinioService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.core.io.Resource;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.io.InputStream;
 
+@Slf4j
 @Controller
 @RequestMapping("/audio")
 public class AudioController {
@@ -23,15 +25,14 @@ public class AudioController {
 
     @GetMapping("/{fileName:.+}")
     public ResponseEntity<Resource> playAudio(@PathVariable String fileName) {
-        System.out.println("=== MinIO 音频请求 ===");
-        System.out.println("请求文件名: " + fileName);
+        log.debug("MinIO 音频请求: {}", fileName);
 
         try {
             String objectName = "song/" + fileName;
             InputStream stream = minioService.getObject(objectName);
             long size = minioService.getObjectSize(objectName);
 
-            System.out.println("MinIO 文件读取成功，大小: " + size + " 字节");
+            log.debug("MinIO 文件读取成功，大小: {} 字节", size);
 
             HttpHeaders headers = new HttpHeaders();
             headers.add(HttpHeaders.CONTENT_TYPE, "audio/mpeg");

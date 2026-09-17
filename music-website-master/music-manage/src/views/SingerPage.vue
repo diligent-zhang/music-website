@@ -136,6 +136,7 @@ import { defineComponent, getCurrentInstance, watch, ref, reactive, computed } f
 import mixin from "@/mixins/mixin";
 import YinDelDialog from "@/components/dialog/YinDelDialog.vue";
 import { HttpManager } from "@/api/index";
+import { getToken } from "@/api/request";
 import { RouterName } from "@/enums";
 import { getBirth } from "@/utils";
 
@@ -186,7 +187,7 @@ export default defineComponent({
       currentPage.value = val;
     }
     function uploadUrl(id) {
-      return HttpManager.attachImageUrl(`/singer/avatar/update?id=${id}`);
+      return HttpManager.attachImageUrl(`/singer/avatar/update?id=${id}&token=${getToken()}`);
     }
 
     /**
